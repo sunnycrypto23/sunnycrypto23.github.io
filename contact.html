@@ -38,37 +38,30 @@
         📘 Facebook: <a href="https://www.facebook.com/michael.sunday.407648" target="_blank">michael.sunday.407648</a>
       </p>
       <p>I usually respond within a day or two. Feel free to ask about anything on the site, or just say hello!</p>
+
+      <h2>Or send me a message directly</h2>
+      <form name="contact" method="POST" data-netlify="true" action="/contact.html">
+        <input type="hidden" name="form-name" value="contact">
+        <p>
+          <label>Name<br>
+            <input type="text" name="name" required>
+          </label>
+        </p>
+        <p>
+          <label>Email<br>
+            <input type="email" name="email" required>
+          </label>
+        </p>
+        <p>
+          <label>Message<br>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
+      </form>
     </div>
   </main>
-
-
-  <!-- ADD THE NEW FORM CODE HERE -->
-  <h2>Or send me a message directly</h2>
-  <form name="contact" method="POST" data-netlify="true" action="/contact.html>
-    <input type="hidden" name="form-name" value="contact">
-    <p>
-      <label>Name<br>
-        <input type="text" name="name" required>
-      </label>
-    </p>
-    <p>
-      <label>Email<br>
-        <input type="email" name="email" required>
-      </label>
-    </p>
-    <p>
-      <label>Message<br>
-        <textarea name="message" rows="5" required></textarea>
-      </label>
-    </p>
-    <p>
-      <button type="submit">Send</button>
-    </p>
-  </form>
-  <!-- END OF NEW FORM -->
-
-      </div>
-    </div>
-  </footer>
 </body>
-  </html>
+</html>
