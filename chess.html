@@ -71,12 +71,6 @@
 
   <script>
     var game = new Chess();
-    var currentMoveTime = 1000; // Default to medium difficulty
-
-    // ---- Difficulty selector ----
-    document.getElementById('difficulty').addEventListener('change', function() {
-      currentMoveTime = parseInt(this.value);
-    });
 
     // ---- Load Stockfish (the computer opponent) as a background worker ----
     var stockfish = new Worker(
@@ -106,8 +100,9 @@
     };
 
     function requestComputerMove() {
+      var difficulty = document.getElementById('difficulty').value;
       stockfish.postMessage('position fen ' + game.fen());
-      stockfish.postMessage('go movetime ' + currentMoveTime);
+      stockfish.postMessage('go movetime ' + difficulty);
     }
 
     // ---- Board interaction ----
