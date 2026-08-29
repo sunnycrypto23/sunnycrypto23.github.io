@@ -150,6 +150,56 @@
 
     var board1 = Chessboard('board1', config);
     updateStatus();
+
+    // ---- Daily Puzzle ----
+    var puzzleGame = new Chess();
+    var board2;
+    var puzzleSolution = [];
+    var puzzleMoveIndex = 0;
+
+    fetch('https://lichess.org/api/puzzle/daily')
+      .then(response => response.json())
+      .then(data => {
+        // Load the position right before the puzzle starts
+        var pgnMoves = data.game.pgn.split(' ');
+        var tempGame = new Chess();
+        pgnMoves.forEach(move => tempGame.move(move, { sloppy: true }));
+
+        puzzleGame.load(tempGame.fen());
+        puzzleSolution = data.puzzle.solution;
+
+        document.getElementById('puzzle-info').innerText =
+          'Rating: ' + data.puzzle.rating + ' — find the best move!';
+
+        board2 = Chessboard('board2', {
+          draggable: true,
+          position: puzzleGame.fen(),
+          pieceTheme: 'https://chessboardjs.com/img/chesspieces/wikipedia/{piece}.png',
+          onDrop: onPuzzleDrop
+        });
+      })
+      .catch(error => {
+        document.getElementById('puzzle-info').innerText = 'Could not load today\'s puzzle.';
+      });
+
+    function onPuzzleDrop(source, target) {
+      var move = puzzleGame.move({ from: source, to: target, promotion: 'q' });
+      if (move === null) return 'snapback';
+
+      var uciMove = source + target;
+      if (puzzleSolution[puzzleMoveIndex] === uciMove) {
+        puzzleMoveIndex++;
+        if (puzzleMoveIndex >= puzzleSolution.length) {
+          document.getElementById('status2').innerText = 'Solved! 🎉';
+        } else {
+          document.getElementById('status2').innerText = 'Correct! Keep going...';
+        }
+      } else {
+        document.getElementById('status2').innerText = 'Not quite — try again.';
+        puzzleGame.undo();
+        board2.position(puzzleGame.fen());
+      }
+    }
   </script>
 </body>
 </html>
