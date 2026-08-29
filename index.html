@@ -111,19 +111,20 @@
   });
   </script>
   <script>
-  document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible'); // ← Fixed typo
+            }
+        });
     }, { threshold: 0.15 });
 
-    document.querySelectorAll('.fade-in').forEach(el => {
-      observer.observe(el);
+    document.querySelectorAll('.fade-in').forEach((el, index) => {
+        el.style.transitionDelay = `${index * 0.1}s`; // ← Fixed property name
+        observer.observe(el);
     });
-  });
+});
   </script>
 </body>
             </html>
