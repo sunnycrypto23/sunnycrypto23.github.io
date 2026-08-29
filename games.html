@@ -187,13 +187,33 @@
       if (move === null) return 'snapback';
 
       var uciMove = source + target;
+
       if (puzzleSolution[puzzleMoveIndex] === uciMove) {
         puzzleMoveIndex++;
+
         if (puzzleMoveIndex >= puzzleSolution.length) {
           document.getElementById('status2').innerText = 'Solved! 🎉';
-        } else {
-          document.getElementById('status2').innerText = 'Correct! Keep going...';
+          return;
         }
+
+        document.getElementById('status2').innerText = 'Correct! Opponent responding...';
+
+        // Auto-play the opponent's reply after a short pause
+        window.setTimeout(function () {
+          var opponentMove = puzzleSolution[puzzleMoveIndex];
+          var oFrom = opponentMove.substring(0, 2);
+          var oTo = opponentMove.substring(2, 4);
+          puzzleGame.move({ from: oFrom, to: oTo, promotion: 'q' });
+          board2.position(puzzleGame.fen());
+          puzzleMoveIndex++;
+
+          if (puzzleMoveIndex >= puzzleSolution.length) {
+            document.getElementById('status2').innerText = 'Solved! 🎉';
+          } else {
+            document.getElementById('status2').innerText = 'Your move — keep going.';
+          }
+        }, 500);
+
       } else {
         document.getElementById('status2').innerText = 'Not quite — try again.';
         puzzleGame.undo();
