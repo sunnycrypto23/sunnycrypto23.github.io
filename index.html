@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div id="loader">
+  <div class="loader-logo">S</div>
+  </div>
   <header class="site-head">
     <div class="wrap">
       <div class="brand-row">
@@ -100,5 +103,12 @@
       </span>
     </div>
   </footer>
+  <script>
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      document.getElementById('loader').classList.add('hide');
+    }, 700);
+  });
+  </script>
 </body>
             </html>
