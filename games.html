@@ -31,12 +31,12 @@
   <main class="wrap">
     <section class="post-head">
       <h1>Games</h1>
-      <p class="lede">A quick chess board to play on, plus a few puzzles to test yourself.</p>
+      <p class="lede">Play chess against the computer. You're White — drag a piece to move.</p>
     </section>
 
     <section class="post-body">
       <h2>Play Chess</h2>
-      <div id="board1" style="width: 100%; max-width: 400px; margin: 0 auto 20px;"></div>
+      <div id="board1" style="width: 100%; max-width: 400px; margin: 0 auto 20px; touch-action: none;"></div>
       <p id="status1" style="text-align:center; font-family:'Space Mono', monospace;"></p>
     </section>
   </main>
@@ -59,8 +59,44 @@
   <script>
     var game = new Chess();
 
+    // ---- Load Stockfish (the computer opponent) as a background worker ----
+    var stockfish = new Worker(
+      URL.createObjectURL(
+        new Blob(
+          ['importScripts("https://cdnjs.cloudflare.com/ajax/libs/stockfish.js/10.0.2/stockfish.js");'],
+          { type: 'application/javascript' }
+        )
+      )
+    );
+    stockfish.postMessage('uci');
+
+    stockfish.onmessage = function (event) {
+      var line = event.data;
+      if (typeof line !== 'string') return;
+
+      if (line.startsWith('bestmove')) {
+        var bestMove = line.split(' ')[1];
+        var from = bestMove.substring(0, 2);
+        var to = bestMove.substring(2, 4);
+        var promotion = bestMove.length > 4 ? bestMove.substring(4, 5) : 'q';
+
+        game.move({ from: from, to: to, promotion: promotion });
+        board1.position(game.fen());
+        updateStatus();
+      }
+    };
+
+    function requestComputerMove() {
+      stockfish.postMessage('position fen ' + game.fen());
+      stockfish.postMessage('go depth 12');
+    }
+
+    // ---- Board interaction ----
     function onDragStart(source, piece) {
       if (game.game_over()) return false;
+      // Only allow dragging White pieces, and only on White's turn
+      if (game.turn() !== 'w') return false;
+      if (piece.search(/^b/) !== -1) return false;
     }
 
     function onDrop(source, target) {
@@ -73,6 +109,10 @@
       if (move === null) return 'snapback';
 
       updateStatus();
+
+      if (!game.game_over()) {
+        window.setTimeout(requestComputerMove, 250);
+      }
     }
 
     function onSnapEnd() {
