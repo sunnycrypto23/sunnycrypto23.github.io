@@ -36,6 +36,14 @@
 
     <section class="post-body">
       <h2>Play Chess</h2>
+      <label for="difficulty" style="font-family:'Space Mono', monospace; font-size:0.85rem;">
+        Difficulty:
+      </label>
+      <select id="difficulty" style="margin-bottom:16px; padding:6px 10px; font-family:'Space Mono', monospace;">
+        <option value="500">Easy</option>
+        <option value="1000" selected>Medium</option>
+        <option value="2500">Hard</option>
+      </select>
       <div id="board1" style="width: 100%; max-width: 400px; margin: 0 auto 20px; touch-action: none;"></div>
       <p id="status1" style="text-align:center; font-family:'Space Mono', monospace;"></p>
 
@@ -63,6 +71,12 @@
 
   <script>
     var game = new Chess();
+    var currentMoveTime = 1000; // Default to medium difficulty
+
+    // ---- Difficulty selector ----
+    document.getElementById('difficulty').addEventListener('change', function() {
+      currentMoveTime = parseInt(this.value);
+    });
 
     // ---- Load Stockfish (the computer opponent) as a background worker ----
     var stockfish = new Worker(
@@ -93,7 +107,7 @@
 
     function requestComputerMove() {
       stockfish.postMessage('position fen ' + game.fen());
-      stockfish.postMessage('go movetime 1000');
+      stockfish.postMessage('go movetime ' + currentMoveTime);
     }
 
     // ---- Board interaction ----
