@@ -88,7 +88,7 @@
 
     function requestComputerMove() {
       stockfish.postMessage('position fen ' + game.fen());
-      stockfish.postMessage('go depth 12');
+      stockfish.postMessage('go movetime 1000');
     }
 
     // ---- Board interaction ----
