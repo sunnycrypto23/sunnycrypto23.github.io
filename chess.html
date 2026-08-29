@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chess — Sunday Ojodomo Michael</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css">
+</head>
+<body>
+  <header class="site-head">
+    <div class="wrap">
+      <div class="brand-row">
+        <a class="brand" href="index.html">Sunday<span class="dot">.</span>Michael</a>
+        <input  type="checkbox" id="nav-toggle"  class="menu-toggle">
+        <label  for="nav-toggle" class="menu-icon">&#9776;</label>
+        <nav class="site-nav">
+          <a href="index.html">home</a>
+          <a href="blog.html">lectures</a>
+          <a href="studies.html">studies</a>
+          <a href="qa.html">q&a</a>
+          <a href="games.html">games</a>
+          <a href="about.html">about</a>
+          <a href="contact.html">contact</a>
+        </nav>
+      </div>
+      <p class="tagline">chess & puzzles</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="post-head">
+      <h1>Chess</h1>
+      <p class="lede">Play against the computer or solve today's puzzle. You're White — drag a piece to move.</p>
+    </section>
+
+    <section class="post-body">
+      <h2>Play Chess</h2>
+      <div id="board1" style="width: 100%; max-width: 400px; margin: 0 auto 20px; touch-action: none;"></div>
+      <p id="status1" style="text-align:center; font-family:'Space Mono', monospace;"></p>
+
+      <h2>Daily Puzzle</h2>
+      <p id="puzzle-info" style="font-family:'Space Mono', monospace; font-size:0.85rem; color: var(--ink-soft);">Loading today's puzzle...</p>
+      <div id="board2" style="width: 100%; max-width: 400px; margin: 0 auto 20px; touch-action: none;"></div>
+      <p id="status2" style="text-align:center; font-family:'Space Mono', monospace;"></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Sunday Ojodomo Michael</span>
+      <span>
+        <a href="mailto:solexmic061@gmail.com">email</a> ·
+        <a href="https://x.com/SundayM77406156" target="_blank">twitter</a> ·
+        <a href="https://www.facebook.com/michael.sunday.407648" target="_blank">facebook</a>
+      </span>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+  <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"></script>
+
+  <script>
+    var game = new Chess();
+
+    // ---- Load Stockfish (the computer opponent) as a background worker ----
+    var stockfish = new Worker(
+      URL.createObjectURL(
+        new Blob(
+          ['importScripts("https://cdnjs.cloudflare.com/ajax/libs/stockfish.js/10.0.2/stockfish.js");'],
+          { type: 'application/javascript' }
+        )
+      )
+    );
+    stockfish.postMessage('uci');
+
+    stockfish.onmessage = function (event) {
+      var line = event.data;
+      if (typeof line !== 'string') return;
+
+      if (line.startsWith('bestmove')) {
+        var bestMove = line.split(' ')[1];
+        var from = bestMove.substring(0, 2);
+        var to = bestMove.substring(2, 4);
+        var promotion = bestMove.length > 4 ? bestMove.substring(4, 5) : 'q';
+
+        game.move({ from: from, to: to, promotion: promotion });
+        board1.position(game.fen());
+        updateStatus();
+      }
+    };
+
+    function requestComputerMove() {
+      stockfish.postMessage('position fen ' + game.fen());
+      stockfish.postMessage('go movetime 1000');
+    }
+
+    // ---- Board interaction ----
+    function onDragStart(source, piece) {
+      if (game.game_over()) return false;
+      // Only allow dragging White pieces, and only on White's turn
+      if (game.turn() !== 'w') return false;
+      if (piece.search(/^b/) !== -1) return false;
+    }
+
+    function onDrop(source, target) {
+      var move = game.move({
+        from: source,
+        to: target,
+        promotion: 'q'
+      });
+
+      if (move === null) return 'snapback';
+
+      updateStatus();
+
+      if (!game.game_over()) {
+        window.setTimeout(requestComputerMove, 250);
+      }
+    }
+
+    function onSnapEnd() {
+      board1.position(game.fen());
+    }
+
+    function updateStatus() {
+      var status = '';
+      var moveColor = game.turn() === 'b' ? 'Black' : 'White';
+
+      if (game.in_checkmate()) {
+        status = 'Checkmate — ' + moveColor + ' loses.';
+      } else if (game.in_draw()) {
+        status = 'Draw.';
+      } else {
+        status = moveColor + ' to move.';
+        if (game.in_check()) status += ' (in check)';
+      }
+      document.getElementById('status1').innerText = status;
+    }
+
+    var config = {
+      draggable: true,
+      position: 'start',
+      pieceTheme: 'https://chessboardjs.com/img/chesspieces/wikipedia/{piece}.png',
+      onDragStart: onDragStart,
+      onDrop: onDrop,
+      onSnapEnd: onSnapEnd
+    };
+
+    var board1 = Chessboard('board1', config);
+    updateStatus();
+
+    // ---- Daily Puzzle ----
+    var puzzleGame = new Chess();
+    var board2;
+    var puzzleSolution = [];
+    var puzzleMoveIndex = 0;
+
+    fetch('https://lichess.org/api/puzzle/daily')
+      .then(response => response.json())
+      .then(data => {
+        // Load the position right before the puzzle starts
+        var pgnMoves = data.game.pgn.split(' ');
+        var tempGame = new Chess();
+        pgnMoves.forEach(move => tempGame.move(move, { sloppy: true }));
+
+        puzzleGame.load(tempGame.fen());
+        puzzleSolution = data.puzzle.solution;
+
+        document.getElementById('puzzle-info').innerText =
+          'Rating: ' + data.puzzle.rating + ' — find the best move!';
+
+        board2 = Chessboard('board2', {
+          draggable: true,
+          position: puzzleGame.fen(),
+          pieceTheme: 'https://chessboardjs.com/img/chesspieces/wikipedia/{piece}.png',
+          onDrop: onPuzzleDrop
+        });
+      })
+      .catch(error => {
+        document.getElementById('puzzle-info').innerText = 'Could not load today\'s puzzle.';
+      });
+
+    function onPuzzleDrop(source, target) {
+      var move = puzzleGame.move({ from: source, to: target, promotion: 'q' });
+      if (move === null) return 'snapback';
+
+      var uciMove = source + target;
+
+      if (puzzleSolution[puzzleMoveIndex] === uciMove) {
+        puzzleMoveIndex++;
+
+        if (puzzleMoveIndex >= puzzleSolution.length) {
+          document.getElementById('status2').innerText = 'Solved! 🎉';
+          return;
+        }
+
+        document.getElementById('status2').innerText = 'Correct! Opponent responding...';
+
+        // Auto-play the opponent's reply after a short pause
+        window.setTimeout(function () {
+          var opponentMove = puzzleSolution[puzzleMoveIndex];
+          var oFrom = opponentMove.substring(0, 2);
+          var oTo = opponentMove.substring(2, 4);
+          puzzleGame.move({ from: oFrom, to: oTo, promotion: 'q' });
+          board2.position(puzzleGame.fen());
+          puzzleMoveIndex++;
+
+          if (puzzleMoveIndex >= puzzleSolution.length) {
+            document.getElementById('status2').innerText = 'Solved! 🎉';
+          } else {
+            document.getElementById('status2').innerText = 'Your move — keep going.';
+          }
+        }, 500);
+
+      } else {
+        document.getElementById('status2').innerText = 'Not quite — try again.';
+        puzzleGame.undo();
+        board2.position(puzzleGame.fen());
+      }
+    }
+  </script>
+</body>
+</html>
