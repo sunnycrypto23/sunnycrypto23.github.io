@@ -74,7 +74,6 @@
 
   <script>
     var game = new Chess();
-    var board1;
 
     // ---- Load Stockfish (the computer opponent) as a background worker ----
     var stockfish = new Worker(
@@ -152,15 +151,6 @@
       document.getElementById('status1').innerText = status;
     }
 
-    // ---- Restart game ----
-    function restartGame() {
-      game = new Chess();
-      board1.position('rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1');
-      updateStatus();
-    }
-
-    document.getElementById('restart-btn').addEventListener('click', restartGame);
-
     var config = {
       draggable: true,
       position: 'start',
@@ -170,8 +160,14 @@
       onSnapEnd: onSnapEnd
     };
 
-    board1 = Chessboard('board1', config);
+    var board1 = Chessboard('board1', config);
     updateStatus();
+
+    document.getElementById('restart-btn').addEventListener('click', function () {
+      game.reset();
+      board1.position('start');
+      updateStatus();
+    });
 
     // ---- Daily Puzzle ----
     var puzzleGame = new Chess();
