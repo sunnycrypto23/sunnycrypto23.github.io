@@ -97,7 +97,11 @@
     var config = {
       draggable: true,
       position: 'start',
-      pieceTheme:   'https://chessboardjs.com/img/chesspieces/wikipedia/{piece}.png',
+      pieceTheme: 'https://chessboardjs.com/img/chesspieces/wikipedia/{piece}.png',
+      onDragStart: onDragStart,
+      onDrop: onDrop,
+      onSnapEnd: onSnapEnd
+    };
 
     var board1 = Chessboard('board1', config);
     updateStatus();
