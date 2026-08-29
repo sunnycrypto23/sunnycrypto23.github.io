@@ -49,7 +49,7 @@ header.site-head {
   top: 0;
   z-index: 1000;
   background: var(--paper);
-  padding: 24px 140px 20px 0;
+  padding: 24px 120px 20px 0;
   border-bottom: 2px solid var(--ink);
 }
 
