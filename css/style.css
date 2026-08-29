@@ -466,3 +466,29 @@ h1, h2, h3 {
   font-weight: 700;
   letter-spacing: -0.02em;
 }
+/* ---------- Depth system ---------- */
+:root {
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+    --shadow-md: 0 8px 24px rgba(0,0,0,0.10);
+      --shadow-lg: 0 20px 50px rgba(0,0,0,0.16);
+      }
+
+      body {
+        background: linear-gradient(180deg, var(--paper) 0%, #ece7d8 100%);
+        }
+
+        header.site-head {
+          box-shadow: var(--shadow-sm);
+          }
+
+          .card, .quick-links, .log-entry {
+            box-shadow: var(--shadow-md);
+            }
+
+            .btn.primary {
+              box-shadow: var(--shadow-md);
+              }
+
+              .btn.primary:hover {
+                box-shadow: var(--shadow-lg);
+                }
