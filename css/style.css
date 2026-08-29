@@ -165,6 +165,9 @@ nav.site-nav a.active::after {
   line-height: 1.1;
   margin: 0 0 18px;
   letter-spacing: -0.02em;
+   background: linear-gradient(135deg, var(--gold), var(--teal-deep));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero h1 em { font-style: italic; color: var(--teal-deep); }
@@ -220,8 +223,8 @@ nav.site-nav a.active::after {
   font-family: 'Space Mono', monospace;
   font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--teal-deep);
+  letter-spacing: 0.15em;
+  color: var(--gold);
   margin: 60px 0 24px;
   display: flex;
   align-items: center;
@@ -457,3 +460,9 @@ footer a { color: var(--ink-soft); }
   opacity: 1;
   transform: translateY(0);
    }
+
+h1, h2, h3 {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
