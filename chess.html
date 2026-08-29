@@ -46,6 +46,9 @@
       </select>
       <div id="board1" style="width: 100%; max-width: 400px; margin: 0 auto 20px; touch-action: none;"></div>
       <p id="status1" style="text-align:center; font-family:'Space Mono', monospace;"></p>
+      <div style="text-align:center;">
+        <button id="restart-btn" class="btn">Restart Game</button>
+      </div>
 
       <h2>Daily Puzzle</h2>
       <p id="puzzle-info" style="font-family:'Space Mono', monospace; font-size:0.85rem; color: var(--ink-soft);">Loading today's puzzle...</p>
@@ -71,6 +74,7 @@
 
   <script>
     var game = new Chess();
+    var board1;
 
     // ---- Load Stockfish (the computer opponent) as a background worker ----
     var stockfish = new Worker(
@@ -148,6 +152,15 @@
       document.getElementById('status1').innerText = status;
     }
 
+    // ---- Restart game ----
+    function restartGame() {
+      game = new Chess();
+      board1.position('rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1');
+      updateStatus();
+    }
+
+    document.getElementById('restart-btn').addEventListener('click', restartGame);
+
     var config = {
       draggable: true,
       position: 'start',
@@ -157,7 +170,7 @@
       onSnapEnd: onSnapEnd
     };
 
-    var board1 = Chessboard('board1', config);
+    board1 = Chessboard('board1', config);
     updateStatus();
 
     // ---- Daily Puzzle ----
