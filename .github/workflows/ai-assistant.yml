@@ -1,0 +1,95 @@
+name: AI Code Assistant
+
+# Trigger: comment "/ai <instruction>" on any issue in this repo.
+# Example: /ai fix the login bug in auth.py
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  ai-respond:
+    # SECURITY GATE 1: only run on issue comments (not PR review comments),
+    # only when the comment starts with "/ai ", and only when the commenter
+    # is the repo owner or a collaborator with write access. This stops a
+    # random person on a public repo from triggering the bot with arbitrary
+    # instructions (prompt injection via issue comments).
+    if: >
+      !github.event.issue.pull_request &&
+      startsWith(github.event.comment.body, '/ai ') &&
+      (github.event.comment.author_association == 'OWNER' ||
+       github.event.comment.author_association == 'COLLABORATOR')
+    runs-on: ubuntu-latest
+
+    # SECURITY GATE 2: least-privilege permissions. No admin, no packages,
+    # no workflow-editing rights. Just enough to comment, branch, and PR.
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Extract instruction
+        id: extract
+        run: |
+          COMMENT=${{ toJSON(github.event.comment.body) }}
+          echo "$COMMENT" > /tmp/comment_raw.json
+          python -c "
+          import json
+          with open('/tmp/comment_raw.json') as f:
+              body = json.load(f)
+          instruction = body[4:].strip()  # strip leading '/ai '
+          with open('/tmp/instruction.txt', 'w') as f:
+              f.write(instruction)
+          "
+
+      - name: Run AI assistant
+        id: ai
+        env:
+          # SECURITY: the key lives only as an encrypted GitHub Secret.
+          # It is never printed, echoed, or written to any file the
+          # assistant script can read back and include in its output.
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+        run: |
+          INSTRUCTION=$(cat /tmp/instruction.txt)
+          python scripts/ai_assistant.py "$INSTRUCTION"
+
+      - name: Create Pull Request
+        # Always opens a PR — never merges automatically. You review and
+        # merge from your phone.
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "AI change: ${{ github.event.issue.title }}"
+          title: "AI fix (issue #${{ github.event.issue.number }}): ${{ github.event.issue.title }}"
+          body: |
+            Triggered by @${{ github.actor }} on issue #${{ github.event.issue.number }}.
+
+            This PR was generated automatically and has **not** been tested
+            beyond automated checks. Review carefully before merging.
+          branch: ai-fix-${{ github.event.issue.number }}-${{ github.run_id }}
+          delete-branch: true
+
+      - name: Comment back on the issue
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: '🤖 AI assistant finished. Check the Pull Requests tab for the proposed changes — nothing has been merged.'
+            })
