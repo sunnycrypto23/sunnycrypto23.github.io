@@ -38,20 +38,12 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r scripts/requirements.txt
-
- - name: Extract instruction
+        
+      - name: Extract instruction
         id: extract
         env:
           COMMENT_BODY: ${{ github.event.comment.body }}
-        run: |
-          python3 -c "
-          import os
-          body = os.environ['COMMENT_BODY']
-          instruction = body[4:].strip()
-          with open('/tmp/instruction.txt', 'w') as f:
-              f.write(instruction)
-          "
-
+        run: python3 scripts/extract_instruction.py
       - name: Run AI assistant
         id: ai
         env:
