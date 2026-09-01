@@ -39,16 +39,15 @@ jobs:
       - name: Install dependencies
         run: pip install -r scripts/requirements.txt
 
-      - name: Extract instruction
+ - name: Extract instruction
         id: extract
+        env:
+          COMMENT_BODY: ${{ github.event.comment.body }}
         run: |
-          COMMENT=${{ toJSON(github.event.comment.body) }}
-          echo "$COMMENT" > /tmp/comment_raw.json
-          python -c "
-          import json
-          with open('/tmp/comment_raw.json') as f:
-              body = json.load(f)
-          instruction = body[4:].strip()  # strip leading '/ai '
+          python3 -c "
+          import os
+          body = os.environ['COMMENT_BODY']
+          instruction = body[4:].strip()
           with open('/tmp/instruction.txt', 'w') as f:
               f.write(instruction)
           "
