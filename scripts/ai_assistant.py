@@ -40,7 +40,7 @@ BLOCKED_PATH_PREFIXES = (
 MAX_FILES_IN_CONTEXT = 40
 MAX_FILE_BYTES = 20_000       # skip huge files when building context
 MAX_FILES_TO_CHANGE = 8       # refuse a response that touches more than this
-MODEL = "gemini-2.5-flash"    # free-tier eligible model
+MODEL = "gemini-3.6-flash"    # free-tier eligible model
 
 
 def is_blocked_path(path: str) -> bool:
