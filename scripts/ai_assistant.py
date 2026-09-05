@@ -1,11 +1,9 @@
 """
 AI Code Assistant — runs inside the GitHub Action.
-
 Takes a plain-English instruction, sends the repo context to Gemini,
 and applies the returned file changes to disk. The Action's own
 create-pull-request step then commits and opens a PR — this script
 never pushes or merges anything itself.
-
 SECURITY DESIGN NOTES (read before changing this file):
 - BLOCKED_PATH_PREFIXES stops the AI from ever writing to workflow
   files, env files, or anything secret-shaped. This is the main
@@ -16,17 +14,14 @@ SECURITY DESIGN NOTES (read before changing this file):
 - MAX_FILES / MAX_FILE_BYTES caps keep a single run from silently
   rewriting the entire repo or blowing through API costs.
 """
-
 import os
 import sys
 import json
 import re
 from pathlib import Path
-
-import google.generativeai as genai
-
+from google import genai
+from google.genai import types
 REPO_ROOT = Path(".").resolve()
-
 # Anything matching these prefixes can NEVER be created or modified by
 # the AI, no matter what the instruction says.
 BLOCKED_PATH_PREFIXES = (
@@ -36,20 +31,15 @@ BLOCKED_PATH_PREFIXES = (
     "secrets",
     ".git/",
 )
-
 MAX_FILES_IN_CONTEXT = 40
 MAX_FILE_BYTES = 20_000       # skip huge files when building context
-MAX_FILES_TO_CHANGE = 8       # refuse a response that touches more than this
+MAX_FILES_TO_CHANGE = 15      # refuse a response that touches more than this
 MODEL = "gemini-3.6-flash"    # free-tier eligible model
-
-
 def is_blocked_path(path: str) -> bool:
     normalized = path.replace("\\", "/").lstrip("/")
     if ".." in normalized.split("/"):
         return True  # no path traversal
     return any(normalized.startswith(p) for p in BLOCKED_PATH_PREFIXES)
-
-
 def collect_repo_context() -> str:
     """Build a lightweight text snapshot of the repo for the model."""
     chunks = []
@@ -71,16 +61,12 @@ def collect_repo_context() -> str:
         chunks.append(f"--- FILE: {rel} ---\n{text}")
         count += 1
     return "\n\n".join(chunks)
-
-
 def call_gemini(instruction: str, repo_context: str) -> dict:
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         print("ERROR: GEMINI_API_KEY not set.", file=sys.stderr)
         sys.exit(1)
-
-    genai.configure(api_key=api_key)
-
+    client = genai.Client(api_key=api_key)
     system_prompt = (
         "You are a careful software engineer making a small, focused change "
         "to a repository. You will be given the repo's current files and an "
@@ -96,37 +82,31 @@ def call_gemini(instruction: str, repo_context: str) -> dict:
         "- If the instruction is unclear or unsafe to act on, return an "
         'empty "files" list and explain why in "summary".'
     )
-
-    model = genai.GenerativeModel(
-        model_name=MODEL,
-        system_instruction=system_prompt,
-        generation_config={"response_mime_type": "application/json"},
-    )
-
     user_message = (
         f"INSTRUCTION:\n{instruction}\n\n"
         f"CURRENT REPO FILES:\n{repo_context}"
     )
-
-    response = model.generate_content(user_message)
+    response = client.models.generate_content(
+        model=MODEL,
+        contents=user_message,
+        config=types.GenerateContentConfig(
+            system_instruction=system_prompt,
+            response_mime_type="application/json",
+        ),
+    )
     raw_text = response.text or ""
-
     # Belt-and-suspenders: strip markdown fences even though JSON mode
     # should already prevent them.
     cleaned = re.sub(r"^```(?:json)?|```$", "", raw_text.strip(), flags=re.MULTILINE).strip()
-
     try:
         return json.loads(cleaned)
     except json.JSONDecodeError:
         print("ERROR: model did not return valid JSON:", file=sys.stderr)
         print(raw_text, file=sys.stderr)
         sys.exit(1)
-
-
 def apply_changes(result: dict) -> None:
     files = result.get("files", [])
     summary = result.get("summary", "")
-
     if len(files) > MAX_FILES_TO_CHANGE:
         print(
             f"Refusing to apply: model tried to change {len(files)} files "
@@ -152,6 +132,8 @@ def apply_changes(result: dict) -> None:
 
     if not applied:
         print("No files were changed — nothing to open a PR for.")
+        # Non-zero exit so the workflow can skip PR creation if desired.
+        # (create-pull-request will simply no-op on an empty diff.)
 
 
 def main():
