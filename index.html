@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sunday Ojodomo Michael — Logbook</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/theme.js"></script>
 </head>
 <body>
   <div id="loader">
@@ -24,6 +25,7 @@
    <a href="games.html">games</a>
    <a href="about.html">about</a>
    <a href="contact.html">contact</a>
+   <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark/light mode">🌙</button>
 </nav>
       </div>
       <p class="tagline">computer science student · federal university lokoja</p>
@@ -35,7 +37,7 @@
     <section class="hero">
       <p class="eyebrow">Welcome</p>
       <h1>Sunday Ojodomo <em>Michael</em></h1>
-      <p class="lede">I'm a Computer Science student at Federal University Lokoja. This site is my digital logbook for study notes, essays, and resources — starting with Nigerian People and Cult[...]
+      <p class="lede">I'm a Computer Science student at Federal University Lokoja. This site is my digital logbook for study notes, essays, and resources — starting with Nigerian People and Culture.</p>
       <div class="hero-actions">
         <a class="btn primary" href="blog.html">Read the blog</a>
         <a class="btn" href="studies.html">Browse studies</a>
@@ -116,16 +118,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible'); // ← Fixed typo
+                entry.target.classList.add('visible');
             }
         });
     }, { threshold: 0.15 });
 
     document.querySelectorAll('.fade-in').forEach((el, index) => {
-        el.style.transitionDelay = `${index * 0.1}s`; // ← Fixed property name
+        el.style.transitionDelay = `${index * 0.1}s`;
         observer.observe(el);
     });
 });
   </script>
 </body>
-            </html>
+</html>
