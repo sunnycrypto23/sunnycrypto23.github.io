@@ -27,6 +27,31 @@ window.addEventListener('load', function(){
   });
 })();
 
+// ===== Mobile menu toggle =====
+(function(){
+  const menuBtn = document.getElementById('menu-toggle');
+  const mobileNav = document.getElementById('mobile-nav');
+  if(!menuBtn || !mobileNav) return;
+
+  function closeMenu(){
+    mobileNav.classList.remove('open');
+    menuBtn.querySelector('.material-symbols-outlined').textContent = 'menu';
+  }
+  function openMenu(){
+    mobileNav.classList.add('open');
+    menuBtn.querySelector('.material-symbols-outlined').textContent = 'close';
+  }
+
+  menuBtn.addEventListener('click', function(){
+    mobileNav.classList.contains('open') ? closeMenu() : openMenu();
+  });
+
+  // Close when a link is tapped
+  mobileNav.querySelectorAll('a').forEach(link=>{
+    link.addEventListener('click', closeMenu);
+  });
+})();
+
 // ===== Course filter =====
 (function(){
   const buttons = document.querySelectorAll('.filter-btn');
