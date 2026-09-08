@@ -58,3 +58,27 @@
     }
   ]
 }
+,
+    {
+      "code": "GST 112",
+      "name": "Nigerian People and Culture",
+      "department": "General Studies",
+      "category": "gst",
+      "status": "Complete",
+      "progress": 100,
+      "description": "A comprehensive module-by-module outline of Nigerian history, culture, colonial rule, and nation-building.",
+      "modules": [
+        { 
+          "id": 1, 
+          "title": "Full Course Summary & PDF", 
+          "status": "complete", 
+          "content": "<p>This module contains the complete, concise summary of GST 112.</p><p style='margin-top: 1.5rem;'><a href='assets/gst112.pdf' target='_blank' class='btn btn-primary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px; vertical-align: middle; margin-right: 4px;'>picture_as_pdf</span> View / Download Full PDF Summary</a></p><p style='margin-top: 1rem; color: var(--text-muted); font-size: 14px;'>The PDF covers all 11 modules, including Nigeria before 1800, Colonial Rule, Nationalism, Organs of Government, and National Ethics.</p>" 
+        },
+        { 
+          "id": 2, 
+          "title": "Practice Questions", 
+          "status": "complete", 
+          "content": "<p>Test your knowledge with 20 practice questions based on the GST 112 summary.</p><p style='margin-top: 1.5rem;'><a href='qa.html' class='btn btn-secondary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px; vertical-align: middle; margin-right: 4px;'>quiz</span> Go to Q&A Page</a></p>" 
+        }
+      ]
+    }
