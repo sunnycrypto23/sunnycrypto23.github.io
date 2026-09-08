@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Details — Sunday.Michael</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <div id="loader">
+    <img src="images/logo.png" alt="Sunday.Michael" class="loader-logo">
+  </div>
+
+  <header>
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" style="display:flex;align-items:center;gap:.75rem;">
+        <img src="images/logo.png" alt="Sunday.Michael logo" class="brand-mark">
+        <div class="brand-text">
+          <span class="brand-name">Sunday.Michael</span>
+          <span class="brand-sub">Digital Campus &amp; Lab</span>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="learn.html">Learn</a>
+        <a href="blog.html">Lectures</a>
+        <a href="studies.html">Studies</a>
+        <a href="qa.html">Q&amp;A</a>
+        <a href="games.html">Games</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" title="Toggle theme">
+          <span class="material-symbols-outlined" id="theme-icon">dark_mode</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="course-details">
+      <div class="wrap">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb" style="margin-bottom: 1.5rem;">
+          <span><a href="learn.html" style="color:inherit;">Learn Hub</a></span>
+          <span>/</span>
+          <span class="current" id="course-code-display">Loading...</span>
+        </div>
+
+        <!-- Course Header -->
+        <div style="margin-bottom: 2.5rem;">
+          <h1 class="section-title" id="course-title-display" style="font-size: 2.25rem; margin-bottom: 0.5rem;">Loading Course...</h1>
+          <p style="color: var(--text-muted); max-width: 40rem;" id="course-desc-display"></p>
+          
+          <div style="margin-top: 1.5rem; max-width: 24rem;">
+            <div class="card-progress-row" style="margin-bottom: 0.5rem;">
+              <span>Overall Progress</span>
+              <span class="pct" id="course-progress-pct">0%</span>
+            </div>
+            <div class="progress-bar-track">
+              <div class="progress-bar-fill" id="course-progress-bar" style="width: 0%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module List -->
+        <h3 style="font-family: 'Newsreader', serif; font-size: 1.5rem; margin-bottom: 1rem;">Course Content</h3>
+        <div id="module-list-container">
+          <!-- Modules will be injected here by JavaScript -->
+          <p style="color: var(--text-muted);">Loading modules...</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© 2026 Sunday Ojodomo Michael · Sunday.Michael</div>
+  </footer>
+
+  <script src="js/site.js"></script>
+  <script src="js/course.js"></script>
+</body>
+</html>
