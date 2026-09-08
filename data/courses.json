@@ -1,0 +1,56 @@
+{
+  "courses": [
+    {
+      "code": "CSC 104",
+      "name": "Introduction to Web Technology",
+      "department": "Computer Science",
+      "status": "In Progress",
+      "progress": 65,
+      "description": "HTML structure, CSS layout fundamentals, JavaScript basics, DOM manipulation, and HTTP client-server concepts.",
+      "modules": [
+        { "id": 1, "title": "HTML Structure & Semantics", "status": "complete" },
+        { "id": 2, "title": "CSS Layout Fundamentals", "status": "complete" },
+        { "id": 3, "title": "JavaScript Basics & DOM", "status": "current" },
+        { "id": 4, "title": "HTTP & Client-Server Concepts", "status": "not-started" }
+      ]
+    },
+    {
+      "code": "CSC 106",
+      "name": "Hardware Fundamentals & Programming",
+      "department": "Computer Science",
+      "status": "In Progress",
+      "progress": 50,
+      "description": "Computer hardware architecture, logic gates, truth tables, memory hierarchies, and introductory algorithmic problem solving.",
+      "modules": [
+        { "id": 1, "title": "Computer Hardware Architecture", "status": "complete" },
+        { "id": 2, "title": "Logic Gates & Truth Tables", "status": "current" },
+        { "id": 3, "title": "Memory Hierarchies", "status": "not-started" }
+      ]
+    },
+    {
+      "code": "MTH 101",
+      "name": "Elementary Mathematics I",
+      "department": "Mathematics",
+      "status": "In Progress",
+      "progress": 70,
+      "description": "Set theory, quadratic equations, polynomials, mathematical induction, trigonometry, and coordinate geometry.",
+      "modules": [
+        { "id": 1, "title": "Set Theory & Logic", "status": "complete" },
+        { "id": 2, "title": "Quadratic Equations", "status": "complete" },
+        { "id": 3, "title": "Trigonometry", "status": "current" }
+      ]
+    },
+    {
+      "code": "MTH 102",
+      "name": "Elementary Mathematics II",
+      "department": "Mathematics",
+      "status": "Not Started",
+      "progress": 0,
+      "description": "Limits and continuity, derivatives of algebraic and trigonometric functions, integration techniques, and vector geometry.",
+      "modules": [
+        { "id": 1, "title": "Limits and Continuity", "status": "not-started" },
+        { "id": 2, "title": "Derivatives", "status": "not-started" }
+      ]
+    }
+  ]
+}
