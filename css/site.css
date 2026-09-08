@@ -330,4 +330,67 @@ footer{border-top:1px solid var(--border);padding:2rem 0;text-align:center;color
   transition:border-color .15s;
 }
 .search-input:focus{outline:none;border-color:var(--sage);}
-  
+/* ============ COURSE PAGE MODULE LIST ============ */
+.module-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.module-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.6rem;
+  transition: border-color 0.15s, background 0.15s;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--text);
+}
+.module-row:hover {
+  border-color: var(--sage);
+  background: var(--surface-low);
+}
+.module-row.active {
+  border-color: var(--sage);
+  background: var(--surface-low);
+  border-left: 4px solid var(--sage);
+}
+.module-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.module-icon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+.module-icon.complete {
+  background: var(--sage);
+  color: var(--accent-on);
+}
+.module-icon.current {
+  background: var(--surface-high);
+  color: var(--sage);
+  border: 1px solid var(--sage);
+}
+.module-icon.not-started {
+  background: var(--surface-low);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}
+.module-title {
+  font-weight: 500;
+  font-size: 14px;
+}
+.module-arrow {
+  color: var(--text-muted);
+  font-size: 18px;
+  }
