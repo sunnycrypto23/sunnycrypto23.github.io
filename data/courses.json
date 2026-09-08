@@ -9,10 +9,10 @@
       "progress": 65,
       "description": "HTML structure, CSS layout fundamentals, JavaScript basics, DOM manipulation, and HTTP client-server concepts.",
       "modules": [
-        { "id": 1, "title": "HTML Structure & Semantics", "status": "complete", "content": "HTML provides the skeleton of a web page. Semantic tags like <header>, <main>, and <footer> give meaning to the structure, improving accessibility and SEO." },
-        { "id": 2, "title": "CSS Layout Fundamentals", "status": "complete", "content": "CSS controls the visual presentation. We use Flexbox and CSS Grid to create responsive, modern layouts that adapt to different screen sizes." },
-        { "id": 3, "title": "JavaScript Basics & DOM", "status": "current", "content": "JavaScript adds interactivity. The Document Object Model (DOM) allows JS to read and change the content, structure, and style of a website dynamically." },
-        { "id": 4, "title": "HTTP & Client-Server Concepts", "status": "not-started", "content": "Understanding how the web works: clients (browsers) send requests to servers, and servers respond with data (HTML, JSON, images) over the HTTP protocol." }
+        { "id": 1, "title": "HTML Structure & Semantics", "status": "complete", "content": "<p>HTML provides the skeleton of a web page. Semantic tags like <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code> give meaning to the structure, improving accessibility and SEO.</p>" },
+        { "id": 2, "title": "CSS Layout Fundamentals", "status": "complete", "content": "<p>CSS controls the visual presentation. We use Flexbox and CSS Grid to create responsive, modern layouts that adapt to different screen sizes.</p>" },
+        { "id": 3, "title": "JavaScript Basics & DOM", "status": "current", "content": "<p>JavaScript adds interactivity. The Document Object Model (DOM) allows JS to read and change the content, structure, and style of a website dynamically.</p>" },
+        { "id": 4, "title": "HTTP & Client-Server Concepts", "status": "not-started", "content": "<p>Understanding how the web works: clients (browsers) send requests to servers, and servers respond with data over the HTTP protocol.</p>" }
       ]
     },
     {
@@ -24,9 +24,9 @@
       "progress": 50,
       "description": "Computer hardware architecture, logic gates, truth tables, memory hierarchies, and introductory algorithmic problem solving.",
       "modules": [
-        { "id": 1, "title": "Computer Hardware Architecture", "status": "complete", "content": "The von Neumann architecture consists of the CPU, memory, and input/output devices. The CPU fetches, decodes, and executes instructions." },
-        { "id": 2, "title": "Logic Gates & Truth Tables", "status": "current", "content": "Basic building blocks of digital circuits: AND, OR, NOT, NAND, NOR, XOR. Truth tables map all possible input combinations to their output." },
-        { "id": 3, "title": "Memory Hierarchies", "status": "not-started", "content": "From fastest/smallest to slowest/largest: Registers, Cache (L1/L2/L3), RAM, and Secondary Storage (SSD/HDD)." }
+        { "id": 1, "title": "Computer Hardware Architecture", "status": "complete", "content": "<p>The von Neumann architecture consists of the CPU, memory, and input/output devices. The CPU fetches, decodes, and executes instructions.</p>" },
+        { "id": 2, "title": "Logic Gates & Truth Tables", "status": "current", "content": "<p>Basic building blocks of digital circuits: AND, OR, NOT, NAND, NOR, XOR. Truth tables map all possible input combinations to their output.</p>" },
+        { "id": 3, "title": "Memory Hierarchies", "status": "not-started", "content": "<p>From fastest/smallest to slowest/largest: Registers, Cache (L1/L2/L3), RAM, and Secondary Storage (SSD/HDD).</p>" }
       ]
     },
     {
@@ -38,9 +38,9 @@
       "progress": 70,
       "description": "Set theory, quadratic equations, polynomials, mathematical induction, trigonometry, and coordinate geometry.",
       "modules": [
-        { "id": 1, "title": "Set Theory & Logic", "status": "complete", "content": "A set is a well-defined collection of distinct objects. Operations include union (∪), intersection (∩), and complement (')." },
-        { "id": 2, "title": "Quadratic Equations", "status": "complete", "content": "Equations of the form ax² + bx + c = 0. Solved using factorization, completing the square, or the quadratic formula: x = [-b ± √(b² - 4ac)] / 2a." },
-        { "id": 3, "title": "Trigonometry", "status": "current", "content": "Study of triangles. Key identities include sin²θ + cos²θ = 1, and the sine/cosine rules for non-right-angled triangles." }
+        { "id": 1, "title": "Set Theory & Logic", "status": "complete", "content": "<p>A set is a well-defined collection of distinct objects. Operations include union (∪), intersection (∩), and complement (').</p>" },
+        { "id": 2, "title": "Quadratic Equations", "status": "complete", "content": "<p>Equations of the form ax² + bx + c = 0. Solved using factorization, completing the square, or the quadratic formula.</p>" },
+        { "id": 3, "title": "Trigonometry", "status": "current", "content": "<p>Study of triangles. Key identities include sin²θ + cos²θ = 1, and the sine/cosine rules for non-right-angled triangles.</p>" }
       ]
     },
     {
@@ -52,13 +52,10 @@
       "progress": 0,
       "description": "Limits and continuity, derivatives of algebraic and trigonometric functions, integration techniques, and vector geometry.",
       "modules": [
-        { "id": 1, "title": "Limits and Continuity", "status": "not-started", "content": "A limit describes the value a function approaches as the input approaches some value. Continuity means no breaks or holes in the graph." },
-        { "id": 2, "title": "Derivatives", "status": "not-started", "content": "The derivative represents the instantaneous rate of change. Basic rules include the power rule, product rule, quotient rule, and chain rule." }
+        { "id": 1, "title": "Limits and Continuity", "status": "not-started", "content": "<p>A limit describes the value a function approaches as the input approaches some value. Continuity means no breaks or holes in the graph.</p>" },
+        { "id": 2, "title": "Derivatives", "status": "not-started", "content": "<p>The derivative represents the instantaneous rate of change. Basic rules include the power rule, product rule, quotient rule, and chain rule.</p>" }
       ]
-    }
-  ]
-}
-,
+    },
     {
       "code": "GST 112",
       "name": "Nigerian People and Culture",
@@ -72,13 +69,15 @@
           "id": 1, 
           "title": "Full Course Summary & PDF", 
           "status": "complete", 
-          "content": "<p>This module contains the complete, concise summary of GST 112.</p><p style='margin-top: 1.5rem;'><a href='assets/gst112.pdf' target='_blank' class='btn btn-primary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px; vertical-align: middle; margin-right: 4px;'>picture_as_pdf</span> View / Download Full PDF Summary</a></p><p style='margin-top: 1rem; color: var(--text-muted); font-size: 14px;'>The PDF covers all 11 modules, including Nigeria before 1800, Colonial Rule, Nationalism, Organs of Government, and National Ethics.</p>" 
+          "content": "<p>This module contains the complete, concise summary of GST 112.</p><p style='margin-top: 1.5rem;'><a href='../assets/gst112.pdf' target='_blank' class='btn btn-primary' style='text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem;'><span class='material-symbols-outlined' style='font-size:18px;'>picture_as_pdf</span> View / Download Full PDF Summary</a></p><p style='margin-top: 1rem; color: var(--text-muted); font-size: 14px;'>The PDF covers all 11 modules, including Nigeria before 1800, Colonial Rule, Nationalism, Organs of Government, and National Ethics.</p>" 
         },
         { 
           "id": 2, 
           "title": "Practice Questions", 
           "status": "complete", 
-          "content": "<p>Test your knowledge with 20 practice questions based on the GST 112 summary.</p><p style='margin-top: 1.5rem;'><a href='qa.html' class='btn btn-secondary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px; vertical-align: middle; margin-right: 4px;'>quiz</span> Go to Q&A Page</a></p>" 
+          "content": "<p>Test your knowledge with 20 practice questions based on the GST 112 summary.</p><p style='margin-top: 1.5rem;'><a href='../qa.html' class='btn btn-secondary' style='text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem;'><span class='material-symbols-outlined' style='font-size:18px;'>quiz</span> Go to Q&A Page</a></p>" 
         }
       ]
     }
+  ]
+}
