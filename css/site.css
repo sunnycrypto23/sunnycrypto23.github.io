@@ -119,6 +119,41 @@ nav.main-nav a{
 nav.main-nav a:hover{color:var(--text);}
 nav.main-nav a.active{background:var(--accent-strong);color:var(--accent-on);font-weight:600;}
 
+/* ============ MOBILE MENU ============ */
+.menu-toggle-btn{
+  display:flex;
+  width:2.25rem;height:2.25rem;border-radius:.6rem;
+  align-items:center;justify-content:center;
+  color:var(--text);border:1px solid var(--border);
+  background:var(--surface);
+}
+@media(min-width:1024px){.menu-toggle-btn{display:none;}}
+
+nav.mobile-nav{
+  display:none;
+  position:fixed;
+  top:5rem;left:0;right:0;
+  bottom:0;
+  background:var(--canvas);
+  z-index:60;
+  flex-direction:column;
+  padding:1rem;
+  gap:2px;
+  overflow-y:auto;
+}
+nav.mobile-nav.open{display:flex;}
+@media(min-width:1024px){nav.mobile-nav{display:none !important;}}
+
+nav.mobile-nav a{
+  padding:.9rem 1rem;
+  border-radius:.6rem;
+  font-size:15px;font-weight:500;
+  color:var(--text);
+  border-bottom:1px solid var(--border);
+}
+nav.mobile-nav a.active{color:var(--sage);font-weight:700;}
+nav.mobile-nav a:last-child{border-bottom:none;}
+
 .header-actions{display:flex;align-items:center;gap:.5rem;}
 .search-btn{
   display:flex;align-items:center;gap:.5rem;
