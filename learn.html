@@ -18,7 +18,7 @@
 
 <header>
   <div class="wrap header-inner">
-    <a class="brand" href="#" style="display:flex;align-items:center;gap:.75rem;">
+    <a class="brand" href="index.html" style="display:flex;align-items:center;gap:.75rem;">
       <img src="images/logo.png" alt="Sunday.Michael logo" class="brand-mark">
       <div class="brand-text">
         <span class="brand-name">Sunday.Michael</span>
@@ -51,16 +51,17 @@
     </div>
   </div>
 </header>
+
 <nav class="mobile-nav" id="mobile-nav">
-      <a href="index.html">Home</a>
-      <a href="learn.html" class="active">Learn</a>
-      <a href="blog.html">Lectures</a>
-      <a href="studies.html">Studies</a>
-      <a href="qa.html">Q&amp;A</a>
-      <a href="games.html">Games</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <a href="index.html">Home</a>
+  <a href="learn.html" class="active">Learn</a>
+  <a href="blog.html">Lectures</a>
+  <a href="studies.html">Studies</a>
+  <a href="qa.html">Q&amp;A</a>
+  <a href="games.html">Games</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
 
 <main>
   <section class="section" id="learn-hub">
@@ -77,7 +78,7 @@
         </div>
       </div>
 
-      <input type="text" class="search-input" placeholder="Search my notes...">
+      <input type="text" class="search-input" placeholder="Search my notes..." id="course-search">
 
       <div class="filters" style="margin-bottom:2rem;">
         <button class="filter-btn active" data-filter="all">All</button>
@@ -87,6 +88,7 @@
 
       <div class="course-grid" id="course-grid">
 
+        <!-- CSC 104 -->
         <div class="course-card" data-category="csc">
           <div class="card-top">
             <div class="card-badges">
@@ -103,10 +105,12 @@
             </div>
             <div class="card-meta">
               <span class="task"><span class="material-symbols-outlined" style="font-size:16px;color:var(--sage);">assignment</span>Lab 03: Semantic Layouts</span>
-              <a class="notes-link" href="#">Notes <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a>
+              <a class="notes-link" href="course.html?code=csc104">Notes <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a>
             </div>
           </div>
         </div>
+
+        <!-- CSC 106 -->
         <div class="course-card" data-category="csc">
           <div class="card-top">
             <div class="card-badges">
@@ -123,60 +127,7 @@
             </div>
             <div class="card-meta">
               <span class="task"><span class="material-symbols-outlined" style="font-size:16px;color:var(--sage);">memory</span>Boolean Logic Assignment</span>
-              <a class="notes-link" href="#">Notes <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a>
+              <a class="notes-link" href="course.html?code=csc106">Notes <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a>
             </div>
           </div>
         </div>
-        <div class="course-card" data-category="mth">
-          <div class="card-top">
-            <div class="card-badges">
-              <span class="subject-badge mth">MTH 101</span>
-              <span class="status-label">In Progress</span>
-            </div>
-            <h3 class="course-title">Elementary Mathematics I</h3>
-            <p class="course-desc">Set theory, quadratic equations, polynomials, mathematical induction, trigonometry, and coordinate geometry.</p>
-          </div>
-          <div class="card-bottom">
-            <div>
-              <div class="card-progress-row"><span>Progress</span><span class="pct">70%</span></div>
-              <div class="progress-bar-track"><div class="progress-bar-fill" style="width:70%;"></div></div>
-            </div>
-            <div class="card-meta">
-              <span class="task"><span class="material-symbols-outlined" style="font-size:16px;color:var(--sage);">functions</span>Trig Problem Set 02</span>
-              <a class="notes-link" href="#">Notes <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a>
-            </div>
-          </div>
-        </div>
-        <div class="course-card" data-category="mth">
-          <div class="card-top">
-            <div class="card-badges">
-              <span class="subject-badge mth">MTH 102</span>
-              <span class="status-label not-started">Not Started</span>
-            </div>
-            <h3 class="course-title">Elementary Mathematics II</h3>
-            <p class="course-desc">Limits and continuity, derivatives of algebraic and trigonometric functions, integration techniques, and vector geometry.</p>
-          </div>
-          <div class="card-bottom">
-            <div>
-              <div class="card-progress-row"><span>Progress</span><span class="pct zero">0%</span></div>
-              <div class="progress-bar-track"><div class="progress-bar-fill" style="width:0%;background:var(--state-neutral-text);"></div></div>
-            </div>
-            <div class="card-meta">
-              <span class="task"><span class="material-symbols-outlined" style="font-size:16px;color:var(--text-muted);">schedule</span>Not started yet</span>
-              <a class="notes-link" href="#">Notes <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="wrap">© 2026 Sunday Ojodomo Michael · Sunday.Michael</div>
-</footer>
-
-<script src="js/site.js"></script>
-
-</body>
-</html>
