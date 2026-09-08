@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module — Sunday.Michael</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <div id="loader">
+    <img src="images/logo.png" alt="Sunday.Michael" class="loader-logo">
+  </div>
+
+  <header>
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" style="display:flex;align-items:center;gap:.75rem;">
+        <img src="images/logo.png" alt="Sunday.Michael logo" class="brand-mark">
+        <div class="brand-text">
+          <span class="brand-name">Sunday.Michael</span>
+          <span class="brand-sub">Digital Campus &amp; Lab</span>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="learn.html">Learn</a>
+        <a href="blog.html">Lectures</a>
+        <a href="studies.html">Studies</a>
+        <a href="qa.html">Q&amp;A</a>
+        <a href="games.html">Games</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" title="Toggle theme">
+          <span class="material-symbols-outlined" id="theme-icon">dark_mode</span>
+        </button>
+        <button class="menu-toggle-btn" id="menu-toggle" type="button" title="Menu">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="learn.html">Learn</a>
+    <a href="blog.html">Lectures</a>
+    <a href="studies.html">Studies</a>
+    <a href="qa.html">Q&amp;A</a>
+    <a href="games.html">Games</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <section class="section" id="lecture-content">
+      <div class="wrap">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb" style="margin-bottom: 1.5rem;">
+          <span><a href="learn.html" style="color:inherit;">Learn Hub</a></span>
+          <span>/</span>
+          <span><a href="#" id="breadcrumb-course" style="color:inherit;">Course</a></span>
+          <span>/</span>
+          <span class="current" id="breadcrumb-module">Module</span>
+        </div>
+
+        <!-- Module Header -->
+        <div style="margin-bottom: 2.5rem; border-bottom: 1px solid var(--border); padding-bottom: 1.5rem;">
+          <span class="subject-badge" id="lecture-badge" style="margin-bottom: 0.75rem; display: inline-block;">CODE</span>
+          <h1 class="section-title" id="lecture-title" style="font-size: 2rem; margin-bottom: 0.5rem;">Loading Module...</h1>
+          <p style="color: var(--text-muted); max-width: 40rem;" id="lecture-course-name">Course Name</p>
+        </div>
+
+        <!-- Module Content -->
+        <div style="max-width: 48rem;">
+          <h3 style="font-family: 'Newsreader', serif; font-size: 1.25rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+            <span class="material-symbols-outlined" style="color: var(--sage);">menu_book</span>
+            Lesson Notes
+          </h3>
+          <div id="lecture-body" style="font-size: 1.05rem; line-height: 1.7; color: var(--text-variant);">
+            <p>Loading content...</p>
+          </div>
+
+          <!-- Navigation Buttons -->
+          <div style="margin-top: 3rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 1.5rem;">
+            <a href="#" id="prev-module-btn" class="btn btn-secondary" style="visibility: hidden;">
+              <span class="material-symbols-outlined" style="font-size: 18px;">arrow_back</span>
+              Previous
+            </a>
+            <a href="#" id="next-module-btn" class="btn btn-primary">
+              Next Module
+              <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© 2026 Sunday Ojodomo Michael · Sunday.Michael</div>
+  </footer>
+
+  <script src="js/site.js"></script>
+  <script src="js/lecture.js"></script>
+</body>
+              </html>
