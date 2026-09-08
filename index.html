@@ -1,133 +1,558 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sunday Ojodomo Michael — Logbook</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/theme.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sunday.Michael — Digital Campus &amp; Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<style>
+
+/* ============ DESIGN TOKENS ============ */
+:root{
+  /* Light theme (default) */
+  --canvas: #fcf9f5;
+  --surface: #ffffff;
+  --surface-low: #f6f3ef;
+  --surface-high: #ebe8e4;
+  --border: #E6E2D8;
+  --text: #1c1c1a;
+  --text-variant: #414944;
+  --text-muted: #64625D;
+  --accent: #134230;
+  --accent-strong: #2d5a46;
+  --accent-on: #ffffff;
+  --sage: #5B7563;
+  --badge-csc-bg: #eaf0f6;
+  --badge-csc-text: #2d5a75;
+  --badge-mth-bg: #f7ece9;
+  --badge-mth-text: #a3523b;
+  --state-progress: #92600d;
+  --state-neutral-bg: #ecebe8;
+  --state-neutral-text: #706e68;
+  --track: #e5e2de;
+  --shadow: 0 1px 2px rgba(28,28,26,0.06), 0 1px 3px rgba(28,28,26,0.04);
+}
+
+html[data-theme="dark"]{
+  --canvas: #141514;
+  --surface: #1C1E1B;
+  --surface-low: #181A17;
+  --surface-high: #232622;
+  --border: #2C2F2B;
+  --text: #EDEBE6;
+  --text-variant: #C9C6BF;
+  --text-muted: #9C9990;
+  --accent: #6CA682;
+  --accent-strong: #2D5A46;
+  --accent-on: #EDEBE6;
+  --sage: #6CA682;
+  --badge-csc-bg: #1A2430;
+  --badge-csc-text: #87A9CF;
+  --badge-mth-bg: #301F1B;
+  --badge-mth-text: #DE8E7C;
+  --state-progress: #D99436;
+  --state-neutral-bg: #222420;
+  --state-neutral-text: #8C8881;
+  --track: #282A26;
+  --shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  background:var(--canvas);
+  color:var(--text);
+  font-family:'Inter',sans-serif;
+  font-size:15px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  transition:background .2s ease, color .2s ease;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;background:none;border:none;color:inherit;}
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 20;font-size:20px;line-height:1;}
+
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem;}
+@media(min-width:1024px){.wrap{padding:0 1.5rem;}}
+
+/* ============ HEADER ============ */
+header{
+  position:sticky;top:0;z-index:50;
+  background:var(--canvas);
+  border-bottom:1px solid var(--border);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  height:5rem;gap:1rem;
+}
+.brand{display:flex;align-items:center;gap:.75rem;}
+.brand-mark{
+  width:2.5rem;height:2.5rem;
+  object-fit:contain;
+}
+
+/* ============ LOADER ============ */
+#loader{
+  position:fixed;inset:0;z-index:999;
+  background:var(--canvas);
+  display:flex;align-items:center;justify-content:center;
+  transition:opacity .5s ease, visibility .5s ease;
+}
+#loader.hide{opacity:0;visibility:hidden;pointer-events:none;}
+.loader-logo{
+  width:5rem;height:5rem;object-fit:contain;
+  animation:loader-pulse 1.4s ease-in-out infinite;
+}
+@keyframes loader-pulse{
+  0%,100%{transform:scale(1);opacity:1;}
+  50%{transform:scale(0.94);opacity:.7;}
+}
+.brand-text{display:flex;flex-direction:column;line-height:1.15;}
+.brand-name{font-family:'Newsreader',serif;font-size:1.15rem;font-weight:600;color:var(--text);}
+.brand-sub{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted);}
+
+nav.main-nav{
+  display:none;
+  align-items:center;gap:2px;
+  background:var(--surface-low);
+  padding:4px;border-radius:.6rem;
+  border:1px solid var(--border);
+}
+@media(min-width:1024px){nav.main-nav{display:flex;}}
+nav.main-nav a{
+  padding:.4rem .75rem;border-radius:.5rem;
+  font-size:13px;font-weight:500;color:var(--text-muted);
+  transition:background .15s, color .15s;
+}
+nav.main-nav a:hover{color:var(--text);}
+nav.main-nav a.active{background:var(--accent-strong);color:var(--accent-on);font-weight:600;}
+
+.header-actions{display:flex;align-items:center;gap:.5rem;}
+.search-btn{
+  display:flex;align-items:center;gap:.5rem;
+  padding:.4rem .75rem;
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:.6rem;color:var(--text-muted);
+}
+.search-btn span.label{display:none;font-size:13px;}
+@media(min-width:640px){.search-btn span.label{display:inline;}}
+.icon-btn{
+  width:2.25rem;height:2.25rem;border-radius:.6rem;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--text-muted);border:1px solid transparent;
+  transition:color .15s, border-color .15s;
+}
+.icon-btn:hover{color:var(--sage);border-color:var(--border);}
+.avatar{
+  width:2.25rem;height:2.25rem;border-radius:50%;
+  background:var(--accent-strong);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--accent-on);
+}
+
+/* ============ HERO ============ */
+.hero-section{
+  background:var(--surface-low);
+  border-bottom:1px solid var(--border);
+  padding:2rem 0 3rem;
+}
+.context-bar{
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;
+  gap:.75rem;padding-bottom:1rem;margin-bottom:1.5rem;
+}
+.context-left{display:flex;align-items:center;gap:.5rem;color:var(--text-muted);font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;}
+.context-left .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);}
+.context-left .school{color:var(--accent);font-weight:700;}
+.status-pill{
+  display:flex;align-items:center;gap:.5rem;
+  background:var(--surface);border:1px solid var(--border);
+  padding:.3rem .6rem;border-radius:.4rem;
+  font-family:'Space Mono',monospace;font-size:12px;color:var(--text);
+}
+.status-pill .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);}
+
+.hero-grid{display:grid;grid-template-columns:1fr;gap:2rem;align-items:start;}
+@media(min-width:1024px){.hero-grid{grid-template-columns:2fr 1fr;}}
+
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.5rem;margin-bottom:1rem;
+}
+.eyebrow .name-tag{
+  background:var(--accent-strong);color:var(--accent-on);
+  padding:.2rem .5rem;border-radius:.3rem;
+  font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;
+}
+.eyebrow .role{color:var(--text-muted);font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;}
+
+h1.hero-headline{
+  font-family:'Newsreader',serif;font-weight:400;
+  font-size:2.25rem;line-height:1.1;letter-spacing:-0.01em;
+  margin:0 0 1rem;color:var(--text);
+}
+@media(min-width:768px){h1.hero-headline{font-size:3.25rem;}}
+h1.hero-headline em{color:var(--accent);font-style:italic;font-weight:400;}
+
+p.hero-desc{
+  font-size:1.05rem;line-height:1.65;color:var(--text-variant);
+  max-width:42rem;margin:0 0 1.5rem;
+}
+
+.hero-ctas{display:flex;flex-wrap:wrap;gap:1rem;}
+.btn{
+  display:inline-flex;align-items:center;gap:.5rem;
+  padding:.7rem 1.25rem;border-radius:.6rem;
+  font-size:13px;font-weight:600;
+  transition:opacity .15s, background .15s;
+}
+.btn-primary{background:var(--accent-strong);color:var(--accent-on);}
+.btn-primary:hover{opacity:.92;}
+.btn-secondary{background:var(--surface);color:var(--text);border:1px solid var(--border);}
+.btn-secondary:hover{background:var(--surface-high);}
+
+/* progress tile */
+.progress-tile{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:.75rem;padding:1.5rem;
+  box-shadow:var(--shadow);
+  display:flex;flex-direction:column;gap:1rem;
+}
+.progress-tile .row{display:flex;align-items:center;justify-content:space-between;}
+.tile-label{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--text-muted);}
+.tile-tag{
+  font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;
+  background:var(--surface-high);color:var(--text);
+  padding:.2rem .5rem;border-radius:.3rem;border:1px solid var(--border);
+}
+.progress-bar-track{width:100%;height:6px;background:var(--track);border-radius:99px;overflow:hidden;}
+.progress-bar-fill{height:100%;background:var(--sage);border-radius:99px;}
+.tile-stats{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;}
+.stat-box{background:var(--surface-low);border:1px solid var(--border);border-radius:.5rem;padding:.75rem;}
+.stat-box .stat-label{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.25rem;}
+.stat-box .stat-value{font-family:'Newsreader',serif;font-size:1.35rem;color:var(--text);}
+.stat-box .stat-value .unit{font-family:'Inter',sans-serif;font-size:12px;color:var(--text-muted);font-weight:400;}
+
+/* ============ COURSE MATRIX ============ */
+.section{padding:3rem 0;}
+.section-head{
+  display:flex;flex-direction:column;gap:1rem;
+  justify-content:space-between;margin-bottom:2rem;
+}
+@media(min-width:768px){.section-head{flex-direction:row;align-items:flex-end;}}
+.breadcrumb{display:flex;align-items:center;gap:.4rem;color:var(--text-muted);font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.4rem;}
+.breadcrumb .current{color:var(--sage);}
+h2.section-title{font-family:'Newsreader',serif;font-size:1.9rem;font-weight:500;margin:0;color:var(--text);}
+
+.filters{display:flex;align-items:center;gap:2px;background:var(--surface-low);padding:4px;border-radius:.6rem;border:1px solid var(--border);width:fit-content;}
+.filter-btn{
+  padding:.4rem .75rem;border-radius:.5rem;font-size:13px;font-weight:500;color:var(--text-muted);
+}
+.filter-btn.active{background:var(--surface);color:var(--sage);border:1px solid var(--border);box-shadow:var(--shadow);}
+.filter-btn:hover{color:var(--text);}
+
+.course-grid{display:grid;grid-template-columns:1fr;gap:1.5rem;}
+@media(min-width:768px){.course-grid{grid-template-columns:1fr 1fr;}}
+@media(min-width:1024px){.course-grid{grid-template-columns:1fr 1fr 1fr;}}
+
+.course-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:.75rem;box-shadow:var(--shadow);
+  display:flex;flex-direction:column;justify-content:space-between;
+  transition:border-color .15s;
+}
+.course-card:hover{border-color:var(--sage);}
+.card-top{padding:1.5rem;}
+.card-badges{display:flex;align-items:center;justify-content:space-between;gap:.5rem;margin-bottom:.75rem;}
+.subject-badge{
+  font-family:'Space Mono',monospace;font-size:11px;font-weight:700;
+  padding:.2rem .5rem;border-radius:.3rem;
+}
+.subject-badge.csc{background:var(--badge-csc-bg);color:var(--badge-csc-text);}
+.subject-badge.mth{background:var(--badge-mth-bg);color:var(--badge-mth-text);}
+.status-label{font-family:'Space Mono',monospace;font-size:11px;font-weight:600;color:var(--state-progress);}
+.status-label.not-started{
+  background:var(--state-neutral-bg);color:var(--state-neutral-text);
+  padding:.15rem .45rem;border-radius:.3rem;text-transform:uppercase;letter-spacing:.04em;font-size:10px;
+}
+.course-title{font-family:'Inter',sans-serif;font-size:1.05rem;font-weight:600;margin:0 0 .4rem;color:var(--text);}
+.course-desc{font-size:13px;color:var(--text-muted);line-height:1.55;margin:0;}
+
+.card-bottom{
+  background:var(--surface-low);border-top:1px solid var(--border);
+  padding:1.25rem 1.5rem;border-radius:0 0 .75rem .75rem;
+  display:flex;flex-direction:column;gap:.75rem;
+}
+.card-progress-row{display:flex;justify-content:space-between;align-items:center;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.35rem;}
+.card-progress-row .pct{font-weight:700;color:var(--sage);}
+.card-progress-row .pct.zero{color:var(--state-neutral-text);}
+.card-meta{display:flex;align-items:center;justify-content:space-between;font-size:13px;}
+.card-meta .task{display:flex;align-items:center;gap:.4rem;color:var(--text-muted);}
+.card-meta .notes-link{color:var(--sage);font-weight:600;font-size:12px;display:flex;align-items:center;}
+
+footer{border-top:1px solid var(--border);padding:2rem 0;text-align:center;color:var(--text-muted);font-size:13px;}
+</style>
 </head>
 <body>
-  <div id="loader">
-  <div class="loader-logo">S</div>
+
+<div id="loader">
+  <img src="images/logo.png" alt="Sunday.Michael" class="loader-logo">
+</div>
+
+<header>
+  <div class="wrap header-inner">
+    <a class="brand" href="#" style="display:flex;align-items:center;gap:.75rem;">
+      <img src="images/logo.png" alt="Sunday.Michael logo" class="brand-mark">
+      <div class="brand-text">
+        <span class="brand-name">Sunday.Michael</span>
+        <span class="brand-sub">Digital Campus &amp; Lab</span>
+      </div>
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="blog.html">Lectures</a>
+      <a href="studies.html">Studies</a>
+      <a href="qa.html">Q&amp;A</a>
+      <a href="games.html">Games</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="search-btn" type="button">
+        <span class="material-symbols-outlined" style="font-size:18px;">search</span>
+        <span class="label">Search</span>
+      </button>
+      <button class="icon-btn" id="theme-toggle" type="button" title="Toggle theme">
+        <span class="material-symbols-outlined" id="theme-icon">dark_mode</span>
+      </button>
+      <div class="avatar">
+        <span class="material-symbols-outlined" style="font-size:18px;">person</span>
+      </div>
+    </div>
   </div>
-  <header class="site-head">
+</header>
+
+<main>
+  <section class="hero-section">
     <div class="wrap">
-      <div class="brand-row">
-        <a class="brand" href="index.html">Sunday<span class="dot">.</span>Michael</a>
-        <input  type="checkbox" id="nav-toggle"  class="menu-toggle">
-        <label  for="nav-toggle" class="menu-icon">&#9776;</label>
-<nav class="site-nav">
-   <a href="index.html" class="active">home</a>
-   <a href="blog.html">lectures</a>
-   <a href="studies.html">studies</a>
-   <a href="qa.html">q&a</a>
-   <a href="games.html">games</a>
-   <a href="about.html">about</a>
-   <a href="contact.html">contact</a>
-   <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark/light mode">🌙</button>
-</nav>
+      <div class="context-bar">
+        <div class="context-left">
+          <span class="dot"></span>
+          <span>Student Academic Workspace</span>
+          <span>•</span>
+          <span class="school">Federal University Lokoja</span>
+        </div>
+        <div class="status-pill"><span class="dot"></span>Semester 1 • In Progress</div>
       </div>
-      <p class="tagline">computer science student · federal university lokoja</p>
+
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">
+            <span class="name-tag">Sunday Ojodomo Michael</span>
+            <span class="role">Computer Science Student &amp; Web Developer</span>
+          </div>
+          <h1 class="hero-headline">Learn. Build. <em>Document.</em></h1>
+          <p class="hero-desc">Personal academic workspace tracking my first-year computer science coursework, web development projects, practice notes, and learning journey at Federal University Lokoja.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="#course-matrix">
+              <span class="material-symbols-outlined" style="font-size:18px;">play_circle</span>
+              Resume Study: CSC104 Web Tech
+            </a>
+            <a class="btn btn-secondary" href="#">
+              View Projects (3)
+              <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="progress-tile">
+          <div class="row">
+            <span class="tile-label">Semester Progress</span>
+            <span class="tile-tag">Active Term</span>
+          </div>
+          <div>
+            <div class="row" style="margin-bottom:.4rem;">
+              <span style="font-size:13px;color:var(--text);font-weight:500;">Coursework Completion</span>
+              <span style="font-family:'Space Mono',monospace;font-size:13px;font-weight:700;color:var(--sage);">57%</span>
+            </div>
+            <div class="progress-bar-track"><div class="progress-bar-fill" style="width:57%;"></div></div>
+          </div>
+          <div class="tile-stats">
+            <div class="stat-box">
+              <div class="stat-label">Study Streak</div>
+              <div class="stat-value">19 <span class="unit">days</span></div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-label">Active Projects</div>
+              <div class="stat-value">03 <span class="unit">building</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <img src="images/profile-pic.jpg" class="profile-pic" alt="Portrait of Sunday Ojodomo Michael">
-  </header>
+  </section>
 
-  <main class="wrap">
-    <section class="hero">
-      <p class="eyebrow">Welcome</p>
-      <h1>Sunday Ojodomo <em>Michael</em></h1>
-      <p class="lede">I'm a Computer Science student at Federal University Lokoja. This site is my digital logbook for study notes, essays, and resources — starting with Nigerian People and Culture.</p>
-      <div class="hero-actions">
-        <a class="btn primary" href="blog.html">Read the blog</a>
-        <a class="btn" href="studies.html">Browse studies</a>
-        <a class="btn" href="qa.html">Q&A</a>
-      </div>
-    </section>
-
-    <section>
-      <h2 class="section-label">Explore</h2>
-      <div class="grid-cards">
-        <div class="card fade-in">
-          <h3>lectures</h3>
-          <p>Essays, summaries, and updates on courses and personal projects.</p>
-        </div>
-        <div class="card fade-in">
-          <h3>Studies</h3>
-          <p>Notes from Computer Science, GST courses, and self-study.</p>
-        </div>
-        <div class="card fade-in">
-          <h3>Q&A</h3>
-          <p>Questions based on my study notes — ask yours via social links.</p>
-        </div>
-        <div class="card fade-in">
-          <h3>Contact</h3>
-          <p>Email and social profiles to reach me directly.</p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2 class="section-label">Latest entry</h2>
-      <ul class="log">
-        <li>
-          <a class="log-entry" href="posts/gst112.html">
-            <span class="log-index">001</span>
-            <h2>GST 112: Nigerian People and Culture — Summary & Notes</h2>
-            <p>A concise summary of the course, with a downloadable PDF and a set of practice questions.</p>
-            <span class="log-meta"><span class="tag">gst112</span><span class="tag">culture</span> 2026</span>
-          </a>
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h2 class="section-label">Quick links</h2>
-      <div class="grid-cards">
-        <div class="card fade-in">
-          <h3>Download PDF</h3>
-          <p><a href="assets/gst112.pdf" target="_blank">View / Download GST 112 Summary (PDF)</a></p>
-        </div>
-        <div class="card fade-in">
-          <h3>Practice Questions</h3>
-          <p><a href="qa.html">Go to Q&A page</a> – based on the PDF summary.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
+  <section class="section" id="course-matrix">
     <div class="wrap">
-      <span>© 2026 Sunday Ojodomo Michael</span>
-      <span>
-        <a href="mailto:solexmic061@gmail.com">email</a> ·
-        <a href="https://x.com/SundayM77406156" target="_blank">twitter</a> ·
-        <a href="https://www.facebook.com/michael.sunday.407648" target="_blank">facebook</a>
-      </span>
-    </div>
-  </footer>
-  <script>
-  window.addEventListener('load', function() {
-    setTimeout(function() {
-      document.getElementById('loader').classList.add('hide');
-    }, 700);
-  });
-  </script>
-  <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, { threshold: 0.15 });
+      <div class="section-head">
+        <div>
+          <div class="breadcrumb">
+            <span>Coursework Catalog</span><span>/</span><span class="current">Year 1 · Semester 1</span>
+          </div>
+          <h2 class="section-title">University Course Matrix</h2>
+        </div>
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">All (4)</button>
+          <button class="filter-btn" data-filter="csc">Computer Science</button>
+          <button class="filter-btn" data-filter="mth">Mathematics</button>
+        </div>
+      </div>
 
-    document.querySelectorAll('.fade-in').forEach((el, index) => {
-        el.style.transitionDelay = `${index * 0.1}s`;
-        observer.observe(el);
-    });
+      <div class="course-grid" id="course-grid">
+
+        <div class="course-card" data-category="csc">
+          <div class="card-top">
+            <div class="card-badges">
+              <span class="subject-badge csc">CSC 104</span>
+              <span class="status-label">In Progress</span>
+            </div>
+            <h3 class="course-title">Introduction to Web Technology</h3>
+            <p class="course-desc">HTML structure, CSS layout fundamentals, JavaScript basics, DOM manipulation, and HTTP client-server concepts.</p>
+          </div>
+          <div class="card-bottom">
+            <div>
+              <div class="card-progress-row"><span>Progress</span><span class="pct">65%</span></div>
+              <div class="progress-bar-track"><div class="progress-bar-fill" style="width:65%;"></div></div>
+            </div>
+            <div class="card-meta">
+              <span class="task"><span class="material-symbols-outlined" style="font-size:16px;color:var(--sage);">assignment</span>Lab 03: Semantic Layouts</span>
+              <a class="notes-link" href="#">Notes <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-card" data-category="csc">
+          <div class="card-top">
+            <div class="card-badges">
+              <span class="subject-badge csc">CSC 106</span>
+              <span class="status-label">In Progress</span>
+            </div>
+            <h3 class="course-title">Hardware Fundamentals &amp; Programming</h3>
+            <p class="course-desc">Computer hardware architecture, logic gates, truth tables, memory hierarchies, and introductory algorithmic problem solving.</p>
+          </div>
+          <div class="card-bottom">
+            <div>
+              <div class="card-progress-row"><span>Progress</span><span class="pct">50%</span></div>
+              <div class="progress-bar-track"><div class="progress-bar-fill" style="width:50%;"></div></div>
+            </div>
+            <div class="card-meta">
+              <span class="task"><span class="material-symbols-outlined" style="font-size:16px;color:var(--sage);">memory</span>Boolean Logic Assignment</span>
+              <a class="notes-link" href="#">Notes <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-card" data-category="mth">
+          <div class="card-top">
+            <div class="card-badges">
+              <span class="subject-badge mth">MTH 101</span>
+              <span class="status-label">In Progress</span>
+            </div>
+            <h3 class="course-title">Elementary Mathematics I</h3>
+            <p class="course-desc">Set theory, quadratic equations, polynomials, mathematical induction, trigonometry, and coordinate geometry.</p>
+          </div>
+          <div class="card-bottom">
+            <div>
+              <div class="card-progress-row"><span>Progress</span><span class="pct">70%</span></div>
+              <div class="progress-bar-track"><div class="progress-bar-fill" style="width:70%;"></div></div>
+            </div>
+            <div class="card-meta">
+              <span class="task"><span class="material-symbols-outlined" style="font-size:16px;color:var(--badge-mth-text);">functions</span>Trig Problem Set 02</span>
+              <a class="notes-link" href="#">Notes <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="course-card" data-category="mth">
+          <div class="card-top">
+            <div class="card-badges">
+              <span class="subject-badge mth">MTH 102</span>
+              <span class="status-label not-started">Not Started</span>
+            </div>
+            <h3 class="course-title">Elementary Mathematics II</h3>
+            <p class="course-desc">Limits and continuity, derivatives of algebraic and trigonometric functions, integration techniques, and vector geometry.</p>
+          </div>
+          <div class="card-bottom">
+            <div>
+              <div class="card-progress-row"><span>Progress</span><span class="pct zero">0%</span></div>
+              <div class="progress-bar-track"><div class="progress-bar-fill" style="width:0%;background:var(--state-neutral-text);"></div></div>
+            </div>
+            <div class="card-meta">
+              <span class="task"><span class="material-symbols-outlined" style="font-size:16px;color:var(--text-muted);">schedule</span>Not started yet</span>
+              <a class="notes-link" href="#">Notes <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Sunday Ojodomo Michael · Sunday.Michael</div>
+</footer>
+
+<script>
+// ===== Loader: hide once page has loaded =====
+window.addEventListener('load', function(){
+  setTimeout(function(){
+    document.getElementById('loader').classList.add('hide');
+  }, 700);
 });
-  </script>
+
+// ===== Theme toggle: switchable light/dark, persisted =====
+(function(){
+  const root = document.documentElement;
+  const toggleBtn = document.getElementById('theme-toggle');
+  const icon = document.getElementById('theme-icon');
+
+  function applyTheme(theme){
+    root.setAttribute('data-theme', theme);
+    icon.textContent = theme === 'dark' ? 'light_mode' : 'dark_mode';
+    localStorage.setItem('sm-theme', theme);
+  }
+
+  const saved = localStorage.getItem('sm-theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  applyTheme(saved || (prefersDark ? 'dark' : 'light'));
+
+  toggleBtn.addEventListener('click', function(){
+    const current = root.getAttribute('data-theme');
+    applyTheme(current === 'dark' ? 'light' : 'dark');
+  });
+})();
+
+// ===== Course filter =====
+(function(){
+  const buttons = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.course-card');
+  buttons.forEach(btn=>{
+    btn.addEventListener('click', function(){
+      buttons.forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      cards.forEach(card=>{
+        card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
+      });
+    });
+  });
+})();
+</script>
+
 </body>
 </html>
