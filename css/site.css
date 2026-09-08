@@ -433,3 +433,8 @@ footer{border-top:1px solid var(--border);padding:2rem 0;text-align:center;color
   color: var(--accent-on);
   font-weight: 600;
 }
+/* ============ LECTURE PAGE ============ */
+#lecture-content {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
