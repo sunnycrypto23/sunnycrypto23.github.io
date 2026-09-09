@@ -8,39 +8,56 @@
         {
           "id": 1,
           "question": "Which of the following best describes the pre-colonial Igbo society?",
-          "options": [
-            "A highly centralized monarchy with a single king",
-            "A stateless society organized around villages and kinship",
-            "A feudal system based on land ownership",
-            "A theocratic state ruled by religious leaders"
-          ],
+          "options": ["A highly centralized monarchy with a single king", "A stateless society organized around villages and kinship", "A feudal system based on land ownership", "A theocratic state ruled by religious leaders"],
           "correct": 1,
           "explanation": "The pre-colonial Igbo society was largely stateless (acephalous), organized around villages, age grades, and kinship rather than a centralized monarchy like the Oyo or Hausa states."
         },
         {
           "id": 2,
           "question": "The amalgamation of the Northern and Southern protectorates of Nigeria occurred in which year?",
-          "options": [
-            "1900",
-            "1914",
-            "1960",
-            "1963"
-          ],
+          "options": ["1900", "1914", "1960", "1963"],
           "correct": 1,
           "explanation": "Lord Frederick Lugard amalgamated the Northern and Southern protectorates of Nigeria in 1914, primarily for administrative and economic convenience."
         },
         {
           "id": 3,
           "question": "Which organ of government is primarily responsible for interpreting the law?",
-          "options": [
-            "The Legislature",
-            "The Executive",
-            "The Judiciary",
-            "The Civil Service"
-          ],
+          "options": ["The Legislature", "The Executive", "The Judiciary", "The Civil Service"],
           "correct": 2,
           "explanation": "The Judiciary is the arm of government responsible for interpreting the laws, settling disputes, and administering justice."
         }
+      ]
+    },
+    {
+      "courseCode": "PHY 102",
+      "title": "CBT Practice Bank 1 (Q1 - 100)",
+      "description": "100 Computer-Based Test style questions covering all units. Answers and explanations provided instantly.",
+      "questions": [
+        { "id": 1, "question": "Which of the following is the weakest of the four fundamental forces?", "options": ["Electromagnetic force", "Strong nuclear force", "Gravitational force", "Weak nuclear force"], "correct": 2, "explanation": "Gravitational force is always attractive and is the weakest of the four fundamental forces." },
+        { "id": 2, "question": "The SI unit of capacitance is:", "options": ["Coulomb", "Farad", "Ohm", "Henry"], "correct": 1, "explanation": "The Farad (F) is the SI unit of capacitance." },
+        { "id": 3, "question": "Coulomb’s law states that the force between two point charges is:", "options": ["Directly proportional to the square of the distance", "Inversely proportional to the product of the charges", "Inversely proportional to the square of the distance", "Independent of the medium"], "correct": 2, "explanation": "Coulomb's law states force is inversely proportional to the square of the distance (1/r²)." },
+        { "id": 4, "question": "The capacitance of a parallel-plate capacitor is given by:", "options": ["C = ε₀d/A", "C = ε₀A/d", "C = Ad/ε₀", "C = ε₀Ad"], "correct": 1, "explanation": "For a parallel-plate capacitor, C = ε₀A/d." },
+        { "id": 5, "question": "Which of the following materials is a good conductor?", "options": ["Glass", "Rubber", "Copper", "Diamond"], "correct": 2, "explanation": "Copper is a metal with free electrons, making it an excellent conductor." },
+        { "id": 6, "question": "The electric field inside a conductor in electrostatic equilibrium is:", "options": ["Maximum", "Zero", "Uniform but non-zero", "Infinity"], "correct": 1, "explanation": "In electrostatic equilibrium, the electric field inside a conductor is always zero." },
+        { "id": 7, "question": "Gauss’s law relates electric flux to:", "options": ["Magnetic field", "Enclosed charge", "Current", "Resistance"], "correct": 1, "explanation": "Gauss's law states that electric flux through a closed surface is proportional to the enclosed charge." },
+        { "id": 8, "question": "The potential difference between two points is defined as:", "options": ["Work done per unit charge", "Force per unit charge", "Charge per unit work", "Energy per unit time"], "correct": 0, "explanation": "Potential difference (Voltage) is the work done per unit charge to move it between two points." },
+        { "id": 9, "question": "An electric dipole consists of:", "options": ["Two like charges", "Two equal and opposite charges separated by a distance", "A single charge", "Two unequal charges"], "correct": 1, "explanation": "An electric dipole is a pair of equal and opposite charges separated by a small distance." },
+        { "id": 10, "question": "The energy stored in a capacitor is given by:", "options": ["½ QV", "QV", "½ Q/V", "Q/V"], "correct": 0, "explanation": "The energy stored in a capacitor is U = ½QV = ½CV² = ½Q²/C." },
+        { "id": 11, "question": "Ohm’s law is expressed as:", "options": ["V = I/R", "V = IR", "I = VR", "R = VI"], "correct": 1, "explanation": "Ohm's law states V = IR (Voltage = Current × Resistance)." },
+        { "id": 12, "question": "The resistance of a wire is:", "options": ["Directly proportional to its cross-sectional area", "Inversely proportional to its length", "Directly proportional to its length", "Independent of temperature"], "correct": 2, "explanation": "Resistance R = ρL/A, so it is directly proportional to length (L)." },
+        { "id": 13, "question": "When resistors are connected in series:", "options": ["The voltage across each is the same", "The current through each is the same", "The total resistance decreases", "Power is the same in each"], "correct": 1, "explanation": "In a series circuit, the current is the same through all components." },
+        { "id": 14, "question": "EMF of a cell is the potential difference:", "options": ["When current is flowing", "Across the external resistor", "When the cell is on open circuit", "Across the internal resistance only"], "correct": 2, "explanation": "EMF is the terminal voltage when no current is flowing (open circuit)." },
+        { "id": 15, "question": "The relationship between EMF (ℰ), terminal voltage (V) and internal resistance (r) is:", "options": ["V = ℰ + Ir", "V = ℰ – Ir", "ℰ = V – Ir", "V = Ir – ℰ"], "correct": 1, "explanation": "Terminal voltage V = ℰ - Ir, where Ir is the 'lost volts' inside the cell." },
+        { "id": 16, "question": "In a parallel combination of identical cells, the total EMF is:", "options": ["Sum of individual EMFs", "Equal to the EMF of one cell", "Zero", "Product of EMFs"], "correct": 1, "explanation": "For identical cells in parallel, the total EMF remains equal to the EMF of a single cell." },
+        { "id": 17, "question": "Thermionic emission is the emission of electrons due to:", "options": ["Light", "Heat", "Electric field", "Magnetic field"], "correct": 1, "explanation": "Thermionic emission is the release of electrons from a heated metal surface." },
+        { "id": 18, "question": "A diode allows current to flow:", "options": ["In both directions equally", "Mainly in one direction", "Only when heated", "Only in reverse bias"], "correct": 1, "explanation": "A diode is a semiconductor device that conducts current primarily in one direction (forward bias)." },
+        { "id": 19, "question": "The process of converting AC to DC is called:", "options": ["Amplification", "Modulation", "Rectification", "Oscillation"], "correct": 2, "explanation": "Rectification is the process of converting alternating current (AC) to direct current (DC)." },
+        { "id": 20, "question": "A full-wave rectifier has higher efficiency than a half-wave rectifier because:", "options": ["It uses only one diode", "It utilises both halves of the AC cycle", "It produces more ripple", "It has higher resistance"], "correct": 1, "explanation": "Full-wave rectifiers use both the positive and negative halves of the AC cycle, yielding ~81.2% efficiency." },
+        { "id": 21, "question": "The force on a charged particle moving in a magnetic field is maximum when the angle between velocity and field is:", "options": ["0°", "45°", "90°", "180°"], "correct": 2, "explanation": "Magnetic force F = qvB sinθ. It is maximum when sinθ = 1, which is at 90°." },
+        { "id": 22, "question": "The SI unit of magnetic field (B) is:", "options": ["Weber", "Tesla", "Henry", "Gauss"], "correct": 1, "explanation": "The Tesla (T) is the SI unit of magnetic flux density (B)." },
+        { "id": 23, "question": "Biot-Savart law is used to find:", "options": ["Electric field due to a charge", "Magnetic field due to a current element", "Force between two charges", "Capacitance of a conductor"], "correct": 1, "explanation": "The Biot-Savart law calculates the magnetic field produced by a small current element." },
+        { "id": 24, "question": "The magnetic field inside a long solenoid is:", "options": ["µ₀I/2πr", "µ₀nI", "µ₀I/2r", "Zero"], "correct": 1, "explanation": "Inside a long solenoid, the magnetic field is uniform and given by B = µ₀nI." },
+        { "id": 25, "question": "Ampère’s law is most useful when the current distribution has:", "options": ["No symmetry", "High symmetry", "Random orientation", "Zero current"], "correct": 1, "explanation": "Ampère's law is the magnetic equivalent of Gauss's law and is highly useful for symmetrical current distributions." }
       ]
     }
   ]
