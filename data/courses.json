@@ -32,9 +32,12 @@
               "question": "If you remove 1000 electrons from a neutral object, what is its net charge?",
               "options": ["+1.602×10⁻¹⁶ C", "-1.602×10⁻¹ C", "0 C", "+1.602×10⁻¹⁹ C"],
               "correct": 0,
-              "explanation": "Removing electrons (negative charge) leaves a positive charge. Q = 1000 × (+1.602×10⁻¹⁹ C) = +1.602×10¹⁶ C." }
+              "explanation": "Removing electrons (negative charge) leaves a positive charge. Q = 1000 × (+1.602×10⁻¹⁹ C) = +1.602×10¹⁶ C."
+            }
           ]
-        },
+        }
+      ]
+    },
     {
       "code": "BIO 102",
       "name": "General Biology II",
