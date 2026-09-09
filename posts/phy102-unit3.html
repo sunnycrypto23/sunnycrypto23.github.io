@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PHY 102: Unit 3 - Magnetism & Magnetic Fields</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css">
+<style>
+  .lecture-text { max-width: 48rem; margin: 0 auto; font-size: 1.05rem; line-height: 1.8; color: var(--text-variant); }
+  .lecture-text h2 { font-family: 'Newsreader', serif; font-size: 1.75rem; color: var(--text); margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+  .lecture-text h3 { font-family: 'Newsreader', serif; font-size: 1.35rem; color: var(--text); margin-top: 2rem; margin-bottom: 0.75rem; }
+  .lecture-text p { margin-bottom: 1.25rem; }
+  .lecture-text ul, .lecture-text ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+  .lecture-text li { margin-bottom: 0.5rem; }
+  .equation-box { background: var(--surface-low); border-left: 4px solid var(--sage); padding: 1.25rem; border-radius: 0 0.5rem 0.5rem 0; margin: 1.5rem 0; font-family: 'Space Mono', monospace; font-size: 1.1rem; text-align: center; color: var(--text); overflow-x: auto; }
+  .example-box { background: var(--surface-low); border: 1px solid var(--border); border-radius: 0.75rem; padding: 1.5rem; margin: 2rem 0; }
+  .example-box h4 { color: var(--sage); margin-top: 0; display: flex; align-items: center; gap: 0.5rem; }
+  .key-term { font-weight: 600; color: var(--text); }
+  .must-know { background: rgba(91, 117, 99, 0.1); border-left: 4px solid var(--sage); padding: 1rem; border-radius: 0 0.5rem 0.5rem 0; margin: 1.5rem 0; font-weight: 500; }
+  table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+  th, td { border: 1px solid var(--border); padding: 0.75rem; text-align: left; }
+  th { background: var(--surface-low); font-weight: 600; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html" style="display:flex;align-items:center;gap:.75rem;">
+      <img src="../images/logo.png" alt="Sunday.Michael logo" class="brand-mark">
+      <div class="brand-text">
+        <span class="brand-name">Sunday.Michael</span>
+        <span class="brand-sub">Digital Campus &amp; Lab</span>
+      </div>
+    </a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../learn.html" class="active">Learn</a>
+      <a href="../knowledge.html">Knowledge</a>
+      <a href="../qa.html">Q&amp;A</a>
+      <a href="../games.html">Games</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="wrap">
+      <div class="breadcrumb" style="margin-bottom:1.5rem;">
+        <span><a href="../learn.html" style="color:inherit;">Learn Hub</a></span>
+        <span>/</span>
+        <span><a href="../course.html?code=phy102" style="color:inherit;">PHY 102</a></span>
+        <span>/</span>
+        <span class="current">Unit 3: Deep Dive</span>
+      </div>
+
+      <h1 class="section-title" style="font-size: 2.25rem; margin-bottom: 0.5rem;">Unit 3: Magnetism & Magnetic Fields</h1>
+      <p style="color: var(--text-muted); margin-bottom: 2.5rem;">The complete, unsummarized lecture notes for PHY 102 Unit 3, extracted directly from the official Comprehensive Handbook.</p>
+
+      <div class="lecture-text">
+        
+        <h2>3.0 Concept of Magnetic Field</h2>
+        <p>A magnetic field is a region of space where a magnetic force can be detected. It is produced by moving electric charges (currents) or by intrinsic magnetic moments of elementary particles (like electrons). The magnetic field is a vector quantity, denoted by <strong>B</strong>.</p>
+        <p><strong>Magnetic Field Lines:</strong> Imaginary lines used to visualize the magnetic field. They emerge from the North pole and enter the South pole. They never intersect. The density of the lines indicates the strength of the field.</p>
+
+        <h2>3.1 Magnetic Flux & Flux Density</h2>
+        <p><strong>Magnetic Flux (Φ):</strong> The total number of magnetic field lines passing through a given surface area. It is a scalar quantity. SI unit: Weber (Wb).</p>
+        <div class="equation-box">Φ = B · A = B A cosθ</div>
+        <p>Where θ is the angle between the magnetic field vector B and the normal (perpendicular) to the surface area A. Maximum flux when θ = 0° (field perpendicular to surface). Zero flux when θ = 90° (field parallel to surface).</p>
+        <p><strong>Magnetic Flux Density (B):</strong> The magnetic flux per unit area perpendicular to the field. It is the strength of the magnetic field. SI unit: Tesla (T). 1 T = 1 Wb/m². Another common unit is Gauss (G): 1 T = 10,000 G.</p>
+
+        <h2>3.2 The Lorentz Force</h2>
+        <p>The Lorentz force is the total force experienced by a charged particle moving through both an electric field E and a magnetic field B.</p>
+        <div class="equation-box">F = q(E + v × B)</div>
+        <p>If there is no electric field (E = 0), the magnetic force is:</p>
+        <div class="equation-box">F = q v B sinθ</div>
+        <p>Where θ is the angle between the velocity vector v and the magnetic field vector B. The direction of the magnetic force is given by the <strong>Right-Hand Rule</strong> (for positive charges) or Fleming's Left-Hand Rule.</p>
+        <div class="must-know">★ MUST KNOW: The magnetic force is always perpendicular to both the velocity and the magnetic field. Because F  v, the magnetic force does NO WORK on the moving charge. It changes the direction of the charge, but not its speed or kinetic energy.</div>
+
+        <h2>3.3 Magnetic Force on a Current-Carrying Conductor</h2>
+        <p>A current-carrying wire in a magnetic field experiences a force because the moving charges (electrons) inside the wire experience a Lorentz force.</p>
+        <div class="equation-box">F = B I L sinθ</div>
+        <p>Where I is the current, L is the length of the wire in the field, and θ is the angle between the current direction and the magnetic field. Maximum force when the wire is perpendicular to the field (θ = 90°). Zero force when the wire is parallel to the field (θ = 0°).</p>
+
+        <div class="example-box">
+          <h4><span class="material-symbols-outlined">calculate</span> Worked Example: Force on a Wire</h4>
+          <p><strong>Problem:</strong> A straight wire of length 0.5 m carries a current of 4 A. It is placed in a uniform magnetic field of 0.2 T at an angle of 30° to the field. Find the magnetic force on the wire.</p>
+          <p><strong>Solution:</strong><br>
+          F = B I L sinθ = (0.2)(4)(0.5) sin(30°) = 0.4 × 0.5 = <strong>0.2 N</strong></p>
+        </div>
+
+        <h2>3.4 Biot-Savart Law</h2>
+        <p>The Biot-Savart law calculates the magnetic field dB produced by a tiny segment of current-carrying wire dl at a distance r.</p>
+        <div class="equation-box">dB = (μ₀ / 4π) × (I dl sinθ / r²)</div>
+        <p>Where μ₀ = 4π × 10⁻⁷ T·m/A is the permeability of free space. It is the magnetic equivalent of Coulomb's law for electric fields.</p>
+        <p><strong>Magnetic field at the center of a circular loop of radius R:</strong></p>
+        <div class="equation-box">B = μ₀ I / (2R)</div>
+
+        <h2>3.5 Ampère’s Circuital Law</h2>
+        <p>Ampère’s law states that the line integral of the magnetic field B around any closed loop is equal to μ₀ times the total current enclosed by the loop. It is highly useful for calculating B in situations with high symmetry.</p>
+        <div class="equation-box">∮ B · dl = μ₀ I_enc</div>
+
+        <h2>3.6 Magnetic Field of a Solenoid</h2>
+        <p>A solenoid is a long coil of wire wound in a tight helix. Inside an ideal (infinitely long) solenoid, the magnetic field is uniform, strong, and parallel to the axis. Outside, the field is approximately zero.</p>
+        <div class="equation-box">B = μ₀ n I</div>
+        <p>Where n = N/L is the number of turns per unit length. The field depends only on the current and the turn density, not on the radius of the solenoid.</p>
+
+        <div class="example-box">
+          <h4><span class="material-symbols-outlined">calculate</span> Worked Example: Solenoid Field</h4>
+          <p><strong>Problem:</strong> A solenoid has 1000 turns per meter and carries a current of 2 A. Calculate the magnetic field inside the solenoid.</p>
+          <p><strong>Solution:</strong><br>
+          B = μ₀ n I = (4π × 10⁻⁷)(1000)(2) = 8π × 10⁻⁴ ≈ <strong>2.51 × 10⁻³ T</strong> (or 2.51 mT)</p>
+        </div>
+
+        <h2>3.7 Magnetic Dipoles & Torque</h2>
+        <p>A current loop acts as a magnetic dipole. The magnetic dipole moment μ is defined as:</p>
+        <div class="equation-box">μ = N I A</div>
+        <p>Where N is the number of turns, I is the current, and A is the area of the loop. The direction of μ is given by the right-hand rule (curl fingers in direction of current, thumb points in direction of μ).</p>
+        <p>When placed in a uniform magnetic field, the loop experiences a torque τ that tries to align μ with B:</p>
+        <div class="equation-box">τ = μ × B &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; τ = N I A B sinθ</div>
+        <p>This is the fundamental principle behind electric motors and galvanometers.</p>
+
+        <h2>3.8 Dielectrics & Polarization</h2>
+        <p>A dielectric is an insulating material that can be polarized by an applied electric field. When placed in an electric field, the positive and negative charges within the dielectric shift slightly, creating an internal electric field that opposes the external field.</p>
+        <p><strong>Dielectric Constant (κ):</strong> The ratio of the permittivity of the material to the permittivity of free space. κ = ε / ε₀. It is always > 1. For vacuum, κ = 1.</p>
+        <div class="equation-box">ε = κ ε₀</div>
+        <p>Inserting a dielectric between the plates of a capacitor increases its capacitance by a factor of κ: C_new = κ C_old. It also increases the maximum voltage the capacitor can withstand before breaking down (dielectric strength).</p>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Sunday Ojodomo Michael · Sunday.Michael</div>
+</footer>
+
+<script src="../js/site.js"></script>
+</body>
+          </html>
