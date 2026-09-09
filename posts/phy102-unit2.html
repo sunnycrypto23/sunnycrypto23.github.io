@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PHY 102: Unit 2 - DC Circuits & Components</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css">
+<style>
+  .lecture-text { max-width: 48rem; margin: 0 auto; font-size: 1.05rem; line-height: 1.8; color: var(--text-variant); }
+  .lecture-text h2 { font-family: 'Newsreader', serif; font-size: 1.75rem; color: var(--text); margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+  .lecture-text h3 { font-family: 'Newsreader', serif; font-size: 1.35rem; color: var(--text); margin-top: 2rem; margin-bottom: 0.75rem; }
+  .lecture-text p { margin-bottom: 1.25rem; }
+  .lecture-text ul, .lecture-text ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+  .lecture-text li { margin-bottom: 0.5rem; }
+  .equation-box { background: var(--surface-low); border-left: 4px solid var(--sage); padding: 1.25rem; border-radius: 0 0.5rem 0.5rem 0; margin: 1.5rem 0; font-family: 'Space Mono', monospace; font-size: 1.1rem; text-align: center; color: var(--text); overflow-x: auto; }
+  .example-box { background: var(--surface-low); border: 1px solid var(--border); border-radius: 0.75rem; padding: 1.5rem; margin: 2rem 0; }
+  .example-box h4 { color: var(--sage); margin-top: 0; display: flex; align-items: center; gap: 0.5rem; }
+  .key-term { font-weight: 600; color: var(--text); }
+  .must-know { background: rgba(91, 117, 99, 0.1); border-left: 4px solid var(--sage); padding: 1rem; border-radius: 0 0.5rem 0.5rem 0; margin: 1.5rem 0; font-weight: 500; }
+  table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+  th, td { border: 1px solid var(--border); padding: 0.75rem; text-align: left; }
+  th { background: var(--surface-low); font-weight: 600; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html" style="display:flex;align-items:center;gap:.75rem;">
+      <img src="../images/logo.png" alt="Sunday.Michael logo" class="brand-mark">
+      <div class="brand-text">
+        <span class="brand-name">Sunday.Michael</span>
+        <span class="brand-sub">Digital Campus &amp; Lab</span>
+      </div>
+    </a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../learn.html" class="active">Learn</a>
+      <a href="../knowledge.html">Knowledge</a>
+      <a href="../qa.html">Q&amp;A</a>
+      <a href="../games.html">Games</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="wrap">
+      <div class="breadcrumb" style="margin-bottom:1.5rem;">
+        <span><a href="../learn.html" style="color:inherit;">Learn Hub</a></span>
+        <span>/</span>
+        <span><a href="../course.html?code=phy102" style="color:inherit;">PHY 102</a></span>
+        <span>/</span>
+        <span class="current">Unit 2: Deep Dive</span>
+      </div>
+
+      <h1 class="section-title" style="font-size: 2.25rem; margin-bottom: 0.5rem;">Unit 2: DC Circuits & Components</h1>
+      <p style="color: var(--text-muted); margin-bottom: 2.5rem;">The complete, unsummarized lecture notes for PHY 102 Unit 2, extracted directly from the official Comprehensive Handbook.</p>
+
+      <div class="lecture-text">
+        
+        <h2>2.0 The Electric Circuit</h2>
+        <p>An electric circuit is a closed path through which electric charge can flow continuously. Every complete circuit must contain:</p>
+        <ul>
+          <li><strong>A power source</strong> (battery, generator) — supplies energy.</li>
+          <li><strong>Conducting path</strong> (wires) — low-resistance route for charge.</li>
+          <li><strong>A load</strong> (resistor, lamp, motor) — converts electrical energy into another form.</li>
+          <li><strong>Optionally a switch</strong> — opens or closes the path.</li>
+        </ul>
+        <p><strong>Key Quantities:</strong> Voltage V (potential difference, unit volt); Current I = Q/t (rate of flow of charge, unit ampere); Resistance R (opposition to current flow, unit ohm).</p>
+
+        <h2>2.1 Ohm’s Law</h2>
+        <p>Ohm’s law states that the current through a conductor is directly proportional to the voltage across it and inversely proportional to its resistance (provided temperature remains constant).</p>
+        <div class="equation-box">V = I R</div>
+        <p>A bigger voltage pushes more charge per second (higher current). A bigger resistance makes it harder for charge to flow, so current decreases. The product V = IR captures both effects.</p>
+
+        <h2>2.2 Resistance and Resistivity</h2>
+        <div class="equation-box">R = ρ L / A</div>
+        <p>Longer wire (larger L) → more collisions → higher R. Thicker wire (larger A) → more paths for electrons → lower R. ρ (resistivity) is a property of the material only.</p>
+        <p><strong>Factors affecting Resistance:</strong> (1) Length L — R ∝ L; (2) Cross-sectional area A — R ∝ 1/A; (3) Material (resistivity ρ); (4) Temperature — for metals, R increases with temperature.</p>
+
+        <h2>2.3 Resistor Combinations</h2>
+        <h3>Series Connection</h3>
+        <p>Resistors connected end-to-end so the same current flows through each. Total voltage = sum of individual voltages. Equivalent resistance is always larger than the largest single resistor.</p>
+        <div class="equation-box">R_total = R₁ + R₂ + R₃ + ...</div>
+        <h3>Parallel Connection</h3>
+        <p>Resistors share the same two nodes so the same voltage appears across each. Total current = sum of branch currents. Equivalent resistance is always smaller than the smallest single resistor.</p>
+        <div class="equation-box">1 / R_total = 1 / R₁ + 1 / R₂ + 1 / R₃ + ...</div>
+
+        <div class="example-box">
+          <h4><span class="material-symbols-outlined">calculate</span> Worked Example: Resistor Combination</h4>
+          <p><strong>Problem:</strong> Two 4 Ω resistors in parallel are connected in series with a 6 Ω resistor. Find the total resistance.</p>
+          <p><strong>Solution:</strong><br>
+          1. Parallel part: 1/R_p = 1/4 + 1/4 = 1/2 → R_p = 2 Ω<br>
+          2. Total: R_total = 2 + 6 = <strong>8 Ω</strong></p>
+        </div>
+
+        <h2>2.4 Electromotive Force (EMF)</h2>
+        <p>EMF (ℰ or E) is the energy supplied by a source per unit charge to drive charge around a complete circuit. It is the open-circuit voltage of the source. Despite the name, EMF is not a force — it is a potential difference measured in volts.</p>
+        <table>
+          <tr><th>Feature</th><th>EMF (ℰ)</th><th>Terminal PD (V)</th></tr>
+          <tr><td>Definition</td><td>Energy supplied per unit charge by the source</td><td>Energy used/converted per unit charge between two points</td></tr>
+          <tr><td>When measured</td><td>Open circuit (no current)</td><td>Closed circuit (current flowing)</td></tr>
+          <tr><td>Includes internal r?</td><td>Yes</td><td>No (only external drop)</td></tr>
+          <tr><td>Value relation</td><td>Always ≥ terminal PD</td><td>Always ≤ EMF</td></tr>
+        </table>
+
+        <h2>2.5 Internal Resistance</h2>
+        <p>Every real cell has internal resistance r caused by the chemicals and electrodes inside it. When current flows, some voltage is lost inside the cell.</p>
+        <div class="equation-box">V = ℰ − I r &nbsp;&nbsp;&nbsp; and &nbsp;&nbsp;&nbsp; I = ℰ / (R + r)</div>
+        <div class="must-know">★ MUST KNOW: Lost volts = I r (voltage dropped inside the cell). Terminal PD = I R (voltage across external load). ℰ = V + I r → EMF = Terminal PD + Lost volts.</div>
+
+        <div class="example-box">
+          <h4><span class="material-symbols-outlined">calculate</span> Worked Example: Internal Resistance</h4>
+          <p><strong>Problem:</strong> The open-circuit p.d. of a cell is 6 V. When 4 A is drawn the terminal voltage falls to 4 V. Find the internal resistance.</p>
+          <p><strong>Solution:</strong><br>
+          ℰ = 6 V, V = 4 V, I = 4 A<br>
+          Lost volts = ℰ − V = 2 V<br>
+          r = (ℰ − V) / I = 2 / 4 = <strong>0.5 Ω</strong></p>
+        </div>
+
+        <h2>2.6 Arrangement of Cells</h2>
+        <p><strong>Series Connection:</strong> Positive of one cell to negative of the next. Used for high voltage.<br>
+        Total EMF = ℰ₁ + ℰ₂ + ... + ℰₙ | Total internal resistance = r₁ + r₂ + ... + rₙ<br>
+        For n identical cells: ℰ_tot = nℰ, r_tot = n r</p>
+        <p><strong>Parallel Connection:</strong> All positives joined, all negatives joined. Used for higher current capacity and longer life.<br>
+        For identical cells: ℰ_eq = ℰ, r_eq = r / n</p>
+
+        <div class="example-box">
+          <h4><span class="material-symbols-outlined">calculate</span> Worked Example: Cells in Series</h4>
+          <p><strong>Problem:</strong> Five 1.5 V cells, each with r = 0.2 Ω, drive a 5 Ω load. Find the current.</p>
+          <p><strong>Solution:</strong><br>
+          ℰ_tot = 5 × 1.5 = 7.5 V<br>
+          r_tot = 5 × 0.2 = 1.0 Ω<br>
+          I = ℰ_tot / (R + r_tot) = 7.5 / (5 + 1) = <strong>1.25 A</strong></p>
+        </div>
+
+        <h2>2.7 Thermionic Emission</h2>
+        <p>Thermionic emission is the process by which free electrons are emitted from the surface of a metal when external heat energy is applied. First observed by Thomas A. Edison in 1883. The emitted electrons are called thermions.</p>
+        <p><strong>Rate of emission depends on:</strong> nature of material, surface temperature, surface area. A good emitter needs low work function, large surface area, and high melting point. Common materials: tungsten, thoriated tungsten, barium-oxide coated metals.</p>
+        <div class="equation-box">J = A T² exp(−eφ / kT) &nbsp;&nbsp;&nbsp; (Richardson–Dushman equation)</div>
+        <p><strong>Devices that use thermionic emission:</strong> vacuum tubes, cathode-ray tubes, X-ray tubes, diodes.</p>
+
+        <h2>2.8 Diodes & Rectification</h2>
+        <p>A diode is a two-terminal semiconductor device that conducts current primarily in one direction only. Low (or zero) resistance in the forward direction; high resistance in the reverse direction. Made from semiconductors (silicon or germanium). Contains an anode (+) and a cathode (−). Also called rectifiers because they convert AC to pulsating DC.</p>
+        <p><strong>Rectification</strong> is the process of converting an alternating current (AC) signal into a direct current (DC) signal using diodes.</p>
+        <table>
+          <tr><th>Feature</th><th>Half-Wave</th><th>Full-Wave</th></tr>
+          <tr><td>Number of diodes</td><td>1</td><td>2 (centre-tap) or 4 (bridge)</td></tr>
+          <tr><td>Uses both half-cycles?</td><td>No</td><td>Yes</td></tr>
+          <tr><td>Ripple</td><td>Higher</td><td>Lower</td></tr>
+          <tr><td>Efficiency</td><td>~40.6%</td><td>~81.2%</td></tr>
+          <tr><td>Form factor</td><td>1.57</td><td>1.11</td></tr>
+        </table>
+        <p><em>Ripple factor measures the amount of AC still present in the DC output. Higher ripple factor → more oscillation at the output.</em></p>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Sunday Ojodomo Michael · Sunday.Michael</div>
+</footer>
+
+<script src="../js/site.js"></script>
+</body>
+        </html>
