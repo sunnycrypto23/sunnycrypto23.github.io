@@ -48,13 +48,60 @@
       "name": "Elementary Mathematics II",
       "department": "Mathematics",
       "category": "mth",
-      "status": "Not Started",
-      "progress": 0,
+      "status": "In Progress",
+      "progress": 30,
       "description": "Limits and continuity, derivatives of algebraic and trigonometric functions, integration techniques, and vector geometry.",
       "modules": [
-        { "id": 1, "title": "Limits and Continuity", "status": "not-started", "content": "<p>A limit describes the value a function approaches as the input approaches some value. Continuity means no breaks or holes in the graph.</p>" },
-        { "id": 2, "title": "Derivatives", "status": "not-started", "content": "<p>The derivative represents the instantaneous rate of change. Basic rules include the power rule, product rule, quotient rule, and chain rule.</p>" }
+        { 
+          "id": 1, 
+          "title": "Functions of Real Variables", 
+          "status": "complete", 
+          "content": "<h3>What is a Function?</h3><p>A function f from set X (Domain) to set Y (Codomain) assigns <strong>exactly one</strong> element f(x) to every x in X.</p><p><strong>Analogy:</strong> A function is like a vending machine. You press a button (input), and the machine gives you exactly one snack (output).</p><h3>Key Concepts</h3><ul><li><strong>Domain:</strong> All possible inputs that are allowed</li><li><strong>Range:</strong> The actual outputs the function produces</li><li><strong>Even Function:</strong> f(-x) = f(x) (mirrors over Y-axis, like x²)</li><li><strong>Odd Function:</strong> f(-x) = -f(x) (180° rotation, like x³)</li><li><strong>Periodic:</strong> f(x + T) = f(x) (repeats, like sin x with period 2π)</li><li><strong>Composite:</strong> (f ∘ g)(x) = f(g(x))</li></ul><h3>The Difference Quotient</h3><p>Formula: <code>[f(x+h) - f(x)]/h</code> — represents the slope of a secant line. This is the precursor to derivatives!</p><p style='margin-top:1.5rem;'><a href='posts/mth102-part1.html' target='_blank' class='btn btn-secondary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px; vertical-align: middle; margin-right: 4px;'>menu_book</span> View Full Detailed Notes (Part 1)</a></p>" 
+        },
+        { 
+          "id": 2, 
+          "title": "Limits & Limit Theorems", 
+          "status": "current", 
+          "content": "<h3>Why Limits?</h3><p>Before calculus, we could calculate the slope of a straight line. But how do you find the slope of a <em>curve</em> at one exact point? The answer: bring two points closer and closer together and see what the slope <strong>approaches</strong>.</p><p><strong>Analogy:</strong> Imagine walking toward a wall. You get closer and closer but never touch it. That prediction of where you'll end up is the limit.</p><h3>Limit Theorems</h3><ul><li><strong>Sum Rule:</strong> lim[f(x) + g(x)] = lim f(x) + lim g(x)</li><li><strong>Product Rule:</strong> lim[f(x)·g(x)] = lim f(x) · lim g(x)</li><li><strong>Quotient Rule:</strong> lim[f(x)/g(x)] = lim f(x) / lim g(x) (if denominator ≠ 0)</li><li><strong>Squeeze Theorem:</strong> If g(x) ≤ f(x) ≤ h(x) and both bounds approach L, then f(x) → L</li></ul><h3>Indeterminate Forms</h3><p>Forms like <code>0/0</code>, <code>∞/∞</code> don't give clear answers. We resolve them using algebraic manipulation (factoring, rationalizing) or L'Hôpital's Rule (later).</p><p style='margin-top:1.5rem;'><a href='posts/mth102-part1.html' target='_blank' class='btn btn-secondary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px; vertical-align: middle; margin-right: 4px;'>menu_book</span> View Full Detailed Notes (Part 1)</a></p>" 
+        },
+        { 
+          "id": 3, 
+          "title": "Continuity", 
+          "status": "not-started", 
+          "content": "<p>Content coming soon. <a href='posts/mth102-part2.html' target='_blank'>View Part 2 notes</a> for detailed coverage.</p>" 
+        },
+        { 
+          "id": 4, 
+          "title": "Differentiation from First Principles", 
+          "status": "not-started", 
+          "content": "<p>Content coming soon. <a href='posts/mth102-part2.html' target='_blank'>View Part 2 notes</a> for detailed coverage.</p>" 
+        },
+        { 
+          "id": 5, 
+          "title": "Advanced Differentiation (Product, Quotient, Chain Rule)", 
+          "status": "not-started", 
+          "content": "<p>Content coming soon. <a href='posts/mth102-part3.html' target='_blank'>View Part 3 notes</a> for detailed coverage.</p>" 
+        },
+        { 
+          "id": 6, 
+          "title": "Applications of Derivatives (Max/Min, Optimization)", 
+          "status": "not-started", 
+          "content": "<p>Content coming soon. <a href='posts/mth102-part3.html' target='_blank'>View Part 3 notes</a> for detailed coverage.</p>" 
+        },
+        { 
+          "id": 7, 
+          "title": "Integration Techniques", 
+          "status": "not-started", 
+          "content": "<p>Content coming soon. <a href='posts/mth102-part4.html' target='_blank'>View Part 4 notes</a> for detailed coverage.</p>" 
+        },
+        { 
+          "id": 8, 
+          "title": "Fundamental Theorem of Calculus (Area under/between curves)", 
+          "status": "not-started", 
+          "content": "<p>Content coming soon. <a href='posts/mth102-part4.html' target='_blank'>View Part 4 notes</a> for detailed coverage.</p>" 
+        }
       ]
+    }
     },
     {
       "code": "GST 112",
