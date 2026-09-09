@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PHY 102: Unit 4 - Electromagnetic Induction</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css">
+<style>
+  .lecture-text { max-width: 48rem; margin: 0 auto; font-size: 1.05rem; line-height: 1.8; color: var(--text-variant); }
+  .lecture-text h2 { font-family: 'Newsreader', serif; font-size: 1.75rem; color: var(--text); margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+  .lecture-text h3 { font-family: 'Newsreader', serif; font-size: 1.35rem; color: var(--text); margin-top: 2rem; margin-bottom: 0.75rem; }
+  .lecture-text p { margin-bottom: 1.25rem; }
+  .lecture-text ul, .lecture-text ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+  .lecture-text li { margin-bottom: 0.5rem; }
+  .equation-box { background: var(--surface-low); border-left: 4px solid var(--sage); padding: 1.25rem; border-radius: 0 0.5rem 0.5rem 0; margin: 1.5rem 0; font-family: 'Space Mono', monospace; font-size: 1.1rem; text-align: center; color: var(--text); overflow-x: auto; }
+  .example-box { background: var(--surface-low); border: 1px solid var(--border); border-radius: 0.75rem; padding: 1.5rem; margin: 2rem 0; }
+  .example-box h4 { color: var(--sage); margin-top: 0; display: flex; align-items: center; gap: 0.5rem; }
+  .key-term { font-weight: 600; color: var(--text); }
+  .must-know { background: rgba(91, 117, 99, 0.1); border-left: 4px solid var(--sage); padding: 1rem; border-radius: 0 0.5rem 0.5rem 0; margin: 1.5rem 0; font-weight: 500; }
+  table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+  th, td { border: 1px solid var(--border); padding: 0.75rem; text-align: left; }
+  th { background: var(--surface-low); font-weight: 600; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html" style="display:flex;align-items:center;gap:.75rem;">
+      <img src="../images/logo.png" alt="Sunday.Michael logo" class="brand-mark">
+      <div class="brand-text">
+        <span class="brand-name">Sunday.Michael</span>
+        <span class="brand-sub">Digital Campus &amp; Lab</span>
+      </div>
+    </a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../learn.html" class="active">Learn</a>
+      <a href="../knowledge.html">Knowledge</a>
+      <a href="../qa.html">Q&amp;A</a>
+      <a href="../games.html">Games</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="wrap">
+      <div class="breadcrumb" style="margin-bottom:1.5rem;">
+        <span><a href="../learn.html" style="color:inherit;">Learn Hub</a></span>
+        <span>/</span>
+        <span><a href="../course.html?code=phy102" style="color:inherit;">PHY 102</a></span>
+        <span>/</span>
+        <span class="current">Unit 4: Deep Dive</span>
+      </div>
+
+      <h1 class="section-title" style="font-size: 2.25rem; margin-bottom: 0.5rem;">Unit 4: Electromagnetic Induction</h1>
+      <p style="color: var(--text-muted); margin-bottom: 2.5rem;">The complete, unsummarized lecture notes for PHY 102 Unit 4, extracted directly from the official Comprehensive Handbook.</p>
+
+      <div class="lecture-text">
+        
+        <h2>4.0 Electromagnetic Induction</h2>
+        <p>In 1831, Michael Faraday discovered that an electric current can be produced in a conductor by a changing magnetic field. The current produced is called an induced current, and the phenomenon is called electromagnetic induction. Induction occurs whenever there is relative motion between a conductor and a magnetic field, or whenever the magnetic flux through a circuit changes.</p>
+
+        <h2>4.1 Faraday’s Laws of Electromagnetic Induction</h2>
+        <p><strong>First Law:</strong> Whenever the magnetic flux linked with a circuit changes, an EMF is induced in the circuit.</p>
+        <p><strong>Second Law:</strong> The magnitude of the induced EMF is proportional to the rate of change of magnetic flux.</p>
+        <div class="equation-box">ℰ = −N (dΦ / dt) &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; Φ = B A cosθ</div>
+        <p>More turns (N) means more flux is linked, so larger EMF. Faster change (larger dΦ/dt) produces larger EMF. The negative sign is Lenz’s law. Magnetic flux Φ is maximum when the field is perpendicular to the coil (θ = 0°) and zero when the field is parallel to the coil (θ = 90°).</p>
+
+        <h2>4.2 Lenz’s Law</h2>
+        <p>Lenz’s law states that the induced EMF (and the resulting current) is always in such a direction as to oppose the change that produced it. The negative sign in Faraday’s law is the mathematical expression of Lenz’s law. It ensures conservation of energy — the induced current never helps the change that created it.</p>
+        <div class="must-know">★ MUST KNOW: If you push a north pole of a magnet towards a coil, the induced current creates a north pole facing the approaching magnet (repulsion). If you pull the north pole away, the induced current creates a south pole (attraction). Always oppose the motion.</div>
+
+        <div class="example-box">
+          <h4><span class="material-symbols-outlined">calculate</span> Worked Example: Induced EMF</h4>
+          <p><strong>Problem:</strong> A coil of 50 turns is removed in 0.02 s from a magnetic field. The flux changes from 3.1 × 10⁻⁴ Wb to 0.10 × 10⁻⁴ Wb. Find the average induced EMF.</p>
+          <p><strong>Solution:</strong><br>
+          ∆Φ = |0.10 × 10⁻⁴ − 3.1 × 10⁻⁴| = 3.0 × 10⁻⁴ Wb<br>
+          ℰ = N (∆Φ / ∆t) = 50 × (3.0 × 10⁻⁴) / 0.02 = <strong>0.75 V</strong></p>
+        </div>
+
+        <h2>4.3 Self-Inductance</h2>
+        <p>Self-inductance is the property of a coil by which it opposes any change in the current flowing through it by inducing an EMF in itself. A coil has a self-inductance of 1 henry (H) if a current changing at 1 A/s induces an EMF of 1 V in the coil. Larger L means the coil more strongly resists changes in current.</p>
+        <div class="equation-box">ℰ = −L (dI / dt) &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; L = N Φ / I</div>
+
+        <h2>4.4 Mutual Inductance</h2>
+        <p>Mutual inductance is the property by which a change of current in one coil (primary) induces an EMF in a nearby second coil (secondary).</p>
+        <div class="equation-box">ℰ_s = −M (dI_p / dt) &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; M = N_s Φ_s / I_p</div>
+
+        <div class="example-box">
+          <h4><span class="material-symbols-outlined">calculate</span> Worked Example: Mutual Inductance</h4>
+          <p><strong>Problem:</strong> A current of 5 A in the primary produces a flux of 0.004 Wb in each of 100 turns of the secondary. Find M.</p>
+          <p><strong>Solution:</strong><br>
+          M = (N_s × Φ_s) / I_p = (100 × 0.004) / 5 = <strong>0.08 H</strong></p>
+        </div>
+
+        <h2>4.5 Transformers</h2>
+        <p>A transformer changes the size of an alternating voltage using the principle of mutual induction. It consists of a primary coil and a secondary coil wound on a soft-iron core.</p>
+        <div class="equation-box">E_s / E_p = N_s / N_p = I_p / I_s</div>
+        <ul>
+          <li><strong>Step-up:</strong> N_s > N_p → secondary voltage higher, secondary current lower.</li>
+          <li><strong>Step-down:</strong> N_s < N_p → secondary voltage lower, secondary current higher.</li>
+        </ul>
+        <p><strong>Efficiency:</strong> η = (E_s I_s / E_p I_p) × 100%</p>
+
+        <div class="example-box">
+          <h4><span class="material-symbols-outlined">calculate</span> Worked Example: Transformer Efficiency</h4>
+          <p><strong>Problem:</strong> A transformer produces 8 V from a 240 V AC supply with 80% efficiency. If the secondary current is 15 A, find the primary current.</p>
+          <p><strong>Solution:</strong><br>
+          0.80 = (8 × 15) / (240 × I_p)<br>
+          0.80 × 240 × I_p = 120<br>
+          I_p = 120 / 192 = <strong>0.625 A</strong></p>
+        </div>
+
+        <h2>4.6 Eddy Currents</h2>
+        <p>Eddy currents are circulating currents induced in bulk conductors by a changing magnetic field. They waste energy as heat. Transformer cores are laminated (made of thin insulated sheets) to break up the eddy-current paths and reduce losses.</p>
+        <p><strong>Factors that increase induced EMF:</strong> (1) More turns N; (2) Stronger magnetic field or larger area; (3) Faster rate of change of flux; (4) Higher permeability of the core.</p>
+
+        <h2>Unit 4 — Quick Reference Formula Sheet</h2>
+        <table>
+          <tr><th>Quantity</th><th>Formula</th><th>Unit</th></tr>
+          <tr><td>Faraday’s law</td><td>ℰ = −N(dΦ/dt)</td><td>V</td></tr>
+          <tr><td>Magnetic flux</td><td>Φ = B A cosθ</td><td>Wb</td></tr>
+          <tr><td>Self-inductance (EMF)</td><td>ℰ = −L(dI/dt)</td><td>V</td></tr>
+          <tr><td>Definition of L</td><td>L = N Φ / I</td><td>H</td></tr>
+          <tr><td>Mutual inductance (EMF)</td><td>ℰ_s = −M(dI_p/dt)</td><td>V</td></tr>
+          <tr><td>Definition of M</td><td>M = N_s Φ_s / I_p</td><td>H</td></tr>
+          <tr><td>Transformer ratio</td><td>E_s/E_p = N_s/N_p = I_p/I_s</td><td>—</td></tr>
+          <tr><td>Transformer efficiency</td><td>η = (E_s I_s)/(E_p I_p) × 100%</td><td>%</td></tr>
+        </table>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Sunday Ojodomo Michael · Sunday.Michael</div>
+</footer>
+
+<script src="../js/site.js"></script>
+</body>
+</html>
