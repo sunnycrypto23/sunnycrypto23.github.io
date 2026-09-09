@@ -13,8 +13,7 @@
           "id": 1,
           "title": "Unit 1: Electrostatics & Electric Fields",
           "status": "complete",
-          "video_url": "https://www.youtube.com/embed/1nksL452sC0",
-          "content": "<h3>Forces in Nature & Electrostatics</h3><p>Covers the four fundamental forces, electric charge properties, Coulomb's Law, Electric Fields, Potential, Gauss's Law, and Capacitance.</p><p style='margin-top:1.5rem;'><a href='posts/phy102-unit1.html' class='btn btn-primary' style='text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem;'><span class='material-symbols-outlined' style='font-size:18px;'>menu_book</span> Read Full Unit 1 Notes</a></p>",
+          "content": "<h3>Forces in Nature & Electrostatics</h3><p>Covers the four fundamental forces, electric charge properties, Coulomb's Law, Electric Fields, Potential, Gauss's Law, and Capacitance.</p><div style='margin:1.5rem 0;'><a href='https://youtube.com/playlist?list=PLX2gX-ftPVXUcMGbk1A7UbNtgadPsK5BD' target='_blank' class='btn btn-primary' style='text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem;'><span class='material-symbols-outlined' style='font-size:18px;'>play_circle</span> Watch Complete Unit 1 Video Series</a></div><p style='margin-top:1rem;'><a href='posts/phy102-unit1.html' class='btn btn-secondary' style='text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem;'><span class='material-symbols-outlined' style='font-size:18px;'>menu_book</span> Read Full Unit 1 Notes</a></p>"
           "feynman_prompt": "Explain why like charges repel using the concept of electric fields.",
           "flashcards": [
             { "term": "Coulomb's Law", "definition": "F = k|q1q2|/r². Force between point charges is proportional to product of charges and inversely proportional to square of distance." },
