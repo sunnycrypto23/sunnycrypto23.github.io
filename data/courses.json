@@ -1,78 +1,6 @@
 {
   "courses": [
     {
-      "code": "CSC 104",
-      "name": "Introduction to Web Technology",
-      "department": "Computer Science",
-      "category": "csc",
-      "status": "In Progress",
-      "progress": 65,
-      "description": "HTML structure, CSS layout fundamentals, JavaScript basics, DOM manipulation, and HTTP client-server concepts.",
-      "modules": [
-        { "id": 1, "title": "HTML Structure & Semantics", "status": "complete", "content": "<p>HTML provides the skeleton of a web page. Semantic tags like <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code> give meaning to the structure, improving accessibility and SEO.</p>" },
-        { "id": 2, "title": "CSS Layout Fundamentals", "status": "complete", "content": "<p>CSS controls the visual presentation. We use Flexbox and CSS Grid to create responsive, modern layouts that adapt to different screen sizes.</p>" },
-        { "id": 3, "title": "JavaScript Basics & DOM", "status": "current", "content": "<p>JavaScript adds interactivity. The Document Object Model (DOM) allows JS to read and change the content, structure, and style of a website dynamically.</p>" },
-        { "id": 4, "title": "HTTP & Client-Server Concepts", "status": "not-started", "content": "<p>Understanding how the web works: clients (browsers) send requests to servers, and servers respond with data over the HTTP protocol.</p>" }
-      ]
-    },
-    {
-      "code": "CSC 106",
-      "name": "Hardware Fundamentals & Programming",
-      "department": "Computer Science",
-      "category": "csc",
-      "status": "In Progress",
-      "progress": 50,
-      "description": "Computer hardware architecture, logic gates, truth tables, memory hierarchies, and introductory algorithmic problem solving.",
-      "modules": [
-        { "id": 1, "title": "Computer Hardware Architecture", "status": "complete", "content": "<p>The von Neumann architecture consists of the CPU, memory, and input/output devices. The CPU fetches, decodes, and executes instructions.</p>" },
-        { "id": 2, "title": "Logic Gates & Truth Tables", "status": "current", "content": "<p>Basic building blocks of digital circuits: AND, OR, NOT, NAND, NOR, XOR. Truth tables map all possible input combinations to their output.</p>" },
-        { "id": 3, "title": "Memory Hierarchies", "status": "not-started", "content": "<p>From fastest/smallest to slowest/largest: Registers, Cache (L1/L2/L3), RAM, and Secondary Storage (SSD/HDD).</p>" }
-      ]
-    },
-    {
-      "code": "MTH 101",
-      "name": "Elementary Mathematics I",
-      "department": "Mathematics",
-      "category": "mth",
-      "status": "In Progress",
-      "progress": 70,
-      "description": "Set theory, quadratic equations, polynomials, mathematical induction, trigonometry, and coordinate geometry.",
-      "modules": [
-        { "id": 1, "title": "Set Theory & Logic", "status": "complete", "content": "<p>A set is a well-defined collection of distinct objects. Operations include union, intersection, and complement.</p>" },
-        { "id": 2, "title": "Quadratic Equations", "status": "complete", "content": "<p>Equations of the form ax² + bx + c = 0. Solved using factorization, completing the square, or the quadratic formula.</p>" },
-        { "id": 3, "title": "Trigonometry", "status": "current", "content": "<p>Study of triangles. Key identities include sin²θ + cos²θ = 1, and the sine/cosine rules for non-right-angled triangles.</p>" }
-      ]
-    },
-    {
-      "code": "MTH 102",
-      "name": "Elementary Mathematics II",
-      "department": "Mathematics",
-      "category": "mth",
-      "status": "In Progress",
-      "progress": 30,
-      "description": "Limits and continuity, derivatives of algebraic and trigonometric functions, integration techniques, and vector geometry.",
-      "modules": [
-        { 
-          "id": 1, 
-          "title": "Functions of Real Variables", 
-          "status": "complete", 
-          "content": "<h3>What is a Function?</h3><p>A function f from set X (Domain) to set Y (Codomain) assigns <strong>exactly one</strong> element f(x) to every x in X.</p><p><strong>Analogy:</strong> A function is like a vending machine. You press a button (input), and the machine gives you exactly one snack (output).</p><h3>Key Concepts</h3><ul><li><strong>Domain:</strong> All possible inputs that are allowed</li><li><strong>Range:</strong> The actual outputs the function produces</li><li><strong>Even Function:</strong> f(-x) = f(x) (mirrors over Y-axis, like x²)</li><li><strong>Odd Function:</strong> f(-x) = -f(x) (180° rotation, like x³)</li><li><strong>Periodic:</strong> f(x + T) = f(x) (repeats, like sin x with period 2π)</li><li><strong>Composite:</strong> (f ∘ g)(x) = f(g(x))</li></ul><h3>The Difference Quotient</h3><p>Formula: <code>[f(x+h) - f(x)]/h</code> — represents the slope of a secant line. This is the precursor to derivatives!</p><p style='margin-top:1.5rem;'><a href='posts/mth102-part1.html' target='_blank' class='btn btn-secondary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px; vertical-align: middle; margin-right: 4px;'>menu_book</span> View Full Detailed Notes (Part 1)</a></p>" 
-        },
-        { 
-          "id": 2, 
-          "title": "Limits & Limit Theorems", 
-          "status": "current", 
-          "content": "<h3>Why Limits?</h3><p>Before calculus, we could calculate the slope of a straight line. But how do you find the slope of a <em>curve</em> at one exact point? The answer: bring two points closer and closer together and see what the slope <strong>approaches</strong>.</p><p><strong>Analogy:</strong> Imagine walking toward a wall. You get closer and closer but never touch it. That prediction of where you'll end up is the limit.</p><h3>Limit Theorems</h3><ul><li><strong>Sum Rule:</strong> lim[f(x) + g(x)] = lim f(x) + lim g(x)</li><li><strong>Product Rule:</strong> lim[f(x)·g(x)] = lim f(x) · lim g(x)</li><li><strong>Quotient Rule:</strong> lim[f(x)/g(x)] = lim f(x) / lim g(x) (if denominator ≠ 0)</li><li><strong>Squeeze Theorem:</strong> If g(x) ≤ f(x) ≤ h(x) and both bounds approach L, then f(x) → L</li></ul><h3>Indeterminate Forms</h3><p>Forms like <code>0/0</code>, <code>∞/∞</code> don't give clear answers. We resolve them using algebraic manipulation (factoring, rationalizing) or L'Hôpital's Rule (later).</p><p style='margin-top:1.5rem;'><a href='posts/mth102-part1.html' target='_blank' class='btn btn-secondary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px; vertical-align: middle; margin-right: 4px;'>menu_book</span> View Full Detailed Notes (Part 1)</a></p>" 
-        },
-        { "id": 3, "title": "Continuity", "status": "not-started", "content": "<p>Content coming soon. <a href='posts/mth102-part2.html' target='_blank'>View Part 2 notes</a> for detailed coverage.</p>" },
-        { "id": 4, "title": "Differentiation from First Principles", "status": "not-started", "content": "<p>Content coming soon. <a href='posts/mth102-part2.html' target='_blank'>View Part 2 notes</a> for detailed coverage.</p>" },
-        { "id": 5, "title": "Advanced Differentiation (Product, Quotient, Chain Rule)", "status": "not-started", "content": "<p>Content coming soon. <a href='posts/mth102-part3.html' target='_blank'>View Part 3 notes</a> for detailed coverage.</p>" },
-        { "id": 6, "title": "Applications of Derivatives (Max/Min, Optimization)", "status": "not-started", "content": "<p>Content coming soon. <a href='posts/mth102-part3.html' target='_blank'>View Part 3 notes</a> for detailed coverage.</p>" },
-        { "id": 7, "title": "Integration Techniques", "status": "not-started", "content": "<p>Content coming soon. <a href='posts/mth102-part4.html' target='_blank'>View Part 4 notes</a> for detailed coverage.</p>" },
-        { "id": 8, "title": "Fundamental Theorem of Calculus", "status": "not-started", "content": "<p>Content coming soon. <a href='posts/mth102-part4.html' target='_blank'>View Part 4 notes</a> for detailed coverage.</p>" }
-      ]
-    },
-    {
       "code": "GST 112",
       "name": "Nigerian People and Culture",
       "department": "General Studies",
@@ -93,6 +21,61 @@
           "status": "complete", 
           "content": "<p>Test your knowledge with 20 practice questions based on the GST 112 summary.</p><p style='margin-top: 1.5rem;'><a href='qa.html' class='btn btn-secondary' style='text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem;'><span class='material-symbols-outlined' style='font-size:18px;'>quiz</span> Go to Q&A Page</a></p>" 
         }
+      ]
+    },
+    {
+      "code": "MTH 102",
+      "name": "Elementary Mathematics II",
+      "department": "Mathematics",
+      "category": "mth",
+      "status": "In Progress",
+      "progress": 30,
+      "description": "Limits and continuity, derivatives of algebraic and trigonometric functions, integration techniques, and vector geometry.",
+      "modules": [
+        { "id": 1, "title": "Functions of Real Variables", "status": "complete", "content": "<h3>What is a Function?</h3><p>A function f from set X (Domain) to set Y (Codomain) assigns <strong>exactly one</strong> element f(x) to every x in X.</p><p style='margin-top:1.5rem;'><a href='posts/mth102-part1.html' target='_blank' class='btn btn-secondary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px;'>menu_book</span> View Full Detailed Notes (Part 1)</a></p>" },
+        { "id": 2, "title": "Limits & Limit Theorems", "status": "current", "content": "<h3>Why Limits?</h3><p>Before calculus, we could calculate the slope of a straight line. But how do you find the slope of a curve at one exact point? The answer: bring two points closer and closer together and see what the slope approaches.</p><p style='margin-top:1.5rem;'><a href='posts/mth102-part1.html' target='_blank' class='btn btn-secondary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px;'>menu_book</span> View Full Detailed Notes (Part 1)</a></p>" },
+        { "id": 3, "title": "Continuity", "status": "not-started", "content": "<p>Content coming soon. <a href='posts/mth102-part2.html' target='_blank'>View Part 2 notes</a> for detailed coverage.</p>" },
+        { "id": 4, "title": "Differentiation from First Principles", "status": "not-started", "content": "<p>Content coming soon. <a href='posts/mth102-part2.html' target='_blank'>View Part 2 notes</a> for detailed coverage.</p>" }
+      ]
+    },
+    {
+      "code": "CSC 104",
+      "name": "Introduction to Web Technology",
+      "department": "Computer Science",
+      "category": "csc",
+      "status": "In Progress",
+      "progress": 65,
+      "description": "HTML structure, CSS layout fundamentals, JavaScript basics, DOM manipulation, and HTTP client-server concepts.",
+      "modules": [
+        { "id": 1, "title": "HTML Structure & Semantics", "status": "complete", "content": "<p>HTML provides the skeleton of a web page. Semantic tags give meaning to the structure, improving accessibility and SEO.</p>" },
+        { "id": 2, "title": "CSS Layout Fundamentals", "status": "complete", "content": "<p>CSS controls the visual presentation. We use Flexbox and CSS Grid to create responsive, modern layouts.</p>" },
+        { "id": 3, "title": "JavaScript Basics & DOM", "status": "current", "content": "<p>JavaScript adds interactivity. The Document Object Model (DOM) allows JS to read and change the content dynamically.</p>" }
+      ]
+    },
+    {
+      "code": "CSC 106",
+      "name": "Hardware Fundamentals & Programming",
+      "department": "Computer Science",
+      "category": "csc",
+      "status": "In Progress",
+      "progress": 50,
+      "description": "Computer hardware architecture, logic gates, truth tables, memory hierarchies, and introductory algorithmic problem solving.",
+      "modules": [
+        { "id": 1, "title": "Computer Hardware Architecture", "status": "complete", "content": "<p>The von Neumann architecture consists of the CPU, memory, and input/output devices.</p>" },
+        { "id": 2, "title": "Logic Gates & Truth Tables", "status": "current", "content": "<p>Basic building blocks of digital circuits: AND, OR, NOT, NAND, NOR, XOR.</p>" }
+      ]
+    },
+    {
+      "code": "MTH 101",
+      "name": "Elementary Mathematics I",
+      "department": "Mathematics",
+      "category": "mth",
+      "status": "In Progress",
+      "progress": 70,
+      "description": "Set theory, quadratic equations, polynomials, mathematical induction, trigonometry, and coordinate geometry.",
+      "modules": [
+        { "id": 1, "title": "Set Theory & Logic", "status": "complete", "content": "<p>A set is a well-defined collection of distinct objects. Operations include union, intersection, and complement.</p>" },
+        { "id": 2, "title": "Quadratic Equations", "status": "complete", "content": "<p>Equations of the form ax² + bx + c = 0. Solved using factorization or the quadratic formula.</p>" }
       ]
     }
   ]
