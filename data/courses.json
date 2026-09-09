@@ -94,6 +94,26 @@
               "explanation": "The induced current opposes the change to conserve energy. If it aided the change, it would create infinite energy."
             }
           ]
+        },
+        {
+          "id": 5,
+          "title": "Unit 5: Maxwell's Equations & AC Circuits",
+          "status": "not-started",
+          "video_url": "https://youtu.be/Iz5ROfDplqs?si=yof3MJobdzgivt1A",
+          "content": "<h3>EM Waves & RLC Circuits</h3><p>Covers Maxwell's equations, electromagnetic waves, AC circuits, reactance, impedance, and resonance.</p><div style='margin:1.5rem 0;'><a href='https://youtu.be/Iz5ROfDplqs?si=yof3MJobdzgivt1A' target='_blank' class='btn btn-primary' style='text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem;'><span class='material-symbols-outlined' style='font-size:18px;'>play_circle</span> Watch Unit 5 Video</a></div><p style='margin-top:1.5rem;'><a href='posts/phy102-unit5.html' class='btn btn-secondary' style='text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem;'><span class='material-symbols-outlined' style='font-size:18px;'>menu_book</span> Read Full Unit 5 Notes</a></p>",
+          "feynman_prompt": "Explain why light is considered an electromagnetic wave.",
+          "flashcards": [
+            { "term": "Maxwell's Equations", "definition": "Four equations describing all classical electromagnetic phenomena. Predicts c = 1/√(µ₀ε₀)." },
+            { "term": "Resonance Frequency", "definition": "f₀ = 1/(2π√(LC)). Occurs when X_L = X_C, making impedance Z = R (minimum)." }
+          ],
+          "micro_quiz": [
+            {
+              "question": "At resonance in a series RLC circuit, the impedance is:",
+              "options": ["Maximum", "Minimum (equals R)", "Zero", "Infinite"],
+              "correct": 1,
+              "explanation": "At resonance, X_L = X_C, so Z = √(R² + 0) = R (minimum impedance)."
+            }
+          ]
         }
       ]
     },
@@ -199,4 +219,4 @@
       ]
     }
   ]
-}
+    }
