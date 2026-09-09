@@ -13,7 +13,7 @@
           "id": 1,
           "title": "Introduction to Electromagnetism",
           "status": "complete",
-          "video_url": "https://www.youtube.com/embed/06Un1d81q1A",
+          "video_url": "https://www.youtube.com/embed/kQ1q08t407E",
           "content": "<h3>The Four Fundamental Forces</h3><p>Every force in nature belongs to one of these four categories: Gravitational, Electromagnetic, Strong Nuclear, and Weak Nuclear.</p><p style='margin-top:1.5rem;'><a href='posts/phy102-module1.html' class='btn btn-primary' style='text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem;'><span class='material-symbols-outlined' style='font-size:18px;'>menu_book</span> Read Full In-Depth Lecture Notes</a></p>",
           "feynman_prompt": "Explain the difference between the four fundamental forces to a 10-year-old using a simple analogy.",
           "flashcards": [
