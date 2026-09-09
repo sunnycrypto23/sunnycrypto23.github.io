@@ -74,6 +74,26 @@
               "explanation": "Tesla (T) is the SI unit. 1 Tesla = 10,000 Gauss."
             }
           ]
+        },
+        {
+          "id": 4,
+          "title": "Unit 4: Electromagnetic Induction",
+          "status": "not-started",
+          "video_url": "https://youtu.be/nGQbA2jwkWI?si=g94D0KSjlabYFj4z",
+          "content": "<h3>Faraday's Law & Transformers</h3><p>Covers Faraday & Lenz's laws, self & mutual inductance, transformers, and eddy currents.</p><div style='margin:1.5rem 0;'><a href='https://youtu.be/nGQbA2jwkWI?si=g94D0KSjlabYFj4z' target='_blank' class='btn btn-primary' style='text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem;'><span class='material-symbols-outlined' style='font-size:18px;'>play_circle</span> Watch Unit 4 Video</a></div><p style='margin-top:1.5rem;'><a href='posts/phy102-unit4.html' class='btn btn-secondary' style='text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem;'><span class='material-symbols-outlined' style='font-size:18px;'>menu_book</span> Read Full Unit 4 Notes</a></p>",
+          "feynman_prompt": "Explain Lenz's Law using the concept of conservation of energy.",
+          "flashcards": [
+            { "term": "Faraday's Law", "definition": "ℰ = -N(dΦ/dt). Induced EMF is proportional to the rate of change of magnetic flux." },
+            { "term": "Transformer Ratio", "definition": "E_s/E_p = N_s/N_p = I_p/I_s. Relates voltage, turns, and current in a transformer." }
+          ],
+          "micro_quiz": [
+            {
+              "question": "Lenz's law is a consequence of conservation of:",
+              "options": ["Charge", "Momentum", "Energy", "Mass"],
+              "correct": 2,
+              "explanation": "The induced current opposes the change to conserve energy. If it aided the change, it would create infinite energy."
+            }
+          ]
         }
       ]
     },
@@ -175,8 +195,4 @@
       "progress": 20,
       "description": "Stoic philosophy, personal notes, and reflections on the classic public-domain text.",
       "modules": [
-        { "id": 1, "title": "Full Notes & Reflections", "status": "current", "content": "<p>My personal study notes and key takeaways from Marcus Aurelius' Meditations.</p><p style='margin-top:1rem;'><a href='posts/meditations.html' target='_blank' class='btn btn-secondary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px; vertical-align: middle; margin-right: 4px;'>menu_book</span> View Full Notes</a></p>" }
-      ]
-    }
-  ]
-}
+        { "id": 1, "title": "Full Notes & Reflections", "status": "current", "content": "<p>My personal study notes and key takeaways from Marcus Aurelius' Meditations.</p><p style='margin-top:1rem;'><a href='posts/meditations.html' target='_blank' class='btn btn-secondary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px; vertical-align: middle; margin-right: 4px;'>menu_book</span> View Full No
