@@ -39,7 +39,7 @@
           "id": 2,
           "title": "Unit 2: DC Circuits & Components",
           "status": "not-started",
-          "video_url": "https://www.youtube.com/embed/YuMOE_VnZw4",
+          "video_url": "https://www.youtube.com/embed/0O20t26q0eQ",
           "content": "<h3>Ohm's Law, Resistors & Diodes</h3><p>Covers DC circuits, Ohm's Law, resistor combinations, EMF, internal resistance, thermionic emission, and rectification.</p><p style='margin-top:1.5rem;'><a href='posts/phy102-unit2.html' class='btn btn-primary' style='text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem;'><span class='material-symbols-outlined' style='font-size:18px;'>menu_book</span> Read Full Unit 2 Notes</a></p>",
           "feynman_prompt": "Explain the difference between EMF and terminal voltage using a water pump analogy.",
           "flashcards": [
@@ -52,6 +52,26 @@
               "options": ["40.6%", "81.2%", "100%", "50%"],
               "correct": 1,
               "explanation": "Full-wave rectifiers utilize both halves of the AC cycle, yielding ~81.2% efficiency."
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Unit 3: Magnetism & Magnetic Fields",
+          "status": "not-started",
+          "video_url": "https://youtu.be/kqd_YWA_BpA?si=p_iAqlKemBNukeG-",
+          "content": "<h3>Lorentz Force, Biot-Savart & Ampère</h3><p>Covers magnetic fields, Lorentz force, Biot-Savart law, Ampère's law, magnetic dipoles, and dielectrics.</p><div style='margin:1.5rem 0;'><a href='https://youtu.be/kqd_YWA_BpA?si=p_iAqlKemBNukeG-' target='_blank' class='btn btn-primary' style='text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem;'><span class='material-symbols-outlined' style='font-size:18px;'>play_circle</span> Watch Unit 3 Video</a></div><div style='margin:1.5rem 0;'><a href='https://youtube.com/playlist?list=PLX2gX-ftPVXUcMGbk1A7UbNtgadPsK5BD' target='_blank' class='btn btn-secondary' style='text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem;'><span class='material-symbols-outlined' style='font-size:18px;'>playlist_play</span> Watch Complete Unit 3 Video Series</a></div><p style='margin-top:1rem;'><a href='posts/phy102-unit3.html' class='btn btn-secondary' style='text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem;'><span class='material-symbols-outlined' style='font-size:18px;'>menu_book</span> Read Full Unit 3 Notes</a></p>",
+          "feynman_prompt": "Explain why a magnetic field does no work on a moving charge.",
+          "flashcards": [
+            { "term": "Lorentz Force", "definition": "F = q(E + v × B). Total force on a charge in E and B fields." },
+            { "term": "Biot-Savart Law", "definition": "Calculates magnetic field produced by a small current element." }
+          ],
+          "micro_quiz": [
+            {
+              "question": "What is the SI unit of magnetic field (B)?",
+              "options": ["Weber", "Tesla", "Henry", "Gauss"],
+              "correct": 1,
+              "explanation": "Tesla (T) is the SI unit. 1 Tesla = 10,000 Gauss."
             }
           ]
         }
