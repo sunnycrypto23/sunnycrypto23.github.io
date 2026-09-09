@@ -567,3 +567,11 @@ footer{border-top:1px solid var(--border);padding:2rem 0;text-align:center;color
   from { opacity: 0; transform: translateY(5px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* ============ PLAYGROUND TWEAKS ============ */
+.card-meta .notes-link .material-symbols-outlined {
+  transition: transform 0.15s ease;
+}
+.card-meta .notes-link:hover .material-symbols-outlined {
+  transform: translateX(2px);
+}
