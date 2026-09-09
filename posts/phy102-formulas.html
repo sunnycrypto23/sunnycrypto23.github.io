@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PHY 102: Master Formula Sheet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css">
+<style>
+  .lecture-text { max-width: 48rem; margin: 0 auto; font-size: 1.05rem; line-height: 1.8; color: var(--text-variant); }
+  .lecture-text h2 { font-family: 'Newsreader', serif; font-size: 1.75rem; color: var(--text); margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+  .lecture-text p { margin-bottom: 1.25rem; }
+  table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid var(--border); padding: 0.75rem; text-align: left; }
+  th { background: var(--surface-low); font-weight: 600; color: var(--text); }
+  td { font-family: 'Space Mono', monospace; color: var(--text-variant); }
+  .must-know { background: rgba(91, 117, 99, 0.1); border-left: 4px solid var(--sage); padding: 1rem; border-radius: 0 0.5rem 0.5rem 0; margin: 1.5rem 0; font-weight: 500; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html" style="display:flex;align-items:center;gap:.75rem;">
+      <img src="../images/logo.png" alt="Sunday.Michael logo" class="brand-mark">
+      <div class="brand-text">
+        <span class="brand-name">Sunday.Michael</span>
+        <span class="brand-sub">Digital Campus &amp; Lab</span>
+      </div>
+    </a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../learn.html" class="active">Learn</a>
+      <a href="../knowledge.html">Knowledge</a>
+      <a href="../qa.html">Q&amp;A</a>
+      <a href="../games.html">Games</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="wrap">
+      <div class="breadcrumb" style="margin-bottom:1.5rem;">
+        <span><a href="../learn.html" style="color:inherit;">Learn Hub</a></span>
+        <span>/</span>
+        <span><a href="../course.html?code=phy102" style="color:inherit;">PHY 102</a></span>
+        <span>/</span>
+        <span class="current">Master Formula Sheet</span>
+      </div>
+
+      <h1 class="section-title" style="font-size: 2.25rem; margin-bottom: 0.5rem;">Master Quick Reference: All Units</h1>
+      <p style="color: var(--text-muted); margin-bottom: 2.5rem;">A consolidated, unsummarized sheet of all key formulas from Units 1–5 for quick revision before exams.</p>
+
+      <div class="lecture-text">
+        <div class="must-know">★ EXAM TIP: Memorize the units for each quantity. Dimensional analysis can often help you eliminate wrong answers in CBT questions!</div>
+
+        <h2>Unit 1: Electrostatics & Electric Fields</h2>
+        <table>
+          <tr><th>Quantity</th><th>Formula</th><th>Unit</th></tr>
+          <tr><td>Coulomb’s Law</td><td>F = k\|q₁q₂\| / r²</td><td>N</td></tr>
+          <tr><td>Electric Field (point)</td><td>E = kq / r² = q / (4πε₀r²)</td><td>N/C or V/m</td></tr>
+          <tr><td>Electric Potential</td><td>V = kQ / r</td><td>V</td></tr>
+          <tr><td>Work / Potential Energy</td><td>W = q∆V</td><td>J</td></tr>
+          <tr><td>Gauss’s Law</td><td>∯ E · dA = Q_enc / ε₀</td><td>N·m²/C</td></tr>
+          <tr><td>Electric Flux</td><td>Φ = EA cosθ</td><td>N·m²/C</td></tr>
+          <tr><td>Capacitance (General)</td><td>C = Q / \|∆V\|</td><td>F</td></tr>
+          <tr><td>Parallel-plate C</td><td>C = ε₀A / d</td><td>F</td></tr>
+          <tr><td>Cylindrical C</td><td>C = 2πε₀L / ln(b/a)</td><td>F</td></tr>
+          <tr><td>Spherical C</td><td>C = 4πε₀ab / (b − a)</td><td>F</td></tr>
+          <tr><td>Dipole moment</td><td>p = qd</td><td>C·m</td></tr>
+          <tr><td>Energy in capacitor</td><td>U = ½CV² = ½QV = ½Q²/C</td><td>J</td></tr>
+          <tr><td>Energy density</td><td>u_E = ½ε₀E²</td><td>J/m³</td></tr>
+        </table>
+
+        <h2>Unit 2: DC Circuits & Components</h2>
+        <table>
+          <tr><th>Quantity</th><th>Formula</th><th>Unit</th></tr>
+          <tr><td>Ohm’s Law</td><td>V = IR</td><td>V, A, Ω</td></tr>
+          <tr><td>Resistance</td><td>R = ρL / A</td><td>Ω</td></tr>
+          <tr><td>Series resistors</td><td>R_T = R₁ + R₂ + ...</td><td>Ω</td></tr>
+          <tr><td>Parallel resistors</td><td>1/R_T = 1/R₁ + 1/R₂ + ...</td><td>Ω</td></tr>
+          <tr><td>EMF</td><td>ℰ = W / Q</td><td>V</td></tr>
+          <tr><td>Terminal voltage</td><td>V = ℰ − Ir</td><td>V</td></tr>
+          <tr><td>Circuit current</td><td>I = ℰ / (R + r)</td><td>A</td></tr>
+          <tr><td>Series cells (n)</td><td>ℰ_tot = nℰ, r_tot = nr</td><td>—</td></tr>
+          <tr><td>Parallel cells (n)</td><td>ℰ_eq = ℰ, r_eq = r/n</td><td>—</td></tr>
+        </table>
+
+        <h2>Unit 3: Magnetism & Magnetic Fields</h2>
+        <table>
+          <tr><th>Quantity</th><th>Formula</th><th>Unit</th></tr>
+          <tr><td>Lorentz force</td><td>F = q(E + v × B)</td><td>N</td></tr>
+          <tr><td>Magnetic force only</td><td>F = qvB sinθ</td><td>N</td></tr>
+          <tr><td>Biot-Savart (straight wire)</td><td>B = µ₀I / (2πR)</td><td>T</td></tr>
+          <tr><td>Centre of coil (N turns)</td><td>B = µ₀NI / (2R)</td><td>T</td></tr>
+          <tr><td>Inside long solenoid</td><td>B = µ₀nI (n = turns/m)</td><td>T</td></tr>
+          <tr><td>Ampère’s law</td><td>∮ B · dl = µ₀I_enc</td><td>T·m</td></tr>
+          <tr><td>Magnetic moment</td><td>m = IA</td><td>A·m²</td></tr>
+          <tr><td>Torque on dipole</td><td>τ = mB sinθ</td><td>N·m</td></tr>
+          <tr><td>Energy of dipole</td><td>U = −mB cosθ</td><td>J</td></tr>
+          <tr><td>Capacitance with dielectric</td><td>C = κε₀A / d</td><td>F</td></tr>
+          <tr><td>Energy in inductor</td><td>U_B = ½LI²</td><td>J</td></tr>
+        </table>
+
+        <h2>Unit 4: Electromagnetic Induction</h2>
+        <table>
+          <tr><th>Quantity</th><th>Formula</th><th>Unit</th></tr>
+          <tr><td>Faraday’s law</td><td>ℰ = −N(dΦ/dt)</td><td>V</td></tr>
+          <tr><td>Magnetic flux</td><td>Φ = BA cosθ</td><td>Wb</td></tr>
+          <tr><td>Self-inductance (EMF)</td><td>ℰ = −L(dI/dt)</td><td>V</td></tr>
+          <tr><td>Definition of L</td><td>L = NΦ / I</td><td>H</td></tr>
+          <tr><td>Mutual inductance (EMF)</td><td>ℰ_s = −M(dI_p/dt)</td><td>V</td></tr>
+          <tr><td>Definition of M</td><td>M = N_sΦ_s / I_p</td><td>H</td></tr>
+          <tr><td>Transformer ratio</td><td>E_s/E_p = N_s/N_p = I_p/I_s</td><td>—</td></tr>
+          <tr><td>Transformer efficiency</td><td>η = (E_s I_s) / (E_p I_p) × 100%</td><td>%</td></tr>
+        </table>
+
+        <h2>Unit 5: Maxwell’s Equations & AC Circuits</h2>
+        <table>
+          <tr><th>Quantity</th><th>Formula</th><th>Unit</th></tr>
+          <tr><td>Speed of light</td><td>c = 1 / √(µ₀ε₀) ≈ 3 × 10⁸ m/s</td><td>m/s</td></tr>
+          <tr><td>LC frequency</td><td>ω = 1 / √(LC)</td><td>rad/s</td></tr>
+          <tr><td>RMS current</td><td>I_rms = I_m / √2 ≈ 0.707 I_m</td><td>A</td></tr>
+          <tr><td>Capacitive reactance</td><td>X_C = 1 / (2πfC)</td><td>Ω</td></tr>
+          <tr><td>Inductive reactance</td><td>X_L = 2πfL</td><td>Ω</td></tr>
+          <tr><td>RLC Impedance</td><td>Z = √[R² + (X_L − X_C)²]</td><td>Ω</td></tr>
+          <tr><td>Resonance frequency</td><td>f₀ = 1 / (2π√(LC))</td><td>Hz</td></tr>
+          <tr><td>Average power</td><td>P = V_rms I_rms cosφ</td><td>W</td></tr>
+          <tr><td>Power factor</td><td>cosφ = R / Z</td><td>—</td></tr>
+        </table>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Sunday Ojodomo Michael · Sunday.Michael</div>
+</footer>
+
+<script src="../js/site.js"></script>
+</body>
+</html>
