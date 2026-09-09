@@ -18,7 +18,7 @@
 
 <header>
   <div class="wrap header-inner">
-    <a class="brand" href="#" style="display:flex;align-items:center;gap:.75rem;">
+    <a class="brand" href="index.html" style="display:flex;align-items:center;gap:.75rem;">
       <img src="images/logo.png" alt="Sunday.Michael logo" class="brand-mark">
       <div class="brand-text">
         <span class="brand-name">Sunday.Michael</span>
@@ -51,16 +51,17 @@
     </div>
   </div>
 </header>
+
 <nav class="mobile-nav" id="mobile-nav">
-      <a href="index.html" class="active">Home</a>
-      <a href="learn.html">Learn</a>
-      <a href="blog.html">Lectures</a>
-      <a href="studies.html">Studies</a>
-      <a href="qa.html">Q&amp;A</a>
-      <a href="games.html">Games</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <a href="index.html" class="active">Home</a>
+  <a href="learn.html">Learn</a>
+  <a href="blog.html">Lectures</a>
+  <a href="studies.html">Studies</a>
+  <a href="qa.html">Q&amp;A</a>
+  <a href="games.html">Games</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
 
 <main>
   <section class="hero-section">
@@ -74,7 +75,6 @@
         </div>
         <div class="status-pill"><span class="dot"></span>Semester 1 • In Progress</div>
       </div>
-
       <div class="hero-grid">
         <div>
           <div class="eyebrow">
@@ -84,17 +84,16 @@
           <h1 class="hero-headline">Learn. Build. <em>Document.</em></h1>
           <p class="hero-desc">Academic workspace tracking my first-year computer science coursework, web development projects, practice notes, and learning journey at Federal University Lokoja.</p>
           <div class="hero-ctas">
-            <a class="btn btn-primary" href="#course-matrix">
+            <a class="btn btn-primary" href="course.html?code=csc104">
               <span class="material-symbols-outlined" style="font-size:18px;">play_circle</span>
-              Resume Study: CSC104
+              Resume Study: CSC 104
             </a>
-            <a class="btn btn-secondary" href="#">
-              View Projects (3)
+            <a class="btn btn-secondary" href="games.html">
+              View Projects & Games
               <span class="material-symbols-outlined" style="font-size:18px;">arrow_forward</span>
             </a>
           </div>
         </div>
-
         <div class="progress-tile">
           <div class="row">
             <span class="tile-label">Semester Progress</span>
@@ -128,99 +127,16 @@
           <h2 class="section-title">University Course Matrix</h2>
         </div>
         <div class="filters">
-          <button class="filter-btn active" data-filter="all">All (4)</button>
+          <button class="filter-btn active" data-filter="all">All</button>
           <button class="filter-btn" data-filter="csc">Computer Science</button>
           <button class="filter-btn" data-filter="mth">Mathematics</button>
+          <button class="filter-btn" data-filter="gst">General Studies</button>
         </div>
       </div>
-
-      <div class="course-grid" id="course-grid">
-
-        <div class="course-card" data-category="csc">
-          <div class="card-top">
-            <div class="card-badges">
-              <span class="subject-badge csc">CSC 104</span>
-              <span class="status-label">In Progress</span>
-            </div>
-            <h3 class="course-title">Introduction to Web Technology</h3>
-            <p class="course-desc">HTML structure, CSS layout fundamentals, JavaScript basics, DOM manipulation, and HTTP client-server concepts.</p>
-          </div>
-          <div class="card-bottom">
-            <div>
-              <div class="card-progress-row"><span>Progress</span><span class="pct">65%</span></div>
-              <div class="progress-bar-track"><div class="progress-bar-fill" style="width:65%;"></div></div>
-            </div>
-            <div class="card-meta">
-              <span class="task"><span class="material-symbols-outlined" style="font-size:16px;color:var(--sage);">assignment</span>Lab 03: Semantic Layouts</span>
-              <a class="notes-link" href="#">Notes <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="course-card" data-category="csc">
-          <div class="card-top">
-            <div class="card-badges">
-              <span class="subject-badge csc">CSC 106</span>
-              <span class="status-label">In Progress</span>
-            </div>
-            <h3 class="course-title">Hardware Fundamentals &amp; Programming</h3>
-            <p class="course-desc">Computer hardware architecture, logic gates, truth tables, memory hierarchies, and introductory algorithmic problem solving.</p>
-          </div>
-          <div class="card-bottom">
-            <div>
-              <div class="card-progress-row"><span>Progress</span><span class="pct">50%</span></div>
-              <div class="progress-bar-track"><div class="progress-bar-fill" style="width:50%;"></div></div>
-            </div>
-            <div class="card-meta">
-              <span class="task"><span class="material-symbols-outlined" style="font-size:16px;color:var(--sage);">memory</span>Boolean Logic Assignment</span>
-              <a class="notes-link" href="#">Notes <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="course-card" data-category="mth">
-          <div class="card-top">
-            <div class="card-badges">
-              <span class="subject-badge mth">MTH 101</span>
-              <span class="status-label">In Progress</span>
-            </div>
-            <h3 class="course-title">Elementary Mathematics I</h3>
-            <p class="course-desc">Set theory, quadratic equations, polynomials, mathematical induction, trigonometry, and coordinate geometry.</p>
-          </div>
-          <div class="card-bottom">
-            <div>
-              <div class="card-progress-row"><span>Progress</span><span class="pct">70%</span></div>
-              <div class="progress-bar-track"><div class="progress-bar-fill" style="width:70%;"></div></div>
-            </div>
-            <div class="card-meta">
-              <span class="task"><span class="material-symbols-outlined" style="font-size:16px;color:var(--badge-mth-text);">functions</span>Trig Problem Set 02</span>
-              <a class="notes-link" href="#">Notes <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="course-card" data-category="mth">
-          <div class="card-top">
-            <div class="card-badges">
-              <span class="subject-badge mth">MTH 102</span>
-              <span class="status-label not-started">Not Started</span>
-            </div>
-            <h3 class="course-title">Elementary Mathematics II</h3>
-            <p class="course-desc">Limits and continuity, derivatives of algebraic and trigonometric functions, integration techniques, and vector geometry.</p>
-          </div>
-          <div class="card-bottom">
-            <div>
-              <div class="card-progress-row"><span>Progress</span><span class="pct zero">0%</span></div>
-              <div class="progress-bar-track"><div class="progress-bar-fill" style="width:0%;background:var(--state-neutral-text);"></div></div>
-            </div>
-            <div class="card-meta">
-              <span class="task"><span class="material-symbols-outlined" style="font-size:16px;color:var(--text-muted);">schedule</span>Not started yet</span>
-              <a class="notes-link" href="#">Notes <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a>
-            </div>
-          </div>
-        </div>
-
-      </div>
+      
+      <!-- Dynamically loaded by js/home.js -->
+      <div class="course-grid" id="home-course-grid"></div>
+      
     </div>
   </section>
 </main>
@@ -230,7 +146,7 @@
 </footer>
 
 <script src="js/site.js"></script>
+<script src="js/home.js"></script>
 
 </body>
-                </html>
-            
+            </html>
