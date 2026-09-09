@@ -1,69 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact — Sunday Ojodomo Michael</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/theme.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Sunday.Michael</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-  <header class="site-head">
-    <div class="wrap">
-      <div class="brand-row">
-        <a class="brand" href="index.html">Sunday<span class="dot">.</span>Michael</a>
-        <input  type="checkbox" id="nav-toggle"  class="menu-toggle">
-        <label  for="nav-toggle" class="menu-icon">&#9776;</label>
-        <nav class="site-nav">
-          <a href="index.html">home</a>
-          <a href="blog.html">lectures</a>
-          <a href="studies.html">studies</a>
-          <a href="qa.html">q&a</a>
-          <a href="about.html">about</a>
-          <a href="contact.html" class="active">contact</a>
-          <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark/light mode">🌙</button>
-        </nav>
+
+<div id="loader">
+  <img src="images/logo.png" alt="Sunday.Michael" class="loader-logo">
+</div>
+
+<header>
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" style="display:flex;align-items:center;gap:.75rem;">
+      <img src="images/logo.png" alt="Sunday.Michael logo" class="brand-mark">
+      <div class="brand-text">
+        <span class="brand-name">Sunday.Michael</span>
+        <span class="brand-sub">Digital Campus &amp; Lab</span>
       </div>
-      <p class="tagline">get in touch</p>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="learn.html">Learn</a>
+      <a href="knowledge.html">Knowledge</a>
+      <a href="blog.html">Lectures</a>
+      <a href="studies.html">Studies</a>
+      <a href="qa.html">Q&amp;A</a>
+      <a href="games.html">Games</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="theme-toggle" type="button" title="Toggle theme">
+        <span class="material-symbols-outlined" id="theme-icon">dark_mode</span>
+      </button>
+      <button class="menu-toggle-btn" id="menu-toggle" type="button" title="Menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
     </div>
-  </header>
+  </div>
+</header>
 
-  <main class="wrap">
-    <section class="post-head">
-      <h1>Contact</h1>
-      <p class="lede">You can reach me through any of the following channels.</p>
-    </section>
-    <div class="post-body">
-      <p>
-        📧 Email: <a href="mailto:solexmic061@gmail.com">solexmic061@gmail.com</a><br>
-        🐦 Twitter/X: <a href="https://x.com/SundayM77406156" target="_blank">@SundayM77406156</a><br>
-        📘 Facebook: <a href="https://www.facebook.com/michael.sunday.407648" target="_blank">michael.sunday.407648</a>
+<nav class="mobile-nav" id="mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="learn.html">Learn</a>
+  <a href="knowledge.html">Knowledge</a>
+  <a href="blog.html">Lectures</a>
+  <a href="studies.html">Studies</a>
+  <a href="qa.html">Q&amp;A</a>
+  <a href="games.html">Games</a>
+  <a href="about.html">About</a>
+  <a href="contact.html" class="active">Contact</a>
+</nav>
+
+<main>
+  <section class="section">
+    <div class="wrap" style="max-width: 48rem; text-align: center;">
+      
+      <div class="breadcrumb" style="justify-content: center; margin-bottom:1rem;">
+        <span><a href="index.html" style="color:inherit;">Home</a></span>
+        <span>/</span>
+        <span class="current">Contact</span>
+      </div>
+      
+      <h1 class="section-title" style="font-size: 2.25rem; margin-bottom: 1rem;">Let's Connect.</h1>
+      
+      <p style="font-size: 1.1rem; line-height: 1.7; color: var(--text-variant); max-width: 36rem; margin: 0 auto 2.5rem auto;">
+        Whether you have a question about my coursework, want to collaborate on a web project, or just want to say hi, I'd love to hear from you.
       </p>
-      <p>I usually respond within a day or two. Feel free to ask about anything on the site, or just say hello!</p>
 
-      <h2>Or send me a message directly</h2>
-      <form name="contact" method="POST" data-netlify="true" action="/contact.html">
-        <input type="hidden" name="form-name" value="contact">
-        <p>
-          <label>Name<br>
-            <input type="text" name="name" required>
-          </label>
-        </p>
-        <p>
-          <label>Email<br>
-            <input type="email" name="email" required>
-          </label>
-        </p>
-        <p>
-          <label>Message<br>
-            <textarea name="message" rows="5" required></textarea>
-          </label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
-      </form>
+      <div style="margin-bottom: 3rem;">
+        <a href="mailto:solexmic061@gmail.com" class="btn btn-primary" style="font-size: 15px; padding: 0.85rem 1.75rem;">
+          <span class="material-symbols-outlined" style="font-size: 20px;">mail</span>
+          Email Me Directly
+        </a>
+      </div>
+
+      <div style="border-top: 1px solid var(--border); padding-top: 2rem;">
+        <p style="font-family: 'Space Mono', monospace; font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem;">Find me on social</p>
+        <div style="display: flex; justify-content: center; gap: 1.5rem;">
+          <a href="https://github.com/sunnycrypto23" target="_blank" class="icon-btn" style="width: 3rem; height: 3rem; border: 1px solid var(--border);" title="GitHub">
+            <span class="material-symbols-outlined" style="font-size: 24px;">code</span>
+          </a>
+          <a href="https://x.com/SundayM77406156" target="_blank" class="icon-btn" style="width: 3rem; height: 3rem; border: 1px solid var(--border);" title="X (Twitter)">
+            <span class="material-symbols-outlined" style="font-size: 24px;">tag</span>
+          </a>
+          <a href="https://www.facebook.com/michael.sunday.407648" target="_blank" class="icon-btn" style="width: 3rem; height: 3rem; border: 1px solid var(--border);" title="Facebook">
+            <span class="material-symbols-outlined" style="font-size: 24px;">group</span>
+          </a>
+        </div>
+      </div>
+
     </div>
-  </main>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Sunday Ojodomo Michael · Sunday.Michael</div>
+</footer>
+
+<script src="js/site.js"></script>
+
 </body>
 </html>
