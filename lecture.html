@@ -77,14 +77,61 @@
           <p style="color: var(--text-muted); max-width: 40rem;" id="lecture-course-name">Course Name</p>
         </div>
 
+        <!-- Learning Progress Steps -->
+        <div class="learning-progress">
+          <span style="font-weight: 600; color: var(--text);">Learning Path:</span>
+          <div class="progress-steps">
+            <div class="step active" title="Watch Video">📺</div>
+            <div class="step" title="Read Notes">📖</div>
+            <div class="step" title="Flashcards"></div>
+            <div class="step" title="Quiz">✓</div>
+          </div>
+        </div>
+
+        <!-- Video Embed (if available) -->
+        <div id="video-section" style="display: none;">
+          <h3 style="font-family: 'Newsreader', serif; font-size: 1.25rem; margin: 1.5rem 0 1rem 0; display: flex; align-items: center; gap: 0.5rem;">
+            <span class="material-symbols-outlined" style="color: var(--sage);">play_circle</span>
+            Watch & Learn
+          </h3>
+          <div id="video-container" class="video-embed"></div>
+        </div>
+
         <!-- Module Content -->
         <div style="max-width: 48rem;">
-          <h3 style="font-family: 'Newsreader', serif; font-size: 1.25rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+          <h3 style="font-family: 'Newsreader', serif; font-size: 1.25rem; margin: 2rem 0 1rem 0; display: flex; align-items: center; gap: 0.5rem;">
             <span class="material-symbols-outlined" style="color: var(--sage);">menu_book</span>
-            Lesson Notes
+            Core Concepts
           </h3>
           <div id="lecture-body" style="font-size: 1.05rem; line-height: 1.7; color: var(--text-variant);">
             <p>Loading content...</p>
+          </div>
+
+          <!-- Flashcards Section -->
+          <div id="flashcards-section" style="display: none;">
+            <h3 style="font-family: 'Newsreader', serif; font-size: 1.25rem; margin: 2rem 0 1rem 0; display: flex; align-items: center; gap: 0.5rem;">
+              <span class="material-symbols-outlined" style="color: var(--sage);">auto_stories</span>
+              Key Terms (Click to Flip)
+            </h3>
+            <div id="flashcards-container" class="flashcard-container"></div>
+          </div>
+
+          <!-- Feynman Summary -->
+          <div id="feynman-section" class="feynman-box" style="display: none;">
+            <h4>
+              <span class="material-symbols-outlined">lightbulb</span>
+              Feynman Challenge
+            </h4>
+            <p id="feynman-prompt"></p>
+          </div>
+
+          <!-- Micro Quiz -->
+          <div id="quiz-section" class="micro-quiz" style="display: none;">
+            <h4>
+              <span class="material-symbols-outlined">quiz</span>
+              Quick Check: Test Your Understanding
+            </h4>
+            <div id="quiz-container"></div>
           </div>
 
           <!-- Navigation Buttons -->
@@ -108,6 +155,6 @@
   </footer>
 
   <script src="js/site.js"></script>
-  <script src="js/lecture.js"></script>
+  <script src="js/lecture-enhanced.js"></script>
 </body>
-              </html>
+</html>
