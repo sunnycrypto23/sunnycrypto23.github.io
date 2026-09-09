@@ -34,7 +34,31 @@
               "explanation": "Removing electrons (negative charge) leaves a positive charge. Q = 1000 × (+1.602×10⁻¹⁹ C) = +1.602×10¹⁶ C."
             }
           ]
+        },
+        ]
+    },
+    {
+      "id": 2,
+      "title": "Unit 2: DC Circuits & Components",
+      "status": "not-started",
+      "video_url": "https://www.youtube.com/embed/0O20t26q0eQ",
+      "content": "<h3>Ohm's Law, Resistors & Diodes</h3><p>Covers DC circuits, Ohm's Law, resistor combinations, EMF, internal resistance, thermionic emission, and rectification.</p><p style='margin-top:1.5rem;'><a href='posts/phy102-unit2.html' class='btn btn-primary' style='text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem;'><span class='material-symbols-outlined' style='font-size:18px;'>menu_book</span> Read Full Unit 2 Notes</a></p>",
+      "feynman_prompt": "Explain the difference between EMF and terminal voltage using a water pump analogy.",
+      "flashcards": [
+        { "term": "Ohm's Law", "definition": "V = IR. Voltage equals current times resistance, provided temperature is constant." },
+        { "term": "Rectification", "definition": "Converting AC to DC using diodes. Full-wave is ~81.2% efficient, half-wave is ~40.6%." }
+      ],
+      "micro_quiz": [
+        {
+          "question": "What is the efficiency of a full-wave rectifier?",
+          "options": ["40.6%", "81.2%", "100%", "50%"],
+          "correct": 1,
+          "explanation": "Full-wave rectifiers utilize both halves of the AC cycle, yielding ~81.2% efficiency."
         }
+      ]
+    }
+  ]
+},
       ]
     },
     {
