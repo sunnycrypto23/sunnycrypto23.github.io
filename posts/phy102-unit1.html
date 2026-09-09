@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PHY 102: Unit 1 - Electrostatics & Electric Fields</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css">
+<style>
+  .lecture-text { max-width: 48rem; margin: 0 auto; font-size: 1.05rem; line-height: 1.8; color: var(--text-variant); }
+  .lecture-text h2 { font-family: 'Newsreader', serif; font-size: 1.75rem; color: var(--text); margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+  .lecture-text h3 { font-family: 'Newsreader', serif; font-size: 1.35rem; color: var(--text); margin-top: 2rem; margin-bottom: 0.75rem; }
+  .lecture-text p { margin-bottom: 1.25rem; }
+  .lecture-text ul, .lecture-text ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+  .lecture-text li { margin-bottom: 0.5rem; }
+  .equation-box { background: var(--surface-low); border-left: 4px solid var(--sage); padding: 1.25rem; border-radius: 0 0.5rem 0.5rem 0; margin: 1.5rem 0; font-family: 'Space Mono', monospace; font-size: 1.1rem; text-align: center; color: var(--text); overflow-x: auto; }
+  .example-box { background: var(--surface-low); border: 1px solid var(--border); border-radius: 0.75rem; padding: 1.5rem; margin: 2rem 0; }
+  .example-box h4 { color: var(--sage); margin-top: 0; display: flex; align-items: center; gap: 0.5rem; }
+  .key-term { font-weight: 600; color: var(--text); }
+  .must-know { background: rgba(91, 117, 99, 0.1); border-left: 4px solid var(--sage); padding: 1rem; border-radius: 0 0.5rem 0.5rem 0; margin: 1.5rem 0; font-weight: 500; }
+  table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+  th, td { border: 1px solid var(--border); padding: 0.75rem; text-align: left; }
+  th { background: var(--surface-low); font-weight: 600; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html" style="display:flex;align-items:center;gap:.75rem;">
+      <img src="../images/logo.png" alt="Sunday.Michael logo" class="brand-mark">
+      <div class="brand-text">
+        <span class="brand-name">Sunday.Michael</span>
+        <span class="brand-sub">Digital Campus &amp; Lab</span>
+      </div>
+    </a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../learn.html" class="active">Learn</a>
+      <a href="../knowledge.html">Knowledge</a>
+      <a href="../qa.html">Q&amp;A</a>
+      <a href="../games.html">Games</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="wrap">
+      <div class="breadcrumb" style="margin-bottom:1.5rem;">
+        <span><a href="../learn.html" style="color:inherit;">Learn Hub</a></span>
+        <span>/</span>
+        <span><a href="../course.html?code=phy102" style="color:inherit;">PHY 102</a></span>
+        <span>/</span>
+        <span class="current">Unit 1: Deep Dive</span>
+      </div>
+
+      <h1 class="section-title" style="font-size: 2.25rem; margin-bottom: 0.5rem;">Unit 1: Forces in Nature & Electrostatics</h1>
+      <p style="color: var(--text-muted); margin-bottom: 2.5rem;">The complete, unsummarized lecture notes for PHY 102 Unit 1, extracted directly from the official Comprehensive Handbook.</p>
+
+      <div class="lecture-text">
+        
+        <h2>1.0 Forces in Nature</h2>
+        <p>Nature is governed by four fundamental forces. Every force you encounter in daily life or in physics originates from one of these four interactions. Understanding their relative strengths and roles is essential background for electromagnetism.</p>
+        <table>
+          <tr><th>Force</th><th>Description & Key Point</th></tr>
+          <tr><td>Gravitational</td><td>Attraction between any two masses. Always attractive. Keeps us on Earth. Weakest of the four forces.</td></tr>
+          <tr><td>Electromagnetic</td><td>Attraction/repulsion between charges. Also produces magnetism. Responsible for chemical bonds, friction, light, and almost all everyday forces.</td></tr>
+          <tr><td>Strong Nuclear</td><td>Holds protons and neutrons together in the nucleus. Overpowers electromagnetic repulsion of protons. Powers the Sun (nuclear fusion).</td></tr>
+          <tr><td>Weak Nuclear</td><td>Responsible for beta decay: a neutron turns into a proton + electron (and antineutrino). The electron is ejected from the atom.</td></tr>
+        </table>
+        <div class="must-know">★ MUST KNOW: Electromagnetic force is the only one of the four that can be both attractive and repulsive.</div>
+
+        <h2>1.1 Electrostatics</h2>
+        <p>Electrostatics is the branch of physics that studies stationary or very slowly moving electric charges and the forces they exert on each other. These forces are described by Coulomb’s law. Electrostatic phenomena — attraction, repulsion, electric fields and potential — all originate from the mutual forces between electric charges.</p>
+
+        <h2>1.2 Electric Charge and Its Properties</h2>
+        <p>Electric charge is a fundamental physical quantity of matter that causes it to experience a force when placed in an electric field. Charge can be transferred from one object to another.</p>
+        <h3>Key Properties of Electric Charge</h3>
+        <ol>
+          <li><span class="key-term">Quantisation:</span> Charge exists only in discrete packets. The smallest unit is the elementary charge e = 1.602 × 10⁻¹⁹ C. Any charge on an object is always an integer multiple of this value: Q = n e, where n = 0, ±1, ±2,...</li>
+          <li><span class="key-term">Conservation:</span> In an isolated system the total electric charge remains constant. Charge is never created or destroyed — it can only be transferred between objects.</li>
+          <li><span class="key-term">Attraction & Repulsion:</span> Like charges repel each other; unlike charges attract each other.</li>
+          <li><span class="key-term">Electric Field:</span> Every charged object creates an electric field around itself; this field exerts a force on other charges placed within it.</li>
+          <li><span class="key-term">Additivity:</span> The total charge of a system is the algebraic sum of all individual charges present.</li>
+          <li><span class="key-term">Coulomb’s Law:</span> The electric force between point charges is proportional to the product of the charges and inversely proportional to the square of the distance between them.</li>
+        </ol>
+        <div class="must-know">★ MUST KNOW: Electron charge −e = −1.602 × 10¹⁹ C; Proton charge +e; Electron mass mₑ = 9.109 × 10⁻³¹ kg. Conductors allow free charge movement (copper, silver, aluminium); Insulators do not (glass, rubber, diamond).</div>
+
+        <h2>1.3 Methods of Charging</h2>
+        <ol>
+          <li><strong>Friction (Rubbing):</strong> Electrons are transferred when two different materials are rubbed together. The material that gains electrons becomes negative; the one that loses electrons becomes positive. Classic examples: glass rod rubbed with silk becomes positive; plastic/ebonite rod rubbed with fur becomes negative.</li>
+          <li><strong>Conduction (Contact):</strong> A charged object touches an uncharged conductor. Charge flows until both reach the same potential. The previously uncharged object gains the same type of charge as the charging object.</li>
+          <li><strong>Induction (No Contact):</strong> A charged object is brought near (but not touching) a conductor. Charges inside the conductor rearrange. If the conductor is momentarily earthed, it can be left with a net charge opposite to the inducing charge.</li>
+        </ol>
+
+        <div class="example-box">
+          <h4><span class="material-symbols-outlined">calculate</span> Worked Example: Total Charge of Electrons</h4>
+          <p><strong>Problem:</strong> What is the total charge of 75.0 kg of electrons?</p>
+          <p><strong>Step 1 — Number of electrons:</strong> N = M / mₑ = 75.0 kg / (9.11 × 10⁻³¹ kg) = 8.23 × 10³¹ electrons</p>
+          <p><strong>Step 2 — Total charge:</strong> Q = N × (−e) = (8.23 × 10³¹) × (−1.602 × 10⁻¹⁹ C) = <strong>−1.32 × 10¹³ C</strong></p>
+        </div>
+
+        <div class="example-box">
+          <h4><span class="material-symbols-outlined">calculate</span> Worked Example: The Penny Problem</h4>
+          <p><strong>Problem:</strong> How many electrons would have to be removed from a penny to leave it with a charge of +1.0 × 10⁻⁷ C? To what fraction of the electrons in the penny does this correspond? (A penny has a mass of 3.11g, assume it is made entirely of copper, atomic weight 63.54 g/mol, 29 electrons per atom).</p>
+          <p><strong>Solution:</strong><br>
+          (a) Electrons removed (N): N = q_total / q_e = (1.0 × 10⁻⁷) / (1.60 × 10⁻¹⁹) = <strong>6.2 × 10¹¹ electrons</strong><br>
+          (b) Moles of copper: n_Cu = 3.11g / 63.54g/mol = 4.89 × 10⁻² mol<br>
+          Number of copper atoms: N_Cu = n_Cu × N_A = (4.89 × 10²)(6.022 × 10²³) = 2.95 × 10²² atoms<br>
+          Total electrons originally in penny: N_e = 29 × N_Cu = 29(2.95 × 10²²) = 8.55 × 10²³ electrons<br>
+          Fraction removed: f = (6.2 × 10¹¹) / (8.55 × 10²³) = <strong>7.3 × 10⁻¹³</strong> (A very small fraction!)</p>
+        </div>
+
+        <h2>1.4 Coulomb’s Law and Superposition</h2>
+        <p>Coulomb’s law gives the magnitude of the electrostatic force between two point charges. The force is attractive if the charges have opposite signs and repulsive if they have the same sign.</p>
+        <div class="equation-box">F = k |q₁| |q₂| / r² &nbsp;&nbsp;&nbsp; (k = 8.99 × 10⁹ N·m²/C² ≈ 9 × 10⁹)</div>
+        <p>Why the formula looks like this: The force grows stronger when the charges are larger (product q₁q₂) and weaker when they are farther apart. Because the field spreads over the surface of a sphere, the force falls as 1/r² (surface area of a sphere = 4πr²). The constant k converts units into newtons. Equivalently, k = 1/(4πε₀) where ε₀ = 8.85 × 10⁻¹² C²/(N·m²) is the permittivity of free space.</p>
+        <p><strong>Superposition Principle:</strong> When more than two charges are present, the total force on any one charge is the vector sum of the individual Coulomb forces from all the other charges. Direction matters — forces are vectors.</p>
+
+        <div class="example-box">
+          <h4><span class="material-symbols-outlined">calculate</span> Worked Example: Force Between Two Charges</h4>
+          <p><strong>Problem:</strong> A point charge of +3.00 × 10⁻ C is 12.0 cm from a charge of −1.50 × 10⁻⁶ C. Find the magnitude of the force on each charge.</p>
+          <p><strong>Solution:</strong> F = k |q₁| |q₂| / r² = (8.99 × 10⁹)(3.00 × 10⁻⁶)(1.50 × 10⁻⁶) / (0.12)² = (8.99 × 10⁹)(4.5 × 10⁻¹²) / 0.0144 = <strong>2.81 N</strong>. Both charges experience an attractive force of 2.81 N (opposite signs attract).</p>
+        </div>
+
+        <h2>1.5 The Electric Field</h2>
+        <p>The electric field at a point is defined as the force experienced by a unit positive test charge placed at that point. It is a vector quantity — it has both magnitude and direction.</p>
+        <div class="equation-box">E = F / q₀ &nbsp;&nbsp;&nbsp; and for a point charge: &nbsp;&nbsp;&nbsp; E = k q / r² = q / (4πε₀ r²)</div>
+        <p>Why E = F/q₀? We want a quantity that describes the ‘influence’ of the source charges without depending on the particular test charge we use. Dividing the force by the test charge removes the dependence on q₀, leaving a pure property of the location in space.</p>
+        <div class="must-know">★ MUST KNOW: E is a vector. Direction of E is the direction of the force on a positive test charge. Field lines start on positive charges and end on negative charges. Denser field lines mean stronger field.</div>
+        <p><strong>Continuous Charge Distributions:</strong> When charge is spread continuously, integrate small elements: line charge (λ), surface charge (σ), volume charge (ρ).</p>
+
+        <h2>1.6 Electric Potential</h2>
+        <p>Electric potential at a point is the work done in bringing a unit positive charge from infinity to that point against the electrostatic force. It is a scalar quantity.</p>
+        <div class="equation-box">V = k Q / r &nbsp;&nbsp;&nbsp; and &nbsp;&nbsp;&nbsp; W = q ∆V</div>
+        <p>The electrostatic force is conservative (like gravity). Work done depends only on the start and end points, not on the path taken. That is why a potential (and potential energy) can be defined at every point.</p>
+        <div class="must-know">★ MUST KNOW: Electric field E is a vector; electric potential V is a scalar. Potential is path-independent.</div>
+
+        <div class="example-box">
+          <h4><span class="material-symbols-outlined">calculate</span> Worked Example: Potential and Work</h4>
+          <p><strong>Problem:</strong> Calculate the potential at a point 9 cm from a charge of 4 × 10⁻ C. What work is done to bring a 2 × 10⁻⁹ C charge from infinity to that point?</p>
+          <p><strong>Solution:</strong> V = kQ / r = (9 × 10⁹)(4 × 10⁻⁷) / 0.09 = 4.0 × 10⁴ V. W = qV = (2 × 10⁻⁹)(4.0 × 10⁴) = <strong>8.0 × 10⁻⁵ J</strong>.</p>
+        </div>
+
+        <h2>1.7 Gauss’s Law & Electric Flux</h2>
+        <p>Gauss’s law relates the electric flux through any closed surface to the total charge enclosed by that surface. It is always true, but is especially useful for finding electric fields when the charge distribution has high symmetry (sphere, infinite line, infinite plane).</p>
+        <div class="equation-box">∯ E · dA = Q_enc / ε₀ &nbsp;&nbsp;&nbsp; and &nbsp;&nbsp;&nbsp; Φ_E = E A cosθ</div>
+        <p>Electric flux is a measure of how many field lines pass through a surface. Maximum flux when the field is perpendicular to the surface (θ = 0°); zero flux when the field is parallel (θ = 90°).</p>
+
+        <h2>1.8 Conductors and Insulators</h2>
+        <p><strong>Conductors:</strong> Materials whose electrons are weakly bound and form a shared ‘electron sea’. Charge moves freely. Low resistivity ρ ≤ 10⁻⁸ Ω·m; high conductivity σ = 1/ρ ≥ 10⁷ S/m. Examples: silver, copper, gold, aluminium, iron.</p>
+        <p><strong>Insulators:</strong> Materials whose electrons are tightly bound. No free charge carriers under ordinary conditions. Very high resistivity ρ ≥ 10⁸ Ω·m. Examples: glass, diamond, rubber, ceramics, dry paper.</p>
+        <div class="must-know">★ MUST KNOW: In electrostatics: excess charge on a conductor resides entirely on the surface; electric field inside a conductor is zero; the entire conductor is an equipotential.</div>
+
+        <h2>1.9 Capacitance</h2>
+        <p>Capacitance C of a capacitor is the ratio of the charge stored to the potential difference between its plates. It measures how much charge a capacitor can store for a given voltage. SI unit: Farad (F). Typical values range from picofarad (pF) to millifarad (mF). 1 µF = 10⁻⁶ F; 1 pF = 10⁻¹² F.</p>
+        <div class="equation-box">C = Q / |∆V|</div>
+        <h3>1.9.1 Parallel-Plate Capacitor</h3>
+        <p>Two parallel metallic plates of area A separated by distance d. Using Gauss’s law with a pillbox: E = σ/ε₀ = Q/(Aε₀). Potential difference |∆V| = E d. Therefore:</p>
+        <div class="equation-box">C = ε₀ A / d</div>
+        <p>C increases with area A (bigger plate holds more charge at same voltage). C decreases as separation d increases. C depends only on geometry and the material between the plates, not on Q or V. With a dielectric of constant κ: C_new = κ ε₀ A / d.</p>
+        <h3>1.9.2 Cylindrical & Spherical Capacitors</h3>
+        <div class="equation-box">Cylindrical: C = 2π ε₀ L / ln(b/a) &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; Spherical: C = 4π ε₀ (a b) / (b − a)</div>
+
+        <h2>1.10 Electric Dipole</h2>
+        <p>An electric dipole consists of two equal and opposite charges +q and −q separated by a fixed distance d. The electric dipole moment p = q d (vector pointing from −q to +q). Unit: C·m.</p>
+        <div class="equation-box">p = q d &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; E_axial ≈ (1/(4πε₀))(2p/ r³) &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; V ≈ (1/(4πε₀))(p cosθ/ r²)</div>
+        <p>Notice the field of a dipole falls as 1/r³ — much faster than the 1/r² of a single point charge. On the axial line E is parallel to p; on the equatorial plane E is opposite to p and half as large.</p>
+
+        <h2>1.11 Energy in Electric Fields</h2>
+        <p>Work must be done to charge a capacitor. That work is stored as electric potential energy in the capacitor (or equivalently in the electric field between the plates).</p>
+        <div class="equation-box">U = ½ Q V = ½ C V² = ½ Q²/ C &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; u_E = ½ ε₀ E² (energy density)</div>
+        <p>Why the ½ appears: When you add charge, the potential is rising. The average potential during charging is V/2, so total work = Q × (V/2) = ½ Q V.</p>
+
+        <div class="example-box">
+          <h4><span class="material-symbols-outlined">calculate</span> Worked Example: Parallel-Plate Capacitor Energy</h4>
+          <p><strong>Problem:</strong> A parallel-plate capacitor: A = 1.0 × 10² m², d = 2.0 × 10⁻³ m, V = 500 V. Find (a) C, (b) energy stored, (c) energy density.</p>
+          <p><strong>Solution:</strong><br>
+          (a) C = ε₀ A / d = (8.85 × 10¹² × 0.01) / 0.002 = 4.43 × 10⁻¹¹ F = <strong>44.3 pF</strong><br>
+          (b) U = ½ C V² = ½ × 4.43 × 10⁻¹¹ × 500² = <strong>5.54 × 10⁻⁶ J</strong><br>
+          (c) Volume = A d = 2.0 × 10⁻⁵ m³; u_E = U / volume = 0.277 J/m³</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Sunday Ojodomo Michael · Sunday.Michael</div>
+</footer>
+
+<script src="../js/site.js"></script>
+</body>
+  </html>
