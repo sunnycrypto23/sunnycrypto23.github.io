@@ -39,7 +39,7 @@
           "id": 2,
           "title": "Unit 2: DC Circuits & Components",
           "status": "not-started",
-          "video_url": "https://www.youtube.com/embed/0O20t26q0eQ",
+          "video_url": "https://www.youtube.com/embed/YuMOE_VnZw4",
           "content": "<h3>Ohm's Law, Resistors & Diodes</h3><p>Covers DC circuits, Ohm's Law, resistor combinations, EMF, internal resistance, thermionic emission, and rectification.</p><p style='margin-top:1.5rem;'><a href='posts/phy102-unit2.html' class='btn btn-primary' style='text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem;'><span class='material-symbols-outlined' style='font-size:18px;'>menu_book</span> Read Full Unit 2 Notes</a></p>",
           "feynman_prompt": "Explain the difference between EMF and terminal voltage using a water pump analogy.",
           "flashcards": [
