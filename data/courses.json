@@ -134,6 +134,16 @@
               "explanation": "Weber (Wb) is the SI unit of magnetic flux. 1 Wb = 1 T·m²."
             }
           ]
+        },
+        {
+          "id": 7,
+          "title": "CBT Practice Bank (25 Questions)",
+          "status": "not-started",
+          "video_url": "",
+          "content": "<h3>Practice with 25 CBT-Style Questions</h3><p>Test your understanding across all units: Electrostatics, DC Circuits, Magnetism, Induction, Maxwell's Equations, and AC Circuits.</p><p style='margin-top:1.5rem;'><a href='cbt/phy102.html' class='btn btn-primary' style='text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem;'><span class='material-symbols-outlined' style='font-size:18px;'>quiz</span> Start CBT Practice</a></p><p style='margin-top:0.5rem; font-size:0.9rem; color:#666;'>25 questions | Instant feedback | Answers & explanations included</p>",
+          "feynman_prompt": "",
+          "flashcards": [],
+          "micro_quiz": []
         }
       ]
     },
@@ -192,7 +202,7 @@
       "department": "Computer Science",
       "category": "csc",
       "status": "In Progress",
-  "progress": 65,
+      "progress": 65,
       "description": "HTML structure, CSS layout fundamentals, JavaScript basics, DOM manipulation, and HTTP client-server concepts.",
       "modules": [
         { "id": 1, "title": "HTML Structure & Semantics", "status": "complete", "content": "<p>HTML provides the skeleton of a web page. Semantic tags give meaning to the structure, improving accessibility and SEO.</p>" },
