@@ -1,0 +1,47 @@
+{
+  "quizzes": [
+    {
+      "courseCode": "GST 112",
+      "title": "Nigerian People and Culture - Practice Quiz",
+      "description": "Test your knowledge of Nigerian history, culture, and nation-building.",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Which of the following best describes the pre-colonial Igbo society?",
+          "options": [
+            "A highly centralized monarchy with a single king",
+            "A stateless society organized around villages and kinship",
+            "A feudal system based on land ownership",
+            "A theocratic state ruled by religious leaders"
+          ],
+          "correct": 1,
+          "explanation": "The pre-colonial Igbo society was largely stateless (acephalous), organized around villages, age grades, and kinship rather than a centralized monarchy like the Oyo or Hausa states."
+        },
+        {
+          "id": 2,
+          "question": "The amalgamation of the Northern and Southern protectorates of Nigeria occurred in which year?",
+          "options": [
+            "1900",
+            "1914",
+            "1960",
+            "1963"
+          ],
+          "correct": 1,
+          "explanation": "Lord Frederick Lugard amalgamated the Northern and Southern protectorates of Nigeria in 1914, primarily for administrative and economic convenience."
+        },
+        {
+          "id": 3,
+          "question": "Which organ of government is primarily responsible for interpreting the law?",
+          "options": [
+            "The Legislature",
+            "The Executive",
+            "The Judiciary",
+            "The Civil Service"
+          ],
+          "correct": 2,
+          "explanation": "The Judiciary is the arm of government responsible for interpreting the laws, settling disputes, and administering justice."
+        }
+      ]
+    }
+  ]
+}
