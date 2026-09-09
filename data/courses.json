@@ -114,6 +114,26 @@
               "explanation": "At resonance, X_L = X_C, so Z = √(R² + 0) = R (minimum impedance)."
             }
           ]
+        },
+        {
+          "id": 6,
+          "title": "Master Formula Sheet",
+          "status": "not-started",
+          "video_url": "",
+          "content": "<h3>Quick Reference</h3><p>A consolidated sheet of all key formulas from Units 1-5 for quick revision before exams.</p><p style='margin-top:1.5rem;'><a href='posts/phy102-formulas.html' class='btn btn-primary' style='text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem;'><span class='material-symbols-outlined' style='font-size:18px;'>calculate</span> View Master Formula Sheet</a></p>",
+          "feynman_prompt": "Why is dimensional analysis (checking units) a powerful tool for solving physics problems?",
+          "flashcards": [
+            { "term": "Resonance Condition", "definition": "Occurs when X_L = X_C, making impedance Z = R (minimum) and current maximum." },
+            { "term": "Transformer Efficiency", "definition": "η = (Output Power / Input Power) × 100% = (E_s I_s / E_p I_p) × 100%." }
+          ],
+          "micro_quiz": [
+            {
+              "question": "What is the SI unit of magnetic flux?",
+              "options": ["Tesla", "Weber", "Henry", "Farad"],
+              "correct": 1,
+              "explanation": "Weber (Wb) is the SI unit of magnetic flux. 1 Wb = 1 T·m²."
+            }
+          ]
         }
       ]
     },
@@ -172,7 +192,7 @@
       "department": "Computer Science",
       "category": "csc",
       "status": "In Progress",
-      "progress": 65,
+  "progress": 65,
       "description": "HTML structure, CSS layout fundamentals, JavaScript basics, DOM manipulation, and HTTP client-server concepts.",
       "modules": [
         { "id": 1, "title": "HTML Structure & Semantics", "status": "complete", "content": "<p>HTML provides the skeleton of a web page. Semantic tags give meaning to the structure, improving accessibility and SEO.</p>" },
@@ -219,4 +239,4 @@
       ]
     }
   ]
-    }
+}
