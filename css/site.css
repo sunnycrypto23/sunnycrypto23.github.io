@@ -438,3 +438,12 @@ footer{border-top:1px solid var(--border);padding:2rem 0;text-align:center;color
   padding-top: 2rem;
   padding-bottom: 4rem;
 }
+
+/* ============ COURSE PAGE INTERACTIONS ============ */
+.module-row.complete .module-title {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+.view-btn:hover {
+  text-decoration: underline;
+}
