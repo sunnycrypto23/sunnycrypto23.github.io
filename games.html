@@ -1,59 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Games — Sunday Ojodomo Michael</title>
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Playground — Sunday.Michael</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-  <header class="site-head">
-    <div class="wrap">
-      <div class="brand-row">
-        <a class="brand" href="index.html">Sunday<span class="dot">.</span>Michael</a>
-        <input  type="checkbox" id="nav-toggle"  class="menu-toggle">
-        <label  for="nav-toggle" class="menu-icon">&#9776;</label>
-        <nav class="site-nav">
-          <a href="index.html">home</a>
-          <a href="blog.html">lectures</a>
-          <a href="studies.html">studies</a>
-          <a href="qa.html">q&a</a>
-          <a href="games.html" class="active">games</a>
-          <a href="about.html">about</a>
-          <a href="contact.html">contact</a>
-        </nav>
+
+<div id="loader">
+  <img src="images/logo.png" alt="Sunday.Michael" class="loader-logo">
+</div>
+
+<header>
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" style="display:flex;align-items:center;gap:.75rem;">
+      <img src="images/logo.png" alt="Sunday.Michael logo" class="brand-mark">
+      <div class="brand-text">
+        <span class="brand-name">Sunday.Michael</span>
+        <span class="brand-sub">Digital Campus &amp; Lab</span>
       </div>
-      <p class="tagline">chess & puzzles</p>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="learn.html">Learn</a>
+      <a href="blog.html">Lectures</a>
+      <a href="studies.html">Studies</a>
+      <a href="qa.html">Q&amp;A</a>
+      <a href="games.html" class="active">Games</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="theme-toggle" type="button" title="Toggle theme">
+        <span class="material-symbols-outlined" id="theme-icon">dark_mode</span>
+      </button>
+      <button class="menu-toggle-btn" id="menu-toggle" type="button" title="Menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
     </div>
-  </header>
+  </div>
+</header>
 
-  <main class="wrap">
-    <section class="post-head">
-      <h1>Games</h1>
-      <p class="lede">Pick a game and play.</p>
-    </section>
+<nav class="mobile-nav" id="mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="learn.html">Learn</a>
+  <a href="blog.html">Lectures</a>
+  <a href="studies.html">Studies</a>
+  <a href="qa.html">Q&amp;A</a>
+  <a href="games.html" class="active">Games</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
 
-    <section class="post-body">
-      <div class="grid-cards">
-        <div class="card">
-          <h3>♟️ Chess</h3>
-          <p>Play against the computer, or try today's puzzle.</p>
-          <a class="btn primary" href="chess.html">Play Chess</a>
+<main>
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head" style="text-align:center; display:block; margin-bottom:3rem;">
+        <div class="breadcrumb" style="justify-content:center; margin-bottom:0.5rem;">
+          <span><a href="index.html" style="color:inherit;">Home</a></span>
+          <span>/</span>
+          <span class="current">Playground</span>
         </div>
-        <!-- Future games go here as new cards -->
+        <h2 class="section-title">Games &amp; Experiments</h2>
+        <p style="color:var(--text-muted); max-width:36rem; margin:0.5rem auto 0;">A collection of interactive projects, coding experiments, and small games built to test new skills.</p>
       </div>
-    </section>
-  </main>
 
-  <footer>
-    <div class="wrap">
-      <span>© 2026 Sunday Ojodomo Michael</span>
-      <span>
-        <a href="mailto:solexmic061@gmail.com">email</a> ·
-        <a href="https://x.com/SundayM77406156" target="_blank">twitter</a> ·
-        <a href="https://www.facebook.com/michael.sunday.407648" target="_blank">facebook</a>
-      </span>
+      <!-- GAMES SECTION -->
+      <h3 style="font-family:'Newsreader',serif; font-size:1.5rem; margin-bottom:1.5rem; display:flex; align-items:center; gap:0.5rem;">
+        <span class="material-symbols-outlined" style="color:var(--sage);">sports_esports</span>
+        Games
+      </h3>
+      <div class="course-grid" style="margin-bottom:3rem;">
+        
+        <!-- Memory Match Game -->
+        <div class="course-card">
+          <div class="card-top">
+            <div class="card-badges">
+              <span class="subject-badge csc">JavaScript</span>
+              <span class="status-label">Live</span>
+            </div>
+            <h3 class="course-title">Memory Match</h3>
+            <p class="course-desc">A classic card-matching game with multiple difficulty levels, themes, and power-ups. Built with vanilla JS.</p>
+          </div>
+          <div class="card-bottom">
+            <div class="card-meta" style="justify-content:flex-end;">
+              <a class="notes-link" href="memory-match/" target="_blank">
+                Play Game <span class="material-symbols-outlined" style="font-size:14px;">open_in_new</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chess (Placeholder for your chess.html) -->
+        <div class="course-card">
+          <div class="card-top">
+            <div class="card-badges">
+              <span class="subject-badge mth">Logic</span>
+              <span class="status-label">In Progress</span>
+            </div>
+            <h3 class="course-title">Chess Interface</h3>
+            <p class="course-desc">A digital chess board interface for practicing openings and testing UI interactions.</p>
+          </div>
+          <div class="card-bottom">
+            <div class="card-meta" style="justify-content:flex-end;">
+              <a class="notes-link" href="chess.html">
+                View Project <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- EXPERIMENTS SECTION -->
+      <h3 style="font-family:'Newsreader',serif; font-size:1.5rem; margin-bottom:1.5rem; display:flex; align-items:center; gap:0.5rem;">
+        <span class="material-symbols-outlined" style="color:var(--sage);">science</span>
+        Experiments
+      </h3>
+      <div class="course-grid">
+        
+        <!-- Schedule Builder App -->
+        <div class="course-card">
+          <div class="card-top">
+            <div class="card-badges">
+              <span class="subject-badge csc">Web App</span>
+              <span class="status-label">In Progress</span>
+            </div>
+            <h3 class="course-title">Student Schedule Builder</h3>
+            <p class="course-desc">An interactive timetable generator with reminder features. Currently being refactored for better automation.</p>
+          </div>
+          <div class="card-bottom">
+            <div class="card-meta" style="justify-content:flex-end;">
+              <a class="notes-link" href="schedule-builder/" target="_blank">
+                View App <span class="material-symbols-outlined" style="font-size:14px;">open_in_new</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Future Experiment Placeholder -->
+        <div class="course-card">
+          <div class="card-top">
+            <div class="card-badges">
+              <span class="subject-badge mth">API</span>
+              <span class="status-label not-started">Planned</span>
+            </div>
+            <h3 class="course-title">Weather Dashboard</h3>
+            <p class="course-desc">A planned experiment to practice fetching data from external APIs and displaying it dynamically.</p>
+          </div>
+          <div class="card-bottom">
+            <div class="card-meta" style="justify-content:flex-end;">
+              <span class="task" style="color:var(--text-muted); font-size:12px;">Coming soon</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
     </div>
-  </footer>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Sunday Ojodomo Michael · Sunday.Michael</div>
+</footer>
+
+<script src="js/site.js"></script>
+
 </body>
 </html>
