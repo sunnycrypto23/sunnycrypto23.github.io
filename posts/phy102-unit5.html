@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PHY 102: Unit 5 - Maxwell's Equations & AC Circuits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css">
+<style>
+  .lecture-text { max-width: 48rem; margin: 0 auto; font-size: 1.05rem; line-height: 1.8; color: var(--text-variant); }
+  .lecture-text h2 { font-family: 'Newsreader', serif; font-size: 1.75rem; color: var(--text); margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+  .lecture-text h3 { font-family: 'Newsreader', serif; font-size: 1.35rem; color: var(--text); margin-top: 2rem; margin-bottom: 0.75rem; }
+  .lecture-text p { margin-bottom: 1.25rem; }
+  .lecture-text ul, .lecture-text ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+  .lecture-text li { margin-bottom: 0.5rem; }
+  .equation-box { background: var(--surface-low); border-left: 4px solid var(--sage); padding: 1.25rem; border-radius: 0 0.5rem 0.5rem 0; margin: 1.5rem 0; font-family: 'Space Mono', monospace; font-size: 1.1rem; text-align: center; color: var(--text); overflow-x: auto; }
+  .example-box { background: var(--surface-low); border: 1px solid var(--border); border-radius: 0.75rem; padding: 1.5rem; margin: 2rem 0; }
+  .example-box h4 { color: var(--sage); margin-top: 0; display: flex; align-items: center; gap: 0.5rem; }
+  .key-term { font-weight: 600; color: var(--text); }
+  .must-know { background: rgba(91, 117, 99, 0.1); border-left: 4px solid var(--sage); padding: 1rem; border-radius: 0 0.5rem 0.5rem 0; margin: 1.5rem 0; font-weight: 500; }
+  table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+  th, td { border: 1px solid var(--border); padding: 0.75rem; text-align: left; }
+  th { background: var(--surface-low); font-weight: 600; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html" style="display:flex;align-items:center;gap:.75rem;">
+      <img src="../images/logo.png" alt="Sunday.Michael logo" class="brand-mark">
+      <div class="brand-text">
+        <span class="brand-name">Sunday.Michael</span>
+        <span class="brand-sub">Digital Campus &amp; Lab</span>
+      </div>
+    </a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../learn.html" class="active">Learn</a>
+      <a href="../knowledge.html">Knowledge</a>
+      <a href="../qa.html">Q&amp;A</a>
+      <a href="../games.html">Games</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="wrap">
+      <div class="breadcrumb" style="margin-bottom:1.5rem;">
+        <span><a href="../learn.html" style="color:inherit;">Learn Hub</a></span>
+        <span>/</span>
+        <span><a href="../course.html?code=phy102" style="color:inherit;">PHY 102</a></span>
+        <span>/</span>
+        <span class="current">Unit 5: Deep Dive</span>
+      </div>
+
+      <h1 class="section-title" style="font-size: 2.25rem; margin-bottom: 0.5rem;">Unit 5: Maxwell’s Equations & AC Circuits</h1>
+      <p style="color: var(--text-muted); margin-bottom: 2.5rem;">The complete, unsummarized lecture notes for PHY 102 Unit 5, extracted directly from the official Comprehensive Handbook.</p>
+
+      <div class="lecture-text">
+        
+        <h2>5.0 Maxwell’s Equations</h2>
+        <p>Maxwell’s four equations completely describe all classical electromagnetic phenomena. They unify electricity and magnetism and predict the existence of electromagnetic waves.</p>
+        <table>
+          <tr><th>Law</th><th>Equation</th><th>Statement & Meaning</th></tr>
+          <tr><td>I. Gauss’s Law (Electric)</td><td>∮ E · dA = Q_enc / ε₀</td><td>Electric field lines begin and end on charges. Charges are the sources of E.</td></tr>
+          <tr><td>II. Gauss’s Law (Magnetic)</td><td>∮ B · dA = 0</td><td>There are no magnetic monopoles. Magnetic field lines always form closed loops.</td></tr>
+          <tr><td>III. Faraday’s Law</td><td>∮ E · dl = −dΦ_B / dt</td><td>A changing magnetic flux produces an electric field (induced EMF).</td></tr>
+          <tr><td>IV. Ampère–Maxwell Law</td><td>∮ B · dl = µ₀ I_enc + µ₀ε₀(dΦ_E / dt)</td><td>Magnetic fields are produced by currents AND by changing electric fields (displacement current).</td></tr>
+        </table>
+        <div class="must-know">★ MUST KNOW: The great result: c = 1 / √(µ₀ε₀) ≈ 3.00 × 10 m/s. Light is an electromagnetic wave that travels at this speed in vacuum.</div>
+
+        <h2>5.1 Electromagnetic Oscillations (LC Circuit)</h2>
+        <p>When a charged capacitor is connected to an inductor, energy oscillates between the electric field of the capacitor and the magnetic field of the inductor. The current and charge vary sinusoidally with the natural angular frequency of the LC oscillation.</p>
+        <div class="equation-box">ω = 1 / √(L C)</div>
+
+        <h2>5.2 Electromagnetic Waves</h2>
+        <p>Electromagnetic waves are self-propagating oscillations of electric and magnetic fields that travel through space at the speed of light. They do not require a medium.</p>
+        <p><strong>Key properties:</strong> E and B fields are perpendicular to each other and to the direction of travel (transverse wave). Speed in vacuum: c = 3 × 10⁸ m/s. Examples: radio waves, microwaves, infrared, visible light, ultraviolet, X-rays, gamma rays.</p>
+
+        <h2>5.3 AC Circuits</h2>
+        <p>Alternating current (AC) varies sinusoidally with time: I = I_m sin(ωt), V = V_m sin(ωt).</p>
+        <p>The RMS (root-mean-square) value is the effective value that gives the same average power as a steady DC current. Most AC meters read RMS values. The average value of a pure AC waveform over a full cycle is zero.</p>
+        <div class="equation-box">I_rms = I_m / √2 ≈ 0.707 I_m &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; V_rms = V_m / √2 ≈ 0.707 V_m</div>
+
+        <h2>5.4 Reactance of L and C</h2>
+        <h3>Capacitive Reactance</h3>
+        <div class="equation-box">X_C = 1 / (2π f C)</div>
+        <p>Current leads voltage by 90° in a pure capacitor.</p>
+        <h3>Inductive Reactance</h3>
+        <div class="equation-box">X_L = 2π f L</div>
+        <p>Current lags voltage by 90° in a pure inductor.</p>
+        <p><em>Why the frequency dependence?</em> A capacitor needs time to charge and discharge — at high frequency there is less time, so it conducts better (X_C decreases). An inductor opposes change more strongly when the current tries to change faster (high frequency), so X_L increases with frequency.</p>
+
+        <h2>5.5 Series RLC Circuit — Impedance</h2>
+        <p>When R, L and C are in series, the total opposition to AC is called impedance Z.</p>
+        <div class="equation-box">Z = √[ R² + (X_L − X_C)² ] &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; I_m = V_m / Z</div>
+        <p><strong>Special cases:</strong> Pure resistor: Z = R (voltage and current in phase). RL circuit: Z = (R² + X_L²). RC circuit: Z = √(R² + X_C²).</p>
+
+        <h2>5.6 Resonance in a Series RLC Circuit</h2>
+        <p>Resonance occurs when the current is maximum. This happens when X_L = X_C.</p>
+        <div class="equation-box">f₀ = 1 / (2π √(L C))</div>
+        <div class="must-know">★ MUST KNOW: At resonance: X_L = X_C → Z = R (minimum impedance); Current is maximum; Voltage and current are in phase; Power factor cosφ = 1 (maximum power transfer). Average power: P_avg = V_rms I_rms cosφ. Only the resistor dissipates average power. Ideal inductors and capacitors dissipate zero average power.</div>
+
+        <div class="example-box">
+          <h4><span class="material-symbols-outlined">calculate</span> Worked Example: Capacitor in AC Circuit</h4>
+          <p><strong>Problem:</strong> A 2 µF capacitor is connected across a 150 V_rms, 60 Hz source. Find the RMS and peak currents.</p>
+          <p><strong>Solution:</strong><br>
+          X_C = 1 / (2π × 60 × 2 × 10⁻⁶) ≈ 1326 Ω<br>
+          I_rms = V_rms / X_C = 150 / 1326 ≈ 0.113 A<br>
+          I_m = √2 × I_rms = 2 × 0.113 ≈ <strong>0.160 A</strong></p>
+        </div>
+
+        <h2>Unit 5 — Quick Reference Formula Sheet</h2>
+        <table>
+          <tr><th>Quantity</th><th>Formula</th><th>Unit</th></tr>
+          <tr><td>Speed of light</td><td>c = 1/√(µ₀ε₀)</td><td>m/s</td></tr>
+          <tr><td>LC frequency</td><td>ω = 1/√(LC)</td><td>rad/s</td></tr>
+          <tr><td>RMS current</td><td>I_rms = I_m/√2</td><td>A</td></tr>
+          <tr><td>Capacitive reactance</td><td>X_C = 1/(2πfC)</td><td>Ω</td></tr>
+          <tr><td>Inductive reactance</td><td>X_L = 2πfL</td><td>Ω</td></tr>
+          <tr><td>Impedance (RLC)</td><td>Z = √[R²+(X_L−X_C)²]</td><td>Ω</td></tr>
+          <tr><td>Resonance frequency</td><td>f₀ = 1/(2π√(LC))</td><td>Hz</td></tr>
+          <tr><td>Average power</td><td>P = V_rms I_rms cosφ</td><td>W</td></tr>
+          <tr><td>Power factor</td><td>cosφ = R/Z</td><td>—</td></tr>
+        </table>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Sunday Ojodomo Michael · Sunday.Michael</div>
+</footer>
+
+<script src="../js/site.js"></script>
+</body>
+</html>
