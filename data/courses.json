@@ -6,29 +6,118 @@
       "department": "Physics",
       "category": "phy",
       "status": "In Progress",
-      "progress": 15,
-      "description": "Study of electric forces, magnetic forces, electric fields, electric potential, and Gauss's law.",
+      "progress": 10,
+      "description": "Comprehensive handbook covering Electrostatics, DC Circuits, Magnetism, Induction, Maxwell's Equations, and 200 CBT practice questions.",
       "modules": [
-        {
-          "id": 1,
-          "title": "Introduction to Electromagnetism",
-          "status": "complete",
-          "video_url": "https://www.youtube.com/embed/kQ1q08t407E",
-          "content": "<h3>The Four Fundamental Forces</h3><p>Every force in nature belongs to one of these four categories: Gravitational, Electromagnetic, Strong Nuclear, and Weak Nuclear.</p><p style='margin-top:1.5rem;'><a href='posts/phy102-module1.html' class='btn btn-primary' style='text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem;'><span class='material-symbols-outlined' style='font-size:18px;'>menu_book</span> Read Full In-Depth Lecture Notes</a></p>",
-          "feynman_prompt": "Explain the difference between the four fundamental forces to a 10-year-old using a simple analogy.",
-          "flashcards": [
-            { "term": "Electromagnetic Force", "definition": "The force responsible for attraction/repulsion of electric charges and magnetic effects." },
-            { "term": "Quantization of Charge", "definition": "The principle that electric charge exists only in discrete units (multiples of e)." }
-          ],
-          "micro_quiz": [
-            {
-              "question": "Which fundamental force is responsible for keeping electrons bound to the atomic nucleus?",
-              "options": ["Gravitational Force", "Electromagnetic Force", "Strong Nuclear Force", "Weak Nuclear Force"],
-              "correct": 1,
-              "explanation": "The electromagnetic force causes the attraction between the positively charged protons in the nucleus and the negatively charged electrons."
-            }
-          ]
-        }
+        { "id": 1, "title": "Unit 1: Electrostatics & Electric Fields", "status": "complete", "video_url": "https://www.youtube.com/embed/kQ1q08t407E", "content": "<h3>Forces in Nature & Electrostatics</h3><p>Covers the four fundamental forces, electric charge properties, Coulomb's Law, Electric Fields, Potential, Gauss's Law, and Capacitance.</p><p style='margin-top:1.5rem;'><a href='posts/phy102-unit1.html' class='btn btn-primary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px;'>menu_book</span> Read Full Unit 1 Notes</a></p>", "feynman_prompt": "Explain why like charges repel using the concept of electric fields.", "flashcards": [ { "term": "Coulomb's Law", "definition": "F = k|q1q2|/r². Force between point charges." }, { "term": "Gauss's Law", "definition": "Φ = Q_enc/ε₀. Relates electric flux to enclosed charge." } ], "micro_quiz": [ { "question": "Which force is responsible for holding protons and neutrons together?", "options": ["Gravitational", "Electromagnetic", "Strong Nuclear", "Weak Nuclear"], "correct": 2, "explanation": "The Strong Nuclear Force overpowers electromagnetic repulsion in the nucleus." } ] },
+        { "id": 2, "title": "Unit 2: DC Circuits & Components", "status": "not-started", "video_url": "https://www.youtube.com/embed/H7WlR8Y5hQc", "content": "<h3>Ohm's Law, Resistors & Diodes</h3><p>Covers DC circuits, Ohm's Law, resistor combinations, EMF, internal resistance, thermionic emission, and rectification.</p><p style='margin-top:1.5rem;'><a href='posts/phy102-unit2.html' class='btn btn-primary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px;'>menu_book</span> Read Full Unit 2 Notes</a></p>", "feynman_prompt": "Explain the difference between EMF and terminal voltage using a water pump analogy.", "flashcards": [ { "term": "Ohm's Law", "definition": "V = IR. Voltage equals current times resistance." }, { "term": "Rectification", "definition": "Converting AC to DC using diodes." } ], "micro_quiz": [ { "question": "What is the efficiency of a full-wave rectifier?", "options": ["40.6%", "81.2%", "100%", "50%"], "correct": 1, "explanation": "Full-wave rectifiers utilize both halves of the AC cycle, yielding ~81.2% efficiency." } ] },
+        { "id": 3, "title": "Unit 3: Magnetism & Magnetic Fields", "status": "not-started", "video_url": "https://www.youtube.com/embed/ZOw1yALfTzA", "content": "<h3>Lorentz Force & Biot-Savart Law</h3><p>Covers magnetic fields, Lorentz force, Biot-Savart law, Ampère’s law, magnetic dipoles, and dielectrics.</p><p style='margin-top:1.5rem;'><a href='posts/phy102-unit3.html' class='btn btn-primary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px;'>menu_book</span> Read Full Unit 3 Notes</a></p>", "feynman_prompt": "Explain why a magnetic field does no work on a moving charge.", "flashcards": [ { "term": "Lorentz Force", "definition": "F = q(E + v × B). Total force on a charge in E and B fields." }, { "term": "Biot-Savart Law", "definition": "Calculates magnetic field produced by a small current element." } ], "micro_quiz": [ { "question": "What is the SI unit of magnetic field (B)?", "options": ["Weber", "Tesla", "Henry", "Gauss"], "correct": 1, "explanation": "Tesla (T) is the SI unit. 1 Tesla = 10,000 Gauss." } ] },
+        { "id": 4, "title": "Unit 4: Electromagnetic Induction", "status": "not-started", "video_url": "https://www.youtube.com/embed/lDXXh8qT8h4", "content": "<h3>Faraday's Law & Transformers</h3><p>Covers Faraday & Lenz's laws, self & mutual inductance, transformers, and eddy currents.</p><p style='margin-top:1.5rem;'><a href='posts/phy102-unit4.html' class='btn btn-primary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px;'>menu_book</span> Read Full Unit 4 Notes</a></p>", "feynman_prompt": "Explain Lenz's Law using the concept of conservation of energy.", "flashcards": [ { "term": "Faraday's Law", "definition": "EMF = -N(dΦ/dt). Induced EMF is proportional to rate of change of flux." }, { "term": "Transformer Ratio", "definition": "Es/Ep = Ns/Np = Ip/Is." } ], "micro_quiz": [ { "question": "Lenz's law is a consequence of conservation of:", "options": ["Charge", "Momentum", "Energy", "Mass"], "correct": 2, "explanation": "The induced current opposes the change to conserve energy." } ] },
+        { "id": 5, "title": "Unit 5: Maxwell's Equations & AC Circuits", "status": "not-started", "video_url": "https://www.youtube.com/embed/q1eor6oIuUo", "content": "<h3>EM Waves & RLC Circuits</h3><p>Covers Maxwell's equations, electromagnetic waves, AC circuits, reactance, impedance, and resonance.</p><p style='margin-top:1.5rem;'><a href='posts/phy102-unit5.html' class='btn btn-primary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px;'>menu_book</span> Read Full Unit 5 Notes</a></p>", "feynman_prompt": "Explain why light is considered an electromagnetic wave.", "flashcards": [ { "term": "Maxwell's Equations", "definition": "Four equations describing all classical electromagnetic phenomena." }, { "term": "Resonance Frequency", "definition": "f₀ = 1/(2π√(LC)). Occurs when X_L = X_C." } ], "micro_quiz": [ { "question": "At resonance in a series RLC circuit, the impedance is:", "options": ["Maximum", "Minimum (equals R)", "Zero", "Infinite"], "correct": 1, "explanation": "At resonance, X_L = X_C, so Z = √(R² + 0) = R (minimum impedance)." } ] },
+        { "id": 6, "title": "Master Formula Sheet", "status": "not-started", "content": "<h3>Quick Reference</h3><p>A consolidated sheet of all key formulas from Units 1-5 for quick revision before exams.</p><p style='margin-top:1.5rem;'><a href='posts/phy102-formulas.html' class='btn btn-secondary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px;'>calculate</span> View Formula Sheet</a></p>" },
+        { "id": 7, "title": "CBT Practice Bank (Q1 - Q100)", "status": "not-started", "content": "<h3>Test Your Knowledge</h3><p>100 Computer-Based Test style questions covering all units. Answers provided at the end.</p><p style='margin-top:1.5rem;'><a href='posts/phy102-cbt1.html' class='btn btn-secondary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px;'>quiz</span> Start Practice Test 1</a></p>" },
+        { "id": 8, "title": "CBT Practice Bank (Q101 - Q202)", "status": "not-started", "content": "<h3>Advanced Practice</h3><p>102 additional CBT style questions to fully prepare you for your exams.</p><p style='margin-top:1.5rem;'><a href='posts/phy102-cbt2.html' class='btn btn-secondary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px;'>quiz</span> Start Practice Test 2</a></p>" }
+      ]
+    },
+    {
+      "code": "BIO 102",
+      "name": "General Biology II",
+      "department": "Biology",
+      "category": "bio",
+      "status": "In Progress",
+      "progress": 40,
+      "description": "A comprehensive study of viruses, bacteria, fungi, plant and animal adaptations, and comparative morphology.",
+      "modules": [
+        { "id": 1, "title": "Viruses & Bacteria", "status": "complete", "content": "<p>Covers the structure, classification, and cultivation of viruses, as well as bacterial characteristics.</p><p style='margin-top:1rem;'><a href='posts/bio102-part1.html' target='_blank' class='btn btn-secondary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px; vertical-align: middle; margin-right: 4px;'>menu_book</span> View Full Detailed Notes (Part 1)</a></p>" },
+        { "id": 2, "title": "Fungi & Plant Adaptations", "status": "complete", "content": "<p>Explores fungal characteristics, nutrition, and classification.</p><p style='margin-top:1rem;'><a href='posts/bio102-part2.html' target='_blank' class='btn btn-secondary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px; vertical-align: middle; margin-right: 4px;'>menu_book</span> View Full Detailed Notes (Part 2)</a></p>" },
+        { "id": 3, "title": "Animal Adaptations", "status": "current", "content": "<p>Focuses on vertebrate adaptations to land.</p><p style='margin-top:1rem;'><a href='posts/bio102-part3.html' target='_blank' class='btn btn-secondary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px; vertical-align: middle; margin-right: 4px;'>menu_book</span> View Full Detailed Notes (Part 3)</a></p>" },
+        { "id": 4, "title": "Invertebrate Morphology", "status": "not-started", "content": "<p>Comparative external morphology.</p><p style='margin-top:1rem;'><a href='posts/bio102-part4.html' target='_blank' class='btn btn-secondary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px; vertical-align: middle; margin-right: 4px;'>menu_book</span> View Full Detailed Notes (Part 4)</a></p>" },
+        { "id": 5, "title": "Vertebrate Morphology", "status": "not-started", "content": "<p>Comparative external morphology of Fishes, Amphibians, Reptiles, Birds, and Mammals.</p><p style='margin-top:1rem;'><a href='posts/bio102-part5.html' target='_blank' class='btn btn-secondary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px; vertical-align: middle; margin-right: 4px;'>menu_book</span> View Full Detailed Notes (Part 5)</a></p>" },
+        { "id": 6, "title": "Physiology", "status": "not-started", "content": "<p>Nutrition, Excretion, Circulation, Reproduction, Respiration.</p><p style='margin-top:1rem;'><a href='posts/bio102-part6.html' target='_blank' class='btn btn-secondary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px; vertical-align: middle; margin-right: 4px;'>menu_book</span> View Full Detailed Notes (Part 6)</a></p>" }
+      ]
+    },
+    {
+      "code": "MTH 102",
+      "name": "Elementary Mathematics II",
+      "department": "Mathematics",
+      "category": "mth",
+      "status": "In Progress",
+      "progress": 30,
+      "description": "Limits and continuity, derivatives of algebraic and trigonometric functions, integration techniques, and vector geometry.",
+      "modules": [
+        { "id": 1, "title": "Functions of Real Variables", "status": "complete", "content": "<h3>What is a Function?</h3><p>A function f from set X (Domain) to set Y (Codomain) assigns <strong>exactly one</strong> element f(x) to every x in X.</p><p style='margin-top:1rem;'><a href='posts/mth102-part1.html' target='_blank' class='btn btn-secondary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px; vertical-align: middle; margin-right: 4px;'>menu_book</span> View Full Detailed Notes (Part 1)</a></p>" },
+        { "id": 2, "title": "Limits & Limit Theorems", "status": "current", "content": "<h3>Why Limits?</h3><p>Before calculus, we could calculate the slope of a straight line. But how do you find the slope of a curve at one exact point?</p><p style='margin-top:1rem;'><a href='posts/mth102-part1.html' target='_blank' class='btn btn-secondary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px; vertical-align: middle; margin-right: 4px;'>menu_book</span> View Full Detailed Notes (Part 1)</a></p>" },
+        { "id": 3, "title": "Continuity", "status": "not-started", "content": "<p>Explores the concept of continuity in functions.</p><p style='margin-top:1rem;'><a href='posts/mth102-part2.html' target='_blank' class='btn btn-secondary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px; vertical-align: middle; margin-right: 4px;'>menu_book</span> View Full Detailed Notes (Part 2)</a></p>" },
+        { "id": 4, "title": "Differentiation from First Principles", "status": "not-started", "content": "<p>Introduction to derivatives using the limit definition.</p><p style='margin-top:1rem;'><a href='posts/mth102-part2.html' target='_blank' class='btn btn-secondary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px; vertical-align: middle; margin-right: 4px;'>menu_book</span> View Full Detailed Notes (Part 2)</a></p>" },
+        { "id": 5, "title": "Advanced Differentiation Rules", "status": "not-started", "content": "<p>Covers the Product Rule, Quotient Rule, and Chain Rule.</p><p style='margin-top:1rem;'><a href='posts/mth102-part3.html' target='_blank' class='btn btn-secondary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px; vertical-align: middle; margin-right: 4px;'>menu_book</span> View Full Detailed Notes (Part 3)</a></p>" },
+        { "id": 6, "title": "Applications of Derivatives", "status": "not-started", "content": "<p>Using derivatives for Max/Min problems and Optimization.</p><p style='margin-top:1rem;'><a href='posts/mth102-part3.html' target='_blank' class='btn btn-secondary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px; vertical-align: middle; margin-right: 4px;'>menu_book</span> View Full Detailed Notes (Part 3)</a></p>" },
+        { "id": 7, "title": "Integration Techniques", "status": "not-started", "content": "<p>Covers all major integration techniques.</p><p style='margin-top:1rem;'><a href='posts/mth102-part4.html' target='_blank' class='btn btn-secondary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px; vertical-align: middle; margin-right: 4px;'>menu_book</span> View Full Detailed Notes (Part 4)</a></p>" },
+        { "id": 8, "title": "Fundamental Theorem of Calculus", "status": "not-started", "content": "<p>Connecting differentiation and integration to find the area under and between curves.</p><p style='margin-top:1rem;'><a href='posts/mth102-part4.html' target='_blank' class='btn btn-secondary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px; vertical-align: middle; margin-right: 4px;'>menu_book</span> View Full Detailed Notes (Part 4)</a></p>" }
+      ]
+    },
+    {
+      "code": "GST 112",
+      "name": "Nigerian People and Culture",
+      "department": "General Studies",
+      "category": "gst",
+      "status": "Complete",
+      "progress": 100,
+      "description": "A comprehensive module-by-module outline of Nigerian history, culture, colonial rule, and nation-building.",
+      "modules": [
+        { "id": 1, "title": "Full Course Summary & PDF", "status": "complete", "content": "<p>This module contains the complete, concise summary of GST 112.</p><p style='margin-top: 1.5rem;'><a href='assets/gst112.pdf' target='_blank' class='btn btn-primary' style='text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem;'><span class='material-symbols-outlined' style='font-size:18px;'>picture_as_pdf</span> View / Download Full PDF Summary</a></p>" },
+        { "id": 2, "title": "Practice Questions", "status": "complete", "content": "<p>Test your knowledge with 20 practice questions based on the GST 112 summary.</p><p style='margin-top: 1.5rem;'><a href='qa.html?course=gst112' class='btn btn-secondary' style='text-decoration:none; display:inline-flex; align-items:center; gap:0.5rem;'><span class='material-symbols-outlined' style='font-size:18px;'>quiz</span> Start Quiz</a></p>" }
+      ]
+    },
+    {
+      "code": "CSC 104",
+      "name": "Introduction to Web Technology",
+      "department": "Computer Science",
+      "category": "csc",
+      "status": "In Progress",
+      "progress": 65,
+      "description": "HTML structure, CSS layout fundamentals, JavaScript basics, DOM manipulation, and HTTP client-server concepts.",
+      "modules": [
+        { "id": 1, "title": "HTML Structure & Semantics", "status": "complete", "content": "<p>HTML provides the skeleton of a web page. Semantic tags give meaning to the structure, improving accessibility and SEO.</p>" },
+        { "id": 2, "title": "CSS Layout Fundamentals", "status": "complete", "content": "<p>CSS controls the visual presentation. We use Flexbox and CSS Grid to create responsive, modern layouts.</p>" },
+        { "id": 3, "title": "JavaScript Basics & DOM", "status": "current", "content": "<p>JavaScript adds interactivity. The Document Object Model (DOM) allows JS to read and change the content dynamically.</p>" }
+      ]
+    },
+    {
+      "code": "CSC 106",
+      "name": "Hardware Fundamentals & Programming",
+      "department": "Computer Science",
+      "category": "csc",
+      "status": "In Progress",
+      "progress": 50,
+      "description": "Computer hardware architecture, logic gates, truth tables, memory hierarchies, and introductory algorithmic problem solving.",
+      "modules": [
+        { "id": 1, "title": "Computer Hardware Architecture", "status": "complete", "content": "<p>The von Neumann architecture consists of the CPU, memory, and input/output devices.</p>" },
+        { "id": 2, "title": "Logic Gates & Truth Tables", "status": "current", "content": "<p>Basic building blocks of digital circuits: AND, OR, NOT, NAND, NOR, XOR.</p>" }
+      ]
+    },
+    {
+      "code": "MTH 101",
+      "name": "Elementary Mathematics I",
+      "department": "Mathematics",
+      "category": "mth",
+      "status": "In Progress",
+      "progress": 70,
+      "description": "Set theory, quadratic equations, polynomials, mathematical induction, trigonometry, and coordinate geometry.",
+      "modules": [
+        { "id": 1, "title": "Set Theory & Logic", "status": "complete", "content": "<p>A set is a well-defined collection of distinct objects. Operations include union, intersection, and complement.</p>" },
+        { "id": 2, "title": "Quadratic Equations", "status": "complete", "content": "<p>Equations of the form ax² + bx + c = 0. Solved using factorization or the quadratic formula.</p>" }
+      ]
+    },
+    {
+      "code": "READ 001",
+      "name": "Meditations by Marcus Aurelius",
+      "department": "Philosophy",
+      "category": "read",
+      "status": "In Progress",
+      "progress": 20,
+      "description": "Stoic philosophy, personal notes, and reflections on the classic public-domain text.",
+      "modules": [
+        { "id": 1, "title": "Full Notes & Reflections", "status": "current", "content": "<p>My personal study notes and key takeaways from Marcus Aurelius' Meditations.</p><p style='margin-top:1rem;'><a href='posts/meditations.html' target='_blank' class='btn btn-secondary' style='text-decoration:none;'><span class='material-symbols-outlined' style='font-size:18px; vertical-align: middle; margin-right: 4px;'>menu_book</span> View Full Notes</a></p>" }
       ]
     }
   ]
