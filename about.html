@@ -1,59 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About — Sunday Ojodomo Michael</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/theme.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Sunday.Michael</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-  <header class="site-head">
-    <div class="wrap">
-      <div class="brand-row">
-        <a class="brand" href="index.html">Sunday<span class="dot">.</span>Michael</a>
-        <input  type="checkbox" id="nav-toggle"  class="menu-toggle">
-        <label  for="nav-toggle" class="menu-icon">&#9776;</label>
-        <nav class="site-nav">
-          <a href="index.html">home</a>
-          <a href="blog.html">lectures</a>
-          <a href="studies.html">studies</a>
-          <a href="qa.html">q&a</a>
-          <a href="about.html" class="active">about</a>
-          <a href="contact.html">contact</a>
-          <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark/light mode">🌙</button>
-        </nav>
+
+<div id="loader">
+  <img src="images/logo.png" alt="Sunday.Michael" class="loader-logo">
+</div>
+
+<header>
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" style="display:flex;align-items:center;gap:.75rem;">
+      <img src="images/logo.png" alt="Sunday.Michael logo" class="brand-mark">
+      <div class="brand-text">
+        <span class="brand-name">Sunday.Michael</span>
+        <span class="brand-sub">Digital Campus &amp; Lab</span>
       </div>
-      <p class="tagline">about me</p>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="learn.html">Learn</a>
+      <a href="knowledge.html">Knowledge</a>
+      <a href="qa.html">Q&amp;A</a>
+      <a href="games.html">Games</a>
+      <a href="about.html" class="active">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="theme-toggle" type="button" title="Toggle theme">
+        <span class="material-symbols-outlined" id="theme-icon">dark_mode</span>
+      </button>
+      <button class="menu-toggle-btn" id="menu-toggle" type="button" title="Menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
     </div>
-  </header>
+  </div>
+</header>
 
-  <main class="wrap">
-    <section class="post-head">
-      <h1>About Me</h1>
-    </section>
-    <div class="post-body">
-      <p>Hello! I'm <strong>Sunday Ojodomo Michael</strong>, a Computer Science student at <strong>Federal University Lokoja</strong>.</p>
-      <p>I created this site to share my study notes, summaries, and resources. It's a personal logbook where I document what I learn — from Computer Science to General Studies courses like GST 112 (Nigerian People and Culture).</p>
-      <h2>What you'll find here</h2>
-      <ul>
-        <li><strong>Lectures:</strong> summaries and essays.</li>
-        <li><strong>Studies:</strong> course notes and self‑study.</li>
-        <li><strong>Q&A:</strong> practice questions from my notes.</li>
-      </ul>
-      <p>I'm always open to feedback and questions. Use the contact page or social links to reach out.</p>
-    </div>
-  </main>
+<nav class="mobile-nav" id="mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="learn.html">Learn</a>
+  <a href="knowledge.html">Knowledge</a>
+  <a href="qa.html">Q&amp;A</a>
+  <a href="games.html">Games</a>
+  <a href="about.html" class="active">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
 
-  <footer>
-    <div class="wrap">
-      <span>© 2026 Sunday Ojodomo Michael</span>
-      <span>
-        <a href="mailto:solexmic061@gmail.com">email</a> ·
-        <a href="https://x.com/SundayM77406156" target="_blank">twitter</a> ·
-        <a href="https://www.facebook.com/michael.sunday.407648" target="_blank">facebook</a>
-      </span>
+<main>
+  <section class="section">
+    <div class="wrap" style="max-width: 48rem;">
+      <div class="section-head" style="text-align:center; display:block; margin-bottom:2rem;">
+        <div class="breadcrumb" style="justify-content:center; margin-bottom:0.5rem;">
+          <span><a href="index.html" style="color:inherit;">Home</a></span>
+          <span>/</span>
+          <span class="current">About Me</span>
+        </div>
+        <h2 class="section-title">Sunday Ojodomo Michael</h2>
+        <p style="color:var(--text-muted); margin-top:0.5rem;">Computer Science Student &amp; Web Developer</p>
+      </div>
+
+      <!-- Intro -->
+      <div style="background:var(--surface); border:1px solid var(--border); border-radius:0.75rem; padding:1.5rem; margin-bottom:2rem;">
+        <p style="font-size:1.05rem; line-height:1.7; color:var(--text-variant); margin:0;">
+          I am a Year 1 Computer Science student at <strong>Federal University Lokoja</strong>. This site is my digital campus — a place where I track my university coursework, document my self-directed learning in web development, and build small interactive projects. My goal is to learn deeply, build consistently, and share the journey.
+        </p>
+      </div>
+
+      <!-- Interested In -->
+      <h3 style="font-family:'Newsreader',serif; font-size:1.25rem; margin-bottom:1rem;">Interested In</h3>
+      <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:2rem;">
+        <span class="subject-badge csc" style="font-size:13px; padding:0.4rem 0.8rem;">Web Development</span>
+        <span class="subject-badge mth" style="font-size:13px; padding:0.4rem 0.8rem;">Artificial Intelligence</span>
+        <span class="subject-badge csc" style="font-size:13px; padding:0.4rem 0.8rem;">Software Engineering</span>
+        <span class="subject-badge mth" style="font-size:13px; padding:0.4rem 0.8rem;">Problem Solving</span>
+      </div>
+
+      <!-- Currently Learning -->
+      <h3 style="font-family:'Newsreader',serif; font-size:1.25rem; margin-bottom:1rem;">Currently Learning</h3>
+      <div style="display:flex; flex-direction:column; gap:0.75rem; margin-bottom:2rem;">
+        <a href="course.html?code=csc104" style="display:flex; justify-content:space-between; align-items:center; padding:1rem; background:var(--surface-low); border:1px solid var(--border); border-radius:0.5rem; text-decoration:none; color:var(--text);">
+          <span style="font-weight:500;">CSC 104: Web Technology</span>
+          <span class="material-symbols-outlined" style="color:var(--sage); font-size:18px;">chevron_right</span>
+        </a>
+        <a href="course.html?code=mth102" style="display:flex; justify-content:space-between; align-items:center; padding:1rem; background:var(--surface-low); border:1px solid var(--border); border-radius:0.5rem; text-decoration:none; color:var(--text);">
+          <span style="font-weight:500;">MTH 102: Calculus</span>
+          <span class="material-symbols-outlined" style="color:var(--sage); font-size:18px;">chevron_right</span>
+        </a>
+        <a href="course.html?code=gst112" style="display:flex; justify-content:space-between; align-items:center; padding:1rem; background:var(--surface-low); border:1px solid var(--border); border-radius:0.5rem; text-decoration:none; color:var(--text);">
+          <span style="font-weight:500;">GST 112: Nigerian Culture</span>
+          <span class="material-symbols-outlined" style="color:var(--sage); font-size:18px;">chevron_right</span>
+        </a>
+      </div>
+
+      <!-- Journey Timeline -->
+      <h3 style="font-family:'Newsreader',serif; font-size:1.25rem; margin-bottom:1rem;">My Journey</h3>
+      <div style="border-left: 2px solid var(--border); padding-left: 1.5rem; margin-left: 0.5rem;">
+        <div style="margin-bottom: 1.5rem; position: relative;">
+          <div style="position: absolute; left: -1.65rem; top: 0.25rem; width: 12px; height: 12px; border-radius: 50%; background: var(--sage); border: 2px solid var(--canvas);"></div>
+          <span style="font-family:'Space Mono',monospace; font-size:12px; color:var(--text-muted);">2026 — Present</span>
+          <p style="margin: 0.25rem 0 0 0; font-weight: 500;">Year 1 Computer Science at Federal University Lokoja. Building this digital campus.</p>
+        </div>
+        <div style="position: relative;">
+          <div style="position: absolute; left: -1.65rem; top: 0.25rem; width: 12px; height: 12px; border-radius: 50%; background: var(--surface-high); border: 2px solid var(--border);"></div>
+          <span style="font-family:'Space Mono',monospace; font-size:12px; color:var(--text-muted);">Prior</span>
+          <p style="margin: 0.25rem 0 0 0; font-weight: 500;">Self-taught HTML, CSS, and JavaScript fundamentals.</p>
+        </div>
+      </div>
+
     </div>
-  </footer>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Sunday Ojodomo Michael · Sunday.Michael</div>
+</footer>
+
+<script src="js/site.js"></script>
+
 </body>
 </html>
